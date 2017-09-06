@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>系统设置-科研故事管理</title>
+    <link href="../../assets/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../assets/icheck/flat/blue.css" rel="stylesheet">
+    <link href="../../css/main.css" rel="stylesheet" rel="stylesheet"/>
+
+    <!--[if lt IE 9]>
+    <script src="../vendor/html5shiv_3.7.3/html5shiv.min.js"></script>
+    <script src="../vendor/respond.js_1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div class="techStorySet">
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="javascripy:;">科研故事管理</a></li>
+        </ul>
+        <div class="search-wrapper">
+            <div class="row input-box">
+                <div class="col-md-6 col-md-offset-3">
+                    <input type="text" class="form-control bigSize" placeholder="输入科研故事标题">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-1 first-col">
+                    <input type="checkbox" id="selectAll" class="checkbox">
+                    <label for="selectAll">全选</label>
+                </div>
+                <div class="col-md-2">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            选择批量操作 <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="javascript:;">审核通过</a></li>
+                            <li><a href="javascript:;">审核拒绝</a></li>
+                            <li><a href="javascript:;">置顶</a></li>
+                            <li><a href="javascript:;">删除</a></li>
+                            <li><a href="javascript:;">取消置顶</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-1">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            全部状态 <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="javascript:;">全部状态</a></li>
+                            <li><a href="javascript:;">待审核</a></li>
+                            <li><a href="javascript:;">已审核</a></li>
+                            <li><a href="javascript:;">已置顶</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <input type="text" class="form-control" placeholder="输入作者">
+                </div>
+                <div class="col-md-2">
+                    <button type="button" class="btn btn-success">查询</button>
+                </div>
+            </div>
+        </div>
+        <div class="content-wrapper">
+        <div class="summary">
+            搜索结果: 找到了234篇，共23页
+        </div>
+        <div class="article-wrapper">
+            <article class="article img-wrap">
+                <p class="checkboxWrap">
+                    <input type="checkbox" class="checkbox">
+                </p>
+                <p class="mediaBox">
+                    <img src="../../images/temp.jpg" alt="">
+                </p>
+                <section class="content">
+                    <h3 class="title">广西科技厅与来访泰国国家科技发展部署座谈交流，广西科技厅与来访泰国国家科技发展部署座谈交流</h3>
+                    <div class="info clearfix">
+                        <span class="time pull-left">9分钟前</span>
+
+                        <button type="button" class="btn btn-danger pull-right">删除</button>
+                        <button type="button" class="btn btn-warning pull-right">审核拒绝</button>
+                        <button type="button" class="btn btn-success pull-right">通过审核</button>
+                    </div>
+                </section>
+            </article>
+            <article class="article">
+                <p class="checkboxWrap">
+                    <input type="checkbox" class="checkbox">
+                </p>
+                <section class="right">
+                    <h3 class="title">广西科技厅与来访的泰国国家科技发展署座谈交流 共促中泰科技创新深度合作</h3>
+                    <p class="detail">
+                        曹坤华指出，目前，泰国和广西各自经济社会发展对先进适用农业技术提出了更高需求，广西作为中国的农业大省，
+                        近年来在农业技术的研究与推广应用方面积累了丰富经验，取得了不少具有较高应用价值的成果，泰国在农业技术方面
+                        也有很多值得广西学习借鉴的地方，双方在促进农业技术创新和推广应用过程中有很大合作空间，广西科技厅愿意向泰国等
+                        东盟国家推广应用先进农业技术成果；
+                    </p>
+                    <p class="info">
+                        <span class="time">2017-01-01 12:12</span>
+                        <span class="author">作者: 张三三</span>
+                    </p>
+                </section>
+            </article>
+            <article class="article img-wrap">
+                <p class="checkboxWrap">
+                    <input type="checkbox" class="checkbox">
+                </p>
+                <p class="mediaBox">
+                    <img src="../../images/temp.jpg" alt="">
+                </p>
+                <section class="content">
+                    <h3 class="title">广西科技厅与来访泰国国家科技发展部署座谈交流，广西科技厅与来访泰国国家科技发展部署座谈交流</h3>
+                    <p class="info">
+                        <span class="time">9分钟前</span>
+                    </p>
+                </section>
+            </article>
+            <article class="article img-wrap">
+                <p class="checkboxWrap">
+                    <input type="checkbox" class="checkbox">
+                </p>
+                <p class="mediaBox">
+                    <img src="../../images/temp.jpg">
+                </p>
+                <section class="content">
+                    <h3 class="title">广西科技厅与来访泰国国家科技发展部署座谈交流，广西科技厅与来访泰国国家科技发展部署座谈交流</h3>
+                    <p class="info">
+                        <span class="time">9分钟前</span>
+                    </p>
+                </section>
+            </article>
+        </div>
+    </div>
+</div>
+<script src="../../assets/jQuery/jquery.min.js"></script>
+<script src="../../assets/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+<script src="../../assets/icheck/icheck.min.js"></script>
+<script src="../../js/systemSet/techStorySet.js"></script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+html,body,ul,li,ol,p,span,div,header,main,h1,h2,h3,h4,h5,h6,em,i,small,section,aside,s,menu,code,label,eq,textarea,input,table,tr,td,th,thead,tbody,option,audio,canvas,svg,select,button,head,footer,applet,object,iframe,blockquote,pre,a,abbr,acronym,address,big,cite,del,dfn,font,img,ins,kbd,q,samp,strike,strong,msqrt,sub,sup,tt,var,b,u,center,dl,dt,dd,fieldset,form,legend,caption,card,circle,article{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    outline: 0;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box; /* Firefox */
+    -webkit-box-sizing:border-box; /* Safari */
+}
+html,body{height:100%;}
+html *{
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+body{
+    font-family: PingFang SC,Lantinghei SC,Helvetica Neue,Helvetica,Arial,Microsoft YaHei,微软雅黑,STHeitiSC-Light,simsun,宋体,WenQuanYi Zen Hei,WenQuanYi Micro Hei,'sans-serif';
+    font-size: 14px;
+}
+ul,ol,li{list-style: none;}
+a{
+    text-decoration: none;
+}
+fieldset, img { border: 0; }
+address, caption, cite, code, dfn, em, strong, th, var { font-style: normal; }
+em,i{font-style:normal;}
+
+.top{
+    height: 80px;
+    background: #3385ff;
+}
+
+.leftNav{
+    background: #f4f4f4;
+    width: 200px;
+    min-height: 500px;
+}
+
+.techStorySet{
+    padding:38px;
+    color: #333;
+    font-size: 16px;
+}
+
+.nav-tabs li a{
+    padding: 10px 0px;
+}
+
+.nav-tabs li.active a,
+.nav-tabs li.active a:active,
+.nav-tabs li.active a:hover{
+    font-size: 18px;
+    color: #3385ff;
+    border:none;
+    border-bottom:1px solid #3385ff;
+}
+
+.techStorySet .row{
+    margin:24px auto 40px;
+}
+
+input.bigSize{
+    height: 54px;
+}
+
+.col-md-1.first-col{
+    padding-left: 0px;
+    line-height:34px;
+}
+
+.first-col label{
+    font-weight: normal;
+    font-size: 16px;
+    margin-left: 5px;
+}
+
+ article{
+    margin: auto;
+    padding: 25px 0px;
+    font-size: 0px;
+    border-bottom: 1px solid #cfcfcf;
+}
+
+.checkboxWrap{
+    display: inline-block;
+    width: 60px;
+    vertical-align: middle;
+    height: 100px;
+    line-height: 100px;
+}
+
+.video-wrap .checkboxWrap,
+.img-wrap .checkboxWrap{
+    height: 228px;
+    line-height: 228px;
+}
+
+.mediaBox{
+    display: inline-block;
+    overflow: hidden;
+    padding: 10px;
+    vertical-align: middle;
+}
+
+.mediaBox video, .mediaBox img{
+    width: 320px;
+    height: 208px;
+}
+
+section.content{
+    display: inline-block;
+    width: calc(100% - 410px);
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+article .info{
+    font-size: 14px;
+    margin-top: 25px;
+}
+
+article.mediaBox .info{
+    margin-top: 40px;
+}
+
+article .btn{
+    width: 120px;
+    margin: 0px 22px;
+}
+
+section.right{
+    display: inline-block;
+    width: calc(100% - 60px);
+    vertical-align: middle;
+}
+
+article p.detail{
+    font-size: 14px;
+    color: #666;
+    margin-top: 25px;
+}
