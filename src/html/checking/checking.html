@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>科技立方</title>
+    <link href="../../assets/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../css/main.css" rel="stylesheet" rel="stylesheet"/>
+
+    <!--[if lt IE 9]>
+    <script src="../vendor/html5shiv_3.7.3/html5shiv.min.js"></script>
+    <script src="../vendor/respond.js_1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <style>
+        .nav-tabs li{
+            margin-right: 0;
+            text-align: center;
+        }
+        .nav-tabs li.active a,
+        .nav-tabs li.active a:active,
+        .nav-tabs li.active a:hover,
+        .nav-tabs li.active a:focus {
+            border-bottom: 4px solid ;
+            padding: 10px 30px;
+        }
+        .nav-tabs li a{
+            padding: 10px 20px;
+        }
+
+        .tab-pane{
+            padding-top: 30px;
+        }
+    </style>
+</head>
+<body>
+<div class="mainPage">
+    <div>
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active">
+                <a href="#home" aria-controls="home" role="tab" data-toggle="tab">系统项目查重</a>
+            </li>
+            <li role="presentation">
+                <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">上传项目查重</a>
+            </li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="home">
+                查重标注 : <input type="text" class="form-control" placeholder="标注用来记录您此次查重的显示信息">
+            </div>
+            <div role="tabpanel" class="tab-pane" id="profile">
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script src="../../assets/jQuery/jquery.min.js"></script>
+<script src="../../assets/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>
