@@ -32,29 +32,80 @@ em,i{font-style:normal;}
 .leftNav{
     background: #f4f4f4;
     width: 200px;
-    min-height: 500px;
+    height: 100%;
 }
 
-.techStorySet{
-    padding:38px;
+.mainPage{
+    padding: 35px;
     color: #333;
     font-size: 16px;
+}
+
+.nav-tabs li{
+    margin-right: 50px;
+}
+
+.nav-tabs li a{
+    font-size: 18px;
+    color: #333;
 }
 
 .nav-tabs li a{
     padding: 10px 0px;
 }
 
+.nav-tabs>li>a:hover{
+    border-color: transparent;
+}
+
 .nav-tabs li.active a,
 .nav-tabs li.active a:active,
-.nav-tabs li.active a:hover{
-    font-size: 18px;
+.nav-tabs li.active a:hover,
+.nav-tabs li.active a:focus{
     color: #3385ff;
     border:none;
     border-bottom:1px solid #3385ff;
 }
 
-.techStorySet .row{
+.nav-tabs.bg-gray{
+    background: #ebebeb;
+    border:none;
+}
+
+.nav-tabs.bg-gray li{
+    margin: 0px 35px;
+}
+
+.nav-tabs.bg-gray li:first-child{
+    margin-left: 60px;
+}
+
+.nav-tabs.bg-gray li a{
+    background: transparent;
+    border: 2px;
+    padding: 35px 0px;
+}
+
+.nav-tabs.bg-gray li.active a{
+    border-bottom: 2px solid #3385ff;
+}
+
+.nav-tabs.bg-gray li a:hover,
+.nav-tabs.bg-gray li a:active,
+.nav-tabs.bg-gray li a:focus{
+    border: none;
+    background: transparent;
+    border-bottom: 2px solid #3385ff;
+}
+
+.nav-pills.nav-blue>li.active>a, 
+.nav-pills.nav-blue>li.active>a:focus, 
+.nav-pills.nav-blue>li.active>a:hover{
+    background: #3385ff;
+}
+
+.techStorySet .row,
+.techStory .row{
     margin:24px auto 40px;
 }
 
@@ -97,8 +148,8 @@ input.bigSize{
 .mediaBox{
     display: inline-block;
     overflow: hidden;
-    padding: 10px;
     vertical-align: middle;
+    margin-right: 10px;;
 }
 
 .mediaBox video, .mediaBox img{
@@ -116,6 +167,20 @@ section.content{
 article .info{
     font-size: 14px;
     margin-top: 25px;
+}
+
+article .info span{
+    padding: 5px 12px 5px 0px;
+}
+
+.info span.tag{
+    padding: 4px 12px;
+    border: 1px solid #3385ff;
+    color: #3385ff;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    margin-right: 12px;
 }
 
 article.mediaBox .info{
@@ -138,3 +203,39 @@ article p.detail{
     color: #666;
     margin-top: 25px;
 }
+
+.noDataWrapper{
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.noDataWrapper p.text{
+    color: #888;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.techCube{
+    background: #f6f9fb;
+}
+
+.techCube .btn-group .btn{
+    padding: 6px 20px;
+    background: #ebebeb;
+    color: #333;
+}
+
+.techCube .btn-group .btn-active{
+    background: #3385ff;
+    color: #fff;
+}
+
+/*.techCube .item{*/
+    /*padding: 60px 50px 20px 50px;*/
+/*}*/
+
+/*.techCube .item.first{*/
+    /*padding-top: 40px;*/
+/*}*/

@@ -8,7 +8,92 @@
 </head>
 <body>
 <div class="leftNav">
-    <ul></ul>
+    <ul class="nav-ul nav nav-pills nav-stacked">
+        <li class="nav-li">
+            <a href="techCube">
+                <i class="nav-icon icon1"></i>
+                科技台
+            </a>
+        </li>
+        <li class="nav-li">
+            <a href="./techCube/techCube.html" target="iframe_right">
+                <i class="nav-icon icon2"></i>
+                科技立方
+            </a>
+        </li>
+        <li class="nav-li dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true" role="button">
+                <i class="nav-icon icon3"></i>
+                科技查重
+                <span class="caret"></span>
+            </a>
+            <ul class="subNav dropdown-menu">
+                <li class="subLi">
+                    <a href="#">项目查重</a>
+                </li>
+                <li class="subLi">
+                    <a href="#">查重记录</a>
+                </li>
+                <li class="subLi">
+                    <a href="#">分析记录</a>
+                </li>
+            </ul>
+        </li>
+        <li class="nav-li dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true" role="button">
+                <i class="nav-icon icon4"></i>
+                科技行业情报
+                <span class="caret"></span>
+            </a>
+            <ul class="subNav dropdown-menu">
+                <li class="subLi"><a href="#">情报中心</a></li>
+                <li class="subLi"><a href="./industryInfo/techStory.html" target="iframe_right">科研故事</a></li>
+            </ul>
+        </li>
+        <li class="nav-li dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true">
+                <i class="nav-icon icon5"></i>
+                科研智汇
+                <span class="caret"></span>
+            </a>
+            <ul class="subNav dropdown-menu">
+                <li class="subLi"><a href="#">一键搜索</a></li>
+                <li class="subLi"><a href="#">科技智搜</a></li>
+            </ul>
+        </li>
+        <li class="nav-li dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true">
+                <i class="nav-icon icon6"></i>
+                科技诚信
+                <span class="caret"></span>
+            </a>
+            <ul class="subNav dropdown-menu">
+                <li class="subLi"><a href="#">诚信总览</a></li>
+                <li class="subLi"><a href="#">个人诚信</a></li>
+                <li class="subLi"><a href="#">企业诚信</a></li>
+            </ul>
+        </li>
+        <li class="nav-li dropdown active">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true">
+                <i class="nav-icon icon7"></i>
+                系统设置
+                <span class="caret"></span>
+            </a>
+            <ul class="subNav dropdown-menu">
+                <li class="subLi"><a href="#">用户管理</a></li>
+                <li class="subLi"><a href="./systemSet/techStorySet.html" target="iframe_right">科研故事管理</a></li>
+                <li class="subLi"><a href="#">角色管理</a></li>
+            </ul>
+        </li>
+    </ul>
 </div>
+
+<script src="../assets/jQuery/jquery.min.js"></script>
+<script src="../assets/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+<script>
+    $(function () {
+        $('.dropdown-toggle').dropdown()
+    });
+</script>
 </body>
 </html>
