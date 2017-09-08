@@ -414,3 +414,8 @@ div.item {
 .honest-list li .time{
     margin-right: 4em;
 }
+
+.td-chart{
+    width: 300px;
+    height: 200px;
+}
