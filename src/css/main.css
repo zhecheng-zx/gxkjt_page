@@ -116,8 +116,8 @@ em,i{font-style:normal;}
     margin-right: 15px;
 }
 
-.mrR80{
-    margin-right: 80px;
+.mrT15{
+    margin-top: 15px;
 }
 
 .techStorySet .row,
@@ -371,7 +371,8 @@ div.item {
 
 .honestyView,
 .personalHonestDetail,
-.honestyResult{
+.honestyResult,
+.techPlatform{
     padding: 30px 40px;
     background: #f6f9fb;
 }
@@ -424,4 +425,24 @@ div.item {
 
 .mrR4{
     margin-right: 4em;
+}
+
+.chart-wrap-small{
+    height: 200px;
+}
+
+.chart-wrap-middle{
+    height: 328px;
+}
+
+.chart-wrap-big{
+    height: 550px;
+}
+
+.techPlatform .chart-wrap{
+    width: 100%;
+}
+
+.techPlatform .panel-body{
+    padding: 0px 10px;
 }
