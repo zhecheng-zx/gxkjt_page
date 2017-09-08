@@ -116,6 +116,10 @@ em,i{font-style:normal;}
     margin-right: 15px;
 }
 
+.mrR80{
+    margin-right: 80px;
+}
+
 .techStorySet .row,
 .techStory .row{
     margin:24px auto 40px;
@@ -276,7 +280,7 @@ article p.detail{
 
 div.item {
     margin-bottom: 20px;
-    padding: 20px 50px;
+    padding: 20px 50px 0px 50px;
     background: #fff;
 }
 
@@ -365,13 +369,48 @@ div.item {
     padding: 10px;
 }
 
-.honestyView{
+.honestyView, .personalHonestDetail{
     padding: 30px 40px;
     background: #f6f9fb;
 }
 
 .item .left,
 .item .right{
-    width: calc(50% - 10px);
+    width: calc(50% - 80px);
+    height: 500px;
     display: inline-block;
+    margin: 20px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.score-explain{
+    margin: 20px 0px 10px 0px;
+}
+
+.score-table{
+    width: 500px;
+}
+
+.table-wrap{
+    padding: 20px;
+}
+
+.table th, .table td {
+    text-align: center;
+    vertical-align: middle!important;
+}
+
+.honest-list{
+    padding: 20px;
+    height: 400px;
+    overflow-y: auto;
+}
+
+.honest-list li{
+    line-height: 40px;
+}
+
+.honest-list li .time{
+    margin-right: 4em;
 }
