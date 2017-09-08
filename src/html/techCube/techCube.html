@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <title>科技立方</title>
     <link href="../../assets/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../assets/bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css">
     <link href="../../css/main.css" rel="stylesheet" rel="stylesheet"/>
 
     <!--[if lt IE 9]>
-    <script src="../vendor/html5shiv_3.7.3/html5shiv.min.js"></script>
-    <script src="../vendor/respond.js_1.4.2/respond.min.js"></script>
+    <script src="../../assets/html5shiv_3.7.3/html5shiv.min.js"></script>
+    <script src="../../assets/respond.js_1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
 <body>
@@ -20,45 +21,212 @@
         <li role="presentation">
             <a href="#guangxi" aria-controls="guangxi" role="tab" data-toggle="tab">广西</a>
         </li>
-        <li role="presentation">
-            <a href="#" aria-controls="" role="tab" data-toggle="tab">广西九张名片</a>
-        </li>
-        <li role="presentation">
-            <a href="#" aria-controls="" role="tab" data-toggle="tab">国内广西科技发展趋势</a>
-        </li>
-        <li role="presentation">
-            <a href="#" aria-controls="" role="tab" data-toggle="tab">项目分析报告</a>
-        </li>
+        <!--<li role="presentation">-->
+            <!--<a href="#" aria-controls="" role="tab" data-toggle="tab">广西九张名片</a>-->
+        <!--</li>-->
+        <!--<li role="presentation">-->
+            <!--<a href="#" aria-controls="" role="tab" data-toggle="tab">国内广西科技发展趋势</a>-->
+        <!--</li>-->
+        <!--<li role="presentation">-->
+            <!--<a href="#" aria-controls="" role="tab" data-toggle="tab">项目分析报告</a>-->
+        <!--</li>-->
     </ul>
     <div class="tab-content">
         <div id="nation" class="tab-pane active" role="tabpanel">
-            <div class="btn-group nationBtnGroup">
-                <button type="button" class="btn btn-default btn-active view">科技纵览</button>
-                <button type="button" class="btn btn-default trend">趋势分析</button>
+            <div class="btn-wrapper">
+                <div class="btn-group nationBtnGroup">
+                    <button type="button" class="btn btn-default btn-active view">科技纵览</button>
+                    <button type="button" class="btn btn-default trend">趋势分析</button>
+                </div>
             </div>
-
             <div class="content">
                 <div id="nation_view">
-                    <div class="nation-chart-one">
+                    <div class="item">
+                        <div class="date-wrapper">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                    请选择年份
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">2017</a></li>
+                                    <li><a href="#">2016</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="itemTitle">
+                            科技资源分布
+                        </div>
                         <div class="chart-wrap" id="chartOne"></div>
                     </div>
-                    <div class="nation-chart-two">
-
+                    <div class="item">
+                        <div class="itemTitle">科技资源分布</div>
+                        <div class="chart-wrap" id="chartTwo"></div>
                     </div>
                 </div>
                 <div id="nation_trend" style="display: none">
-                    趋势分析
+                    <div class="item nation-chart-two">
+                        <div class="chart-wrap" id="chartThree"></div>
+                    </div>
                 </div>
             </div>
         </div>
         <div id="guangxi" class="tab-pane" role="tabpanel">
-            bb
+            <div class="btn-wrapper">
+                <div class="btn-group guangxiBtnGroup">
+                    <button type="button" class="btn btn-default btn-active view">科技纵览</button>
+                    <button type="button" class="btn btn-default trend">趋势分析</button>
+                </div>
+            </div>
+            <div class="content">
+                <div id="guangxi_view">
+                    <div class="item">
+                        <div class="date-wrapper">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                    请选择年份
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">2017</a></li>
+                                    <li><a href="#">2016</a></li>
+                                </ul>
+                            </div>
+                            <div class="btn-group mrL20">
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                    请选择月
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#">4</a></li>
+                                    <li><a href="#">5</a></li>
+                                    <li><a href="#">6</a></li>
+                                    <li><a href="#">7</a></li>
+                                    <li><a href="#">8</a></li>
+                                    <li><a href="#">9</a></li>
+                                    <li><a href="#">10</a></li>
+                                    <li><a href="#">11</a></li>
+                                    <li><a href="#">12</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="itemTitle">
+                            科技资源分布
+                        </div>
+                        <div class="chart-wrap" id="guangxi_chart_one"></div>
+                    </div>
+                    <div class="item">
+                        <div class="itemTitle">广西</div>
+                    </div>
+                    <div class="item-half">
+                        <div class="itemTitle">各分类项目(全省)</div>
+                        <div class="chart-wrap" id="guangxi_chart_two"></div>
+                    </div>
+                    <div class="item-half">
+                        <div class="itemTitle">各分类事业单位数量(全省)</div>
+                        <div class="chart-wrap" id="guangxi_chart_three"></div>
+                    </div>
+                    <div class="item-half">
+                        <div class="itemTitle">各分类专家数量(全省)</div>
+                        <div class="chart-wrap" id="guangxi_chart_four"></div>
+                    </div>
+                    <div class="item-half">
+                        <div class="itemTitle">各分类科技工作者数量(全省)</div>
+                        <div class="chart-wrap" id="guangxi_chart_five"></div>
+                    </div>
+                    <div class="item-half">
+                        <div class="itemTitle">各地市申报项目量</div>
+                        <div class="chart-wrap" id="guangxi_chart_six"></div>
+                    </div>
+                    <div class="item-half">
+                        <div class="itemTitle">各地市企事业单位数量</div>
+                        <div class="chart-wrap" id=""></div>
+                    </div>
+                    <div class="item-half">
+                        <div class="itemTitle">各地市专家数量</div>
+                        <div class="chart-wrap"></div>
+                    </div>
+                    <div class="item-half">
+                        <div class="itemTitle">各地市科技工作者数量</div>
+                        <div class="chart-wrap"></div>
+                    </div>
+                </div>
+                <div id="guangxi_trend">
+                    <div class="item">
+                        <div class="date-wrapper">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                    行业类别
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">教育</a></li>
+                                    <li><a href="#">医疗</a></li>
+                                    <li><a href="#">水污染</a></li>
+                                    <li><a href="#">大数据</a></li>
+                                    <li><a href="#">海洋治理</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="itemTitle">项目趋势</div>
+                        <div class="chart-wrap"></div>
+                    </div>
+                    <div class="item">
+                        <div class="itemTitle">企事业单位</div>
+                        <div class="chart-wrap">
+                            
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="itemTitle">科技工作者</div>
+                        <div class="chart-wrap">
+
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="itemTitle">专家数量</div>
+                        <div class="chart-wrap">
+
+                        </div>
+                    </div>
+                    <div class="search-box row">
+                        <div class="col-md-2">各地市趋势对比:</div>
+                       <div class="col-md-3">
+                           <div class="datetimepicker">
+                               <input type="text" id="datePicker" class="form-control">
+                           </div>
+                       </div>
+                        <div class="col-md-3">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                    行业类别
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">教育</a></li>
+                                    <li><a href="#">医疗</a></li>
+                                    <li><a href="#">水污染</a></li>
+                                    <li><a href="#">大数据</a></li>
+                                    <li><a href="#">海洋治理</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
         </div>
     </div>
 </div>
 
 <script src="../../assets/jQuery/jquery.min.js"></script>
 <script src="../../assets/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+<script src="../../assets/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
 <script src="../../assets/echarts/echarts-all-3.js"></script>
 <script src="../../assets/echarts/china.js"></script>
 <script src="../../js/techCube/techCube.js"></script>
