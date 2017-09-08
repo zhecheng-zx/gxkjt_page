@@ -112,6 +112,10 @@ em,i{font-style:normal;}
     margin-bottom: 20px;
 }
 
+.mrR15{
+    margin-right: 15px;
+}
+
 .techStorySet .row,
 .techStory .row{
     margin:24px auto 40px;
@@ -284,6 +288,79 @@ div.item {
     margin-bottom: 20px;
 }
 
-.item-half:nth-child(odd){
-    margin-right: 15px;
+.col-md-2.text{
+    line-height: 34px;
+    width: 12%;
+}
+
+.techCube .search-box{
+    margin: 20px 0px;
+}
+
+.info-wrap{
+    font-size: 0px;
+    padding: 20px;
+}
+
+.info-quarter{
+    width: 25%;
+    display: inline-block;
+    text-align: center;
+}
+
+.info-quarter .icon-box{
+    width: 100px;
+    height: 100px;
+    background: #f6f9fb;
+    border-radius: 50%;
+    margin: auto;
+    text-align: center;
+    line-height: 125px;
+}
+
+.info-quarter .name{
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+.info-quarter .num{
+    font-size: 24px;
+}
+
+.cube-icon{
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    background-image: url('../images/icon1.png');
+    background-repeat: no-repeat;
+    -webkit-background-size: 120px 30px;
+    background-size: 120px 30px;
+}
+
+.cube-icon.icon1{
+    background-position: 2px 0px;
+}
+
+.cube-icon.icon2{
+    background-position: -31px 0px;
+}
+
+.cube-icon.icon3{
+    background-position: -64px 0px;
+}
+
+.cube-icon.icon4{
+    background-position: -93px 0px;
+}
+
+.chart-box{
+    font-size: 0px;
+    padding: 15px 0px;
+}
+
+.chart-quarter{
+    width: 25%;
+    height: 100px;
+    display: inline-block;
+    padding: 10px;
 }
