@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>广西科技</title>
+    <link rel="stylesheet" href="../../assets/bootstrap-3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/sfq.css">
+    <style>
+        .left_nav{
+            width: 20%;
+            background: #f5f5f5;
+            height: 900px;
+            float: left;
+        }
+        .top{
+            padding: 25px 40px;
+
+        }
+        .icon_img{
+            margin-right: 20px;
+        }
+        .right_content{
+            float: left;
+            width: 80%;
+            padding: 5px;
+        }
+        .ma_span{
+            margin-right: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="top clearfix">
+    <div style="float: left">
+        <img src="../../images/logo.png" alt="">
+    </div>
+    <div style="float: right">
+        <span class="ma_span">
+            <img src="../../images/search.png" alt="">
+        </span>
+        <span class="ma_span">
+            <img src="../../images/home.png" alt="">
+        </span>
+        <span class="ma_span">
+            <img src="../../images/login.png" alt="">
+        </span>
+        <span class="ma_span">
+            <img src="../../images/close.png" alt="">
+        </span>
+    </div>
+</div>
+<div class="left_nav">
+    <dl class="list_dl">
+        <dt class="list_dt">
+            <span class="_after"></span>
+            <p>
+                <img src="../../images/icon2.png" alt="" class="icon_img">
+                科技台
+            </p>
+            <i class="list_dt_icon"></i>
+        </dt>
+        <dt class="list_dt">
+            <span class="_after"></span>
+            <p>
+                <img src="../../images/icon3.png" alt="" class="icon_img">
+                科技立方
+            </p>
+            <i class="list_dt_icon"></i>
+        </dt>
+        <dt class="list_dt">
+            <span class="_after"></span>
+            <p>
+                <img src="../../images/icon4.png" alt="" class="icon_img">
+                科技查重
+            </p>
+            <i class="list_dt_icon"></i>
+        </dt>
+        <dd class="list_dd">
+            <ul>
+                <li class="list_li">项目查重</li>
+                <li class="list_li">查重记录</li>
+                <li class="list_li">分析记录</li>
+            </ul>
+        </dd>
+        <dt class="list_dt">
+            <span class="_after"></span>
+            <p>
+                <img src="../../images/icon5.png" alt="" class="icon_img">
+                科技行业情报
+            </p>
+            <i class="list_dt_icon"></i>
+        </dt>
+        <dd class="list_dd">
+            <ul>
+                <li class="list_li">情报中心</li>
+                <li class="list_li">科研故事</li>
+            </ul>
+        </dd>
+        <dt class="list_dt">
+            <span class="_after"></span>
+            <p>
+                <img src="../../images/icon7.png" alt="" class="icon_img">
+                科技智汇
+            </p>
+            <i class="list_dt_icon"></i>
+        </dt>
+        <dd class="list_dd">
+            <ul>
+                <li class="list_li">一键搜索</li>
+                <li class="list_li">科技智搜</li>
+
+            </ul>
+        </dd>
+        <dt class="list_dt">
+            <span class="_after"></span>
+            <p>
+                <img src="../../images/icon8.png" alt="" class="icon_img">
+                科技诚信
+            </p>
+            <i class="list_dt_icon"></i>
+        </dt>
+        <dd class="list_dd">
+            <ul>
+                <li class="list_li">诚信总览</li>
+                <li class="list_li">个人诚信</li>
+                <li class="list_li">企业诚信</li>
+
+            </ul>
+        </dd>
+        <dt class="list_dt">
+            <span class="_after"></span>
+            <p>
+                <img src="../../images/icon8.png" alt="" class="icon_img">
+                系统设置
+            </p>
+            <i class="list_dt_icon"></i>
+        </dt>
+        <dd class="list_dd">
+            <ul>
+                <li class="list_li">用户管理</li>
+                <li class="list_li">科研故事管理</li>
+                <li class="list_li">角色管理</li>
+
+            </ul>
+        </dd>
+    </dl>
+</div>
+<div class="right_content">
+    1
+</div>
+<div>
+
+</div>
+
+<script src="../../assets/jQuery/jquery.min.js"></script>
+<script src="../../assets/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+
+<script>
+    $(".list_dt").on("click",function () {
+        $('.list_dd').stop();
+        $(this).siblings("dt").removeAttr("id");
+        if($(this).attr("id")=="open"){
+            $(this).removeAttr("id").siblings("dd").slideUp();
+        }else{
+            $(this).attr("id","open").next().slideDown().siblings("dd").slideUp();
+        }
+    });
+</script>
+</body>
+</html>
