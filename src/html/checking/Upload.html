@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>上传项目查重</title>
+    <link href="../../assets/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../css/main.css" rel="stylesheet" rel="stylesheet"/>
+    <link rel="stylesheet" href="../../css/public.css">
+    <!--[if lt IE 9]>
+    <script src="../../assets/html5shiv_3.7.3/html5shiv.min.js"></script>
+    <script src="../../assets/respond.js_1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <style>
+
+        .find_result li div{
+            float: left;
+            text-align: center;
+            font-size: 14px;
+        }
+        .find_result li .w_1{
+            width: 10%;
+        }
+        .find_result li .w_2{
+            width: 30%;
+        }
+        .find_result li .w_3{
+            width: 10%;
+        }
+        .find_result li .w_4{
+            width: 10%;
+        }
+        .find_result li .w_5{
+            width: 10%;
+        }
+        .find_result li .w_7{
+            width: 30%;
+        }
+    </style>
+</head>
+<body>
+<div class="mainPage">
+    <div>
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs has_bot" role="tablist">
+            <li role="presentation" class="active">
+                <a href="#home" aria-controls="home" role="tab" data-toggle="tab">上传项目查重</a>
+            </li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <span class="hasRight">查重项目：上传项目</span>
+            <span class="hasRight">对比项目：2017 医疗</span>
+            <span class="hasRight upload">
+                <img src="../../images/bger.png" alt="">
+                导出Excel表格</span>
+            <ul class="find_result">
+                <li class="first">
+                    <div class="w_1">编号</div>
+                    <div class="w_2">标题</div>
+                    <div class="w_3">负责人</div>
+                    <div class="w_4">状态</div>
+                    <div class="w_5">重复率</div>
+                    <div class="w_7">操作</div>
+                </li>
+                <li>
+                    <div class="w_1">1</div>
+                    <div class="w_2">复杂环境下决策模型若干关键问题的研究</div>
+                    <div class="w_3">张三</div>
+                    <div class="w_4 red_text">待查</div>
+                    <div class="w_5">-</div>
+                    <div class="w_7">
+                        <a href="javascript:;">查看结果</a>
+                        | <a href="javascript:;">删除</a>
+                        | <a href="javascript:;">下载报告</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="w_1">1</div>
+                    <div class="w_2">复杂环境下决策模型若干关键问题的研究</div>
+                    <div class="w_3">张三</div>
+                    <div class="w_4 green_text">正在查重</div>
+                    <div class="w_5">-</div>
+                    <div class="w_7">
+                        <a href="javascript:;">查看结果</a>
+                        | <a href="javascript:;">删除</a>
+                        | <a href="javascript:;">下载报告</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="w_1">1</div>
+                    <div class="w_2">复杂环境下决策模型若干关键问题的研究</div>
+                    <div class="w_3">张三</div>
+                    <div class="w_4">已完成</div>
+                    <div class="w_5">-</div>
+                    <div class="w_7">
+                        <a href="javascript:;">查看结果</a>
+                        | <a href="javascript:;">删除</a>
+                        | <a href="javascript:;">下载报告</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="w_1">1</div>
+                    <div class="w_2">复杂环境下决策模型若干关键问题的研究</div>
+                    <div class="w_3">张三</div>
+                    <div class="w_4 red_text">待查</div>
+                    <div class="w_5">-</div>
+                    <div class="w_7">
+                        <a href="javascript:;">查看结果</a>
+                        | <a href="javascript:;">删除</a>
+                        | <a href="javascript:;">下载报告</a>
+                    </div>
+                </li>
+
+            </ul>
+
+            <div class="center_box">
+                <button type="button" class="btn btn-success btn_w">上一页</button>
+                <button type="button" class="btn btn-success btn_w">下一页</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script src="../../assets/jQuery/jquery.min.js"></script>
+<script src="../../assets/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

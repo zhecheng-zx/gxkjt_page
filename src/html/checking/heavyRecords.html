@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>查重记录</title>
+    <link href="../../assets/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../css/main.css" rel="stylesheet" rel="stylesheet"/>
+
+    <!--[if lt IE 9]>
+    <script src="../../assets/html5shiv_3.7.3/html5shiv.min.js"></script>
+    <script src="../../assets/respond.js_1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <style>
+        .nav-tabs li{
+            margin-right: 0;
+            text-align: center;
+        }
+        .nav-tabs li.active a,
+        .nav-tabs li.active a:active,
+        .nav-tabs li.active a:hover,
+        .nav-tabs li.active a:focus {
+            border-bottom: 4px solid ;
+            padding: 10px 30px;
+        }
+        .nav-tabs li a{
+            padding: 10px 20px;
+        }
+        .has_bot{
+            margin-bottom: 20px;
+        }
+        .left_drop{
+            float: left;
+            margin-right: 20px;
+        }
+        .btn_w{
+            width: 100px;
+            margin-right: 30px;
+        }
+        .find_result{
+            margin-top: 20px;
+        }
+        .find_result .first{
+            background: #3285FF;
+
+            color: #F3ECEE;
+        }
+        .find_result li{
+            width: 100%;
+            padding: 20px 0;
+            overflow: hidden;
+        }
+        .find_result li div{
+            float: left;
+            text-align: center;
+            font-size: 14px;
+        }
+        .find_result li .w_1{
+            width: 5%;
+        }
+        .find_result li .w_2{
+            width: 10%;
+        }
+        .find_result li .w_3{
+            width: 25%;
+        }
+        .find_result li .w_4{
+            width: 25%;
+        }
+        .find_result li .w_5{
+            width: 10%;
+        }
+        .find_result li .w_6{
+            width: 10%;
+        }
+        .find_result li .w_7{
+            width: 15%;
+        }
+        .find_result li:nth-of-type(even){
+            background:#E4E4E4;
+        }
+        .center_box{
+            text-align: center;
+            overflow: hidden;
+            margin: 30px auto;
+        }
+        .red_text{
+            color: red;
+        }
+        a:hover{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+<div class="mainPage">
+    <div>
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs has_bot" role="tablist">
+            <li role="presentation" class="active">
+                <a href="#home" aria-controls="home" role="tab" data-toggle="tab">查重记录</a>
+            </li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div class="dropdown left_drop">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    选择组别
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something</a></li>
+                    <li><a href="#">Separated link</a></li>
+                </ul>
+            </div>
+            <button type="button" class="btn btn-success btn_w">查询</button>
+            <ul class="find_result">
+                <li class="first">
+                    <div class="w_1">编号</div>
+                    <div class="w_2">类型</div>
+                    <div class="w_3">标注</div>
+                    <div class="w_4">查重时间</div>
+                    <div class="w_5">查重人</div>
+                    <div class="w_6">查重进度</div>
+                    <div class="w_7">操作</div>
+                </li>
+                <li>
+                    <div class="w_1">1</div>
+                    <div class="w_2">上传项目</div>
+                    <div class="w_3">[上传项目]广西南宁第十批申报项目</div>
+                    <div class="w_4">2017-7-21 18:12</div>
+                    <div class="w_5">张三</div>
+                    <div class="w_6">2/10</div>
+                    <div class="w_7">
+                        <a href="javascript:;">查看结果</a>|<a href="javascript:;">下载报告</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="w_1">1</div>
+                    <div class="w_2">上传项目</div>
+                    <div class="w_3">[上传项目]广西南宁第十批申报项目</div>
+                    <div class="w_4">2017-7-21 18:12</div>
+                    <div class="w_5">张三</div>
+                    <div class="w_6 red_text">2/10</div>
+                    <div class="w_7">
+                        <a href="javascript:;">查看结果</a>|<a href="javascript:;">下载报告</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="w_1">1</div>
+                    <div class="w_2">上传项目</div>
+                    <div class="w_3">[上传项目]广西南宁第十批申报项目</div>
+                    <div class="w_4">2017-7-21 18:12</div>
+                    <div class="w_5">张三</div>
+                    <div class="w_6 red_text">2/10</div>
+                    <div class="w_7">
+                        <a href="javascript:;">查看结果</a>|<a href="javascript:;">下载报告</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="w_1">1</div>
+                    <div class="w_2">上传项目</div>
+                    <div class="w_3">[上传项目]广西南宁第十批申报项目</div>
+                    <div class="w_4">2017-7-21 18:12</div>
+                    <div class="w_5">张三</div>
+                    <div class="w_6">2/10</div>
+                    <div class="w_7">
+                        <a href="javascript:;">查看结果</a>|<a href="javascript:;">下载报告</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="w_1">1</div>
+                    <div class="w_2">上传项目</div>
+                    <div class="w_3">[上传项目]广西南宁第十批申报项目</div>
+                    <div class="w_4">2017-7-21 18:12</div>
+                    <div class="w_5">张三</div>
+                    <div class="w_6">2/10</div>
+                    <div class="w_7">
+                        <a href="javascript:;">查看结果</a>|<a href="javascript:;">下载报告</a>
+                    </div>
+                </li>
+            </ul>
+
+            <div class="center_box">
+                <button type="button" class="btn btn-success btn_w">上一页</button>
+                <button type="button" class="btn btn-success btn_w">下一页</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script src="../../assets/jQuery/jquery.min.js"></script>
+<script src="../../assets/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

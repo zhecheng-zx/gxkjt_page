@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>科技立方</title>
+    <title>系统项目查重</title>
     <link href="../../assets/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet" />
     <link href="../../css/main.css" rel="stylesheet" rel="stylesheet"/>
 
@@ -10,27 +10,8 @@
     <script src="../vendor/html5shiv_3.7.3/html5shiv.min.js"></script>
     <script src="../vendor/respond.js_1.4.2/respond.min.js"></script>
     <![endif]-->
+    <link rel="stylesheet" href="../../css/public.css">
 
-    <style>
-        .nav-tabs li{
-            margin-right: 0;
-            text-align: center;
-        }
-        .nav-tabs li.active a,
-        .nav-tabs li.active a:active,
-        .nav-tabs li.active a:hover,
-        .nav-tabs li.active a:focus {
-            border-bottom: 4px solid ;
-            padding: 10px 30px;
-        }
-        .nav-tabs li a{
-            padding: 10px 20px;
-        }
-
-        .tab-pane{
-            padding-top: 30px;
-        }
-    </style>
 </head>
 <body>
 <div class="mainPage">
@@ -44,13 +25,651 @@
                 <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">上传项目查重</a>
             </li>
         </ul>
-
         <!-- Tab panes -->
         <div class="tab-content">
             <div role="tabpanel" class="tab-pane active" id="home">
-                查重标注 : <input type="text" class="form-control" placeholder="标注用来记录您此次查重的显示信息">
+                <div>
+                   <span class="has_mr">查重标注 :</span>
+                   <input type="text" class="form-control" placeholder="标注用来记录您此次查重的显示信息">
+               </div>
+                <div class="radio">
+                   <span class="has_mr">查重类型 :</span>
+                   <label class="radio-inline">
+                       <input type="radio" name="inlineRadioOptions" value="option1"> <span class="has_mr">对比查重</span>
+                   </label>
+                   <label class="radio-inline">
+                       <input type="radio" name="inlineRadioOptions"value="option2"> <span class="has_mr">项目分析</span>
+                   </label>
+               </div>
+                <div class="checkbox">
+                   <span class="has_mr">查重字段 :</span>
+                   <label class="checkbox-inline">
+                       <input type="checkbox" value="option1"> <span class="has_mr">项目名称</span>
+                   </label>
+                   <label class="checkbox-inline">
+                       <input type="checkbox" value="option2"> <span class="has_mr">项目总体目标</span>
+                   </label>
+                   <label class="checkbox-inline">
+                       <input type="checkbox" value="option3"> <span class="has_mr">项目主要内容</span>
+                   </label>
+                   <label class="checkbox-inline">
+                       <input type="checkbox" value="option4"> <span class="has_mr">项目考核指标</span>
+                   </label>
+               </div>
+                <div class="radio">
+                    <span class="has_mr">查重范围 :</span>
+                    <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" value="option1"> <span class="has_mr">内网</span>
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions"value="option2"> <span class="has_mr">外网</span>
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <span class="has_mr">分析字段 :</span>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" value="option1"> <span class="has_mr">项目负责人</span>
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" value="option2"> <span class="has_mr">申报单位</span>
+                    </label>
+                    <button type="button" class="btn btn-success r_btn" data-toggle="modal" data-target=".bs-example-modal-sm">提交</button>
+                    <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+                        <div class="modal-dialog modal-sm" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="modal-img"></div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                                    <button type="button" class="btn btn-default">确认</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="aline"></div>
+                <div class="look_warPer">
+                    <div class="look">
+                        <div class="has_mar">
+                            <button type="button" class="btn btn-primary ">查重项目</button>
+                        </div>
+                        <div class="dropdown left_drop">
+                            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                年份
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                            </ul>
+                        </div>
+                        <div class="dropdown left_drop">
+                            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                月份
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                            </ul>
+                        </div>
+                        <div class="dropdown left_drop">
+                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            行业
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu3">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                        </ul>
+                    </div>
+                        <button type="button" class="btn btn-success ">查询</button>
+
+                        <div class="lookList">
+                            <div class="lookItem">
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" value="option1"> <span class="has_mr">就打算尽快的哈数据库的哈萨克和大</span>
+                                </label>
+                            </div>
+                            <div class="lookItem">
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" value="option1"> <span class="has_mr">啊啥是空间的卡上的卡号是的合适的</span>
+                                </label>
+                            </div>
+                            <div class="lookItem">
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" value="option1"> <span class="has_mr">就打算尽快的哈数据库的哈萨克和大</span>
+                                </label>
+                            </div>
+                            <div class="lookItem">
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" value="option1"> <span class="has_mr">啊啥是空间的卡上的卡号是的合适的</span>
+                                </label>
+                            </div>
+                            <div class="lookItem">
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" value="option1"> <span class="has_mr">就打算尽快的哈数据库的哈萨克和大</span>
+                                </label>
+                            </div>
+                            <div class="lookItem">
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" value="option1"> <span class="has_mr">啊啥是空间的卡上的卡号是的合适的</span>
+                                </label>
+                            </div>
+                            <div class="lookItem">
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" value="option1"> <span class="has_mr">就打算尽快的哈数据库的哈萨克和大</span>
+                                </label>
+                            </div>
+                            <div class="lookItem">
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" value="option1"> <span class="has_mr">啊啥是空间的卡上的卡号是的合适的</span>
+                                </label>
+                            </div>
+                            <div class="lookItem">
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" value="option1"> <span class="has_mr">就打算尽快的哈数据库的哈萨克和大</span>
+                                </label>
+                            </div>
+                            <div class="lookItem">
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" value="option1"> <span class="has_mr">啊啥是空间的卡上的卡号是的合适的</span>
+                                </label>
+                            </div>
+                            <div class="lookItem">
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" value="option1"> <span class="has_mr">就打算尽快的哈数据库的哈萨克和大</span>
+                                </label>
+                            </div>
+                            <div class="lookItem">
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" value="option1"> <span class="has_mr">啊啥是空间的卡上的卡号是的合适的</span>
+                                </label>
+                            </div>
+                            <div class="lookItem">
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" value="option1"> <span class="has_mr">就打算尽快的哈数据库的哈萨克和大</span>
+                                </label>
+                            </div>
+                            <div class="lookItem">
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" value="option1"> <span class="has_mr">啊啥是空间的卡上的卡号是的合适的</span>
+                                </label>
+                            </div>
+                        </div>
+                        <nav aria-label="Page navigation" class="page">
+                            <ul class="pagination">
+                                <li>
+                                    <a href="#" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                                <li><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li>
+                                    <a href="#" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="look">
+                        <div class="has_mar">
+                            <button type="button" class="btn btn-primary">对比项目</button>
+                        </div>
+                        <div class="dropdown left_drop">
+                            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                年份
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu4">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                            </ul>
+                        </div>
+                        <div class="dropdown left_drop">
+                            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                月份
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu5">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                            </ul>
+                        </div>
+                        <div class="dropdown left_drop">
+                            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu6" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                行业
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu6">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                            </ul>
+                        </div>
+                        <button type="button" class="btn btn-success ">查询</button>
+
+                        <div class="lookList">
+                            <div class="lookItem">
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" value="option1"> <span class="has_mr">就打算尽快的哈数据库的哈萨克和大</span>
+                                </label>
+                            </div>
+                            <div class="lookItem">
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" value="option1"> <span class="has_mr">啊啥是空间的卡上的卡号是的合适的</span>
+                                </label>
+                            </div>
+                            <div class="lookItem">
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" value="option1"> <span class="has_mr">就打算尽快的哈数据库的哈萨克和大</span>
+                                </label>
+                            </div>
+                            <div class="lookItem">
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" value="option1"> <span class="has_mr">啊啥是空间的卡上的卡号是的合适的</span>
+                                </label>
+                            </div>
+                            <div class="lookItem">
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" value="option1"> <span class="has_mr">就打算尽快的哈数据库的哈萨克和大</span>
+                                </label>
+                            </div>
+                            <div class="lookItem">
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" value="option1"> <span class="has_mr">啊啥是空间的卡上的卡号是的合适的</span>
+                                </label>
+                            </div>
+                            <div class="lookItem">
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" value="option1"> <span class="has_mr">就打算尽快的哈数据库的哈萨克和大</span>
+                                </label>
+                            </div>
+                            <div class="lookItem">
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" value="option1"> <span class="has_mr">啊啥是空间的卡上的卡号是的合适的</span>
+                                </label>
+                            </div>
+                            <div class="lookItem">
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" value="option1"> <span class="has_mr">就打算尽快的哈数据库的哈萨克和大</span>
+                                </label>
+                            </div>
+                            <div class="lookItem">
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" value="option1"> <span class="has_mr">啊啥是空间的卡上的卡号是的合适的</span>
+                                </label>
+                            </div>
+                            <div class="lookItem">
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" value="option1"> <span class="has_mr">就打算尽快的哈数据库的哈萨克和大</span>
+                                </label>
+                            </div>
+                            <div class="lookItem">
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" value="option1"> <span class="has_mr">啊啥是空间的卡上的卡号是的合适的</span>
+                                </label>
+                            </div>
+                            <div class="lookItem">
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" value="option1"> <span class="has_mr">就打算尽快的哈数据库的哈萨克和大</span>
+                                </label>
+                            </div>
+                            <div class="lookItem">
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" value="option1"> <span class="has_mr">啊啥是空间的卡上的卡号是的合适的</span>
+                                </label>
+                            </div>
+                        </div>
+                        <nav aria-label="Page navigation" class="page">
+                            <ul class="pagination">
+                                <li>
+                                    <a href="#" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                                <li><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li>
+                                    <a href="#" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
             </div>
+
+
             <div role="tabpanel" class="tab-pane" id="profile">
+                <div>
+                    <span class="has_mr">查重标注 :</span>
+                    <input type="text" class="form-control" placeholder="标注用来记录您此次查重的显示信息">
+                </div>
+
+                <div class="checkbox">
+                    <span class="has_mr">查重内容 :</span>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" value="option1"> <span class="has_mr">项目名称</span>
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" value="option2"> <span class="has_mr">项目总体目标</span>
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" value="option3"> <span class="has_mr">项目主要内容</span>
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" value="option4"> <span class="has_mr">项目考核指标</span>
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <span class="has_mr">上传项目文件格式为申报项目文件格式 :</span> <span class="blue">下载模板文件</span>
+
+
+                </div>
+                <div class="radio">
+                    <span class="has_mr">查重范围 :</span>
+                    <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" value="option1"> <span class="has_mr">内网</span>
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions"value="option2"> <span class="has_mr">外网</span>
+                    </label>
+
+                    <button type="button" class="btn btn-success r_btn" data-toggle="modal" data-target=".bs-example-modal-lg">提交</button>
+                    <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+                        <div class="modal-dialog modal-lg" role="document">
+                            <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="modal-img"></div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                                        <button type="button" class="btn btn-default">确认</button>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="aline"></div>
+                <div class="look_warPer">
+                    <div class="look">
+                        <div class="has_mar">
+                            <button type="button" class="btn btn-primary ">查重项目</button>
+                        </div>
+                        <div class="dropdown left_drop">
+                            <a class="blue justMargin">上传项目</a>
+                        </div>
+                        <button type="button" class="btn btn-success">查询</button>
+
+                        <div class="lookList">
+                            <div class="lookItem">
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" value="option1"> <span class="has_mr">就打算尽快的哈数据库的哈萨克和大</span>
+                                </label>
+                            </div>
+                            <div class="lookItem">
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" value="option1"> <span class="has_mr">啊啥是空间的卡上的卡号是的合适的</span>
+                                </label>
+                            </div>
+                            <div class="lookItem">
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" value="option1"> <span class="has_mr">就打算尽快的哈数据库的哈萨克和大</span>
+                                </label>
+                            </div>
+                            <div class="lookItem">
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" value="option1"> <span class="has_mr">啊啥是空间的卡上的卡号是的合适的</span>
+                                </label>
+                            </div>
+                            <div class="lookItem">
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" value="option1"> <span class="has_mr">就打算尽快的哈数据库的哈萨克和大</span>
+                                </label>
+                            </div>
+                            <div class="lookItem">
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" value="option1"> <span class="has_mr">啊啥是空间的卡上的卡号是的合适的</span>
+                                </label>
+                            </div>
+                            <div class="lookItem">
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" value="option1"> <span class="has_mr">就打算尽快的哈数据库的哈萨克和大</span>
+                                </label>
+                            </div>
+                            <div class="lookItem">
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" value="option1"> <span class="has_mr">啊啥是空间的卡上的卡号是的合适的</span>
+                                </label>
+                            </div>
+                            <div class="lookItem">
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" value="option1"> <span class="has_mr">就打算尽快的哈数据库的哈萨克和大</span>
+                                </label>
+                            </div>
+                            <div class="lookItem">
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" value="option1"> <span class="has_mr">啊啥是空间的卡上的卡号是的合适的</span>
+                                </label>
+                            </div>
+                            <div class="lookItem">
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" value="option1"> <span class="has_mr">就打算尽快的哈数据库的哈萨克和大</span>
+                                </label>
+                            </div>
+                            <div class="lookItem">
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" value="option1"> <span class="has_mr">啊啥是空间的卡上的卡号是的合适的</span>
+                                </label>
+                            </div>
+                            <div class="lookItem">
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" value="option1"> <span class="has_mr">就打算尽快的哈数据库的哈萨克和大</span>
+                                </label>
+                            </div>
+                            <div class="lookItem">
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" value="option1"> <span class="has_mr">啊啥是空间的卡上的卡号是的合适的</span>
+                                </label>
+                            </div>
+                        </div>
+                        <nav aria-label="Page navigation" class="page">
+                            <ul class="pagination">
+                                <li>
+                                    <a href="#" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                                <li><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li>
+                                    <a href="#" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="look">
+                        <div class="has_mar">
+                            <button type="button" class="btn btn-primary">对比项目</button>
+                        </div>
+                        <div class="dropdown left_drop">
+                            <button class="btn btn-default dropdown-toggle" type="button" id="dropdown4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                年份
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdown4">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                            </ul>
+                        </div>
+                        <div class="dropdown left_drop">
+                            <button class="btn btn-default dropdown-toggle" type="button" id="dropdown5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                月份
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdown5">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                            </ul>
+                        </div>
+                        <div class="dropdown left_drop">
+                            <button class="btn btn-default dropdown-toggle" type="button" id="dropdown6" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                行业
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdown6">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                            </ul>
+                        </div>
+                        <button type="button" class="btn btn-success ">查询</button>
+
+                        <div class="lookList">
+                            <div class="lookItem">
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" value="option1"> <span class="has_mr">就打算尽快的哈数据库的哈萨克和大</span>
+                                </label>
+                            </div>
+                            <div class="lookItem">
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" value="option1"> <span class="has_mr">啊啥是空间的卡上的卡号是的合适的</span>
+                                </label>
+                            </div>
+                            <div class="lookItem">
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" value="option1"> <span class="has_mr">就打算尽快的哈数据库的哈萨克和大</span>
+                                </label>
+                            </div>
+                            <div class="lookItem">
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" value="option1"> <span class="has_mr">啊啥是空间的卡上的卡号是的合适的</span>
+                                </label>
+                            </div>
+                            <div class="lookItem">
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" value="option1"> <span class="has_mr">就打算尽快的哈数据库的哈萨克和大</span>
+                                </label>
+                            </div>
+                            <div class="lookItem">
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" value="option1"> <span class="has_mr">啊啥是空间的卡上的卡号是的合适的</span>
+                                </label>
+                            </div>
+                            <div class="lookItem">
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" value="option1"> <span class="has_mr">就打算尽快的哈数据库的哈萨克和大</span>
+                                </label>
+                            </div>
+                            <div class="lookItem">
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" value="option1"> <span class="has_mr">啊啥是空间的卡上的卡号是的合适的</span>
+                                </label>
+                            </div>
+                            <div class="lookItem">
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" value="option1"> <span class="has_mr">就打算尽快的哈数据库的哈萨克和大</span>
+                                </label>
+                            </div>
+                            <div class="lookItem">
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" value="option1"> <span class="has_mr">啊啥是空间的卡上的卡号是的合适的</span>
+                                </label>
+                            </div>
+                            <div class="lookItem">
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" value="option1"> <span class="has_mr">就打算尽快的哈数据库的哈萨克和大</span>
+                                </label>
+                            </div>
+                            <div class="lookItem">
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" value="option1"> <span class="has_mr">啊啥是空间的卡上的卡号是的合适的</span>
+                                </label>
+                            </div>
+                            <div class="lookItem">
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" value="option1"> <span class="has_mr">就打算尽快的哈数据库的哈萨克和大</span>
+                                </label>
+                            </div>
+                            <div class="lookItem">
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" value="option1"> <span class="has_mr">啊啥是空间的卡上的卡号是的合适的</span>
+                                </label>
+                            </div>
+                        </div>
+                        <nav aria-label="Page navigation" class="page">
+                            <ul class="pagination">
+                                <li>
+                                    <a href="#" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                                <li><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li>
+                                    <a href="#" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
 
             </div>
         </div>
@@ -60,5 +679,9 @@
 
 <script src="../../assets/jQuery/jquery.min.js"></script>
 <script src="../../assets/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+
+<script>
+    $('#myModal').modal('modal')
+</script>
 </body>
 </html>
