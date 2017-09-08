@@ -360,7 +360,18 @@ div.item {
 
 .chart-quarter{
     width: 25%;
-    height: 100px;
+    height: 210px;
     display: inline-block;
     padding: 10px;
+}
+
+.honestyView{
+    padding: 30px 40px;
+    background: #f6f9fb;
+}
+
+.item .left,
+.item .right{
+    width: calc(50% - 10px);
+    display: inline-block;
 }
