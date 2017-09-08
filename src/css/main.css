@@ -36,7 +36,7 @@ em,i{font-style:normal;}
 }
 
 .mainPage{
-    padding: 35px;
+    padding: 35px 35px 20px 35px;
     color: #333;
     font-size: 16px;
 }
@@ -204,6 +204,10 @@ article p.detail{
     margin-top: 25px;
 }
 
+.page-bar{
+    text-align: center;
+}
+
 .noDataWrapper{
     height: 100%;
     width: 100%;
@@ -232,10 +236,13 @@ article p.detail{
     color: #fff;
 }
 
-/*.techCube .item{*/
-    /*padding: 60px 50px 20px 50px;*/
-/*}*/
+.techCube .tab-content{
+    padding: 40px 50px 20px;
+    background: #fff;
+}
 
-/*.techCube .item.first{*/
-    /*padding-top: 40px;*/
-/*}*/
+.chart-wrap{
+    width: 600px;
+    height: 400px;
+    margin: auto;
+}

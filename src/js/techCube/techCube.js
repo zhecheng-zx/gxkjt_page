@@ -15,11 +15,40 @@ $(function () {
         _this.addClass('btn-active');
 
         if(_this.hasClass('view')){
-            $('#nation_vew').show();
+            $('#nation_view').show();
             $('#nation_trend').hide();
         }else {
-            $('#nation_vew').hide();
+            $('#nation_view').hide();
             $('#nation_trend').show();
         }
     });
+
+
+    var option = {
+        tooltip: {
+            trigger: 'item',
+            formatter: '{b}'
+        },
+        series: [
+            {
+                name: '中国',
+                type: 'map',
+                mapType: 'china',
+                selectedMode : 'multiple',
+                label: {
+                    normal: {
+                        show: true
+                    },
+                    emphasis: {
+                        show: true
+                    }
+                },
+                data:[
+                    {name:'广东', selected:true}
+                ]
+            }
+        ]
+    };
+    var chartOne = echarts.init(document.getElementById('chartOne'));
+    chartOne.setOption(option, true);
 });
