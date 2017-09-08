@@ -369,7 +369,9 @@ div.item {
     padding: 10px;
 }
 
-.honestyView, .personalHonestDetail{
+.honestyView,
+.personalHonestDetail,
+.honestyResult{
     padding: 30px 40px;
     background: #f6f9fb;
 }
@@ -403,7 +405,7 @@ div.item {
 
 .honest-list{
     padding: 20px;
-    height: 400px;
+    max-height: 400px;
     overflow-y: auto;
 }
 
@@ -418,4 +420,8 @@ div.item {
 .td-chart{
     width: 300px;
     height: 200px;
+}
+
+.mrR4{
+    margin-right: 4em;
 }
