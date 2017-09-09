@@ -119,8 +119,8 @@
 
                         </select>
                         <button type="button" class="btn btn-success ">查询</button>
-                        <div class="table_list" style="height: 500px;">
-                            <table data-pagination="false" >
+                        <div class="table_list" style="overflow: hidden">
+                            <table data-pagination="false">
 
                             </table>
                         </div>
@@ -215,8 +215,8 @@
                         </div>
                         <button type="button" class="btn btn-success">查询</button>
 
-                        <div class="table_list"  style="height: 500px;">
-                            <table data-pagination="false" >
+                        <div class="table_list">
+                            <table data-pagination="false">
 
                             </table>
                         </div>
@@ -276,6 +276,7 @@
         $('table').bootstrapTable({
             url: '../../json/data2.json',
             dataType: "json",
+            height:500,
             columns: [{
                 field: 'id',
                 title: '项目名称'
