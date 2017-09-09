@@ -11,13 +11,19 @@
     <script src="../../assets/html5shiv_3.7.3/html5shiv.min.js"></script>
     <script src="../../assets/respond.js_1.4.2/respond.min.js"></script>
     <![endif]-->
+    <style>
+
+    </style>
 </head>
 <body>
 <div class="techPlatform">
     <div class="row">
         <div class="col-md-4">
             <div class="panel panel-default">
-                <div class="panel-heading">广西壮族自治区</div>
+                <div class="panel-heading blue" style="color: #3187ff;">
+                    <img src="../../images/sercli.png" alt="">
+                    广西壮族自治区
+                </div>
                 <div class="panel-body">
                     <div class="chart-wrap-big" id="chart-guangxi"></div>
                 </div>
@@ -60,7 +66,10 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="panel panel-default">
-                        <div class="panel-heading">九张名片项目统计</div>
+                        <div class="panel-heading "  style="color: #3187ff">
+                            <img src="../../images/sercli.png" alt="">
+                            九张名片项目统计
+                        </div>
                         <div class="panel-body">
                             <div class="chart-wrap-middle" id="chart-nine-card"></div>
                         </div>
@@ -70,7 +79,7 @@
                     <div class="panel panel-default">
                         <div class="panel-body">
                             <div class="panel-heading"> &nbsp;</div>
-                            <div class="chart-wrap-middle"></div>
+                            <div class="chart-wrap-middle" id="card2"></div>
                         </div>
                     </div>
                 </div>
@@ -80,25 +89,36 @@
     <div class="row">
         <div class="col-md-4">
             <div class="panel panel-default">
-                <div class="panel-heading">全国科技产出</div>
+                <div class="panel-heading"  style="color: #3187ff">
+                    <img src="../../images/sercli.png" alt="">
+                    全国科技产出
+                </div>
                 <div class="panel-body">
-                    <div class="chart-wrap-middle"></div>
+                    <div class="chart-wrap-middle" id="card3"></div>
                 </div>
             </div>
         </div>
         <div class="col-md-4">
             <div class="panel panel-default">
-                <div class="panel-heading">各处室科技数据量</div>
+                <div class="panel-heading"  style="color: #3187ff">
+                    <img src="../../images/sercli.png" alt="">
+                    各处室科技数据量
+                </div>
                 <div class="panel-body">
-                    <div class="chart-wrap-middle"></div>
+                    <div class="chart-wrap-middle" id="card4"></div>
                 </div>
             </div>
         </div>
         <div class="col-md-4">
             <div class="panel panel-default">
-                <div class="panel-heading">全区科技热点</div>
+                <div class="panel-heading"  style="color: #3187ff">
+                    <img src="../../images/sercli.png" alt="">
+                    全区科技热点
+                </div>
                 <div class="panel-body">
-                    <div class="chart-wrap-middle"></div>
+                    <div class="chart-wrap-middle">
+                        <img src="../../images/sdt.png" alt="" style="width: 100%;height: 100%;">
+                    </div>
                 </div>
             </div>
         </div>
@@ -109,5 +129,64 @@
 <script src="../../assets/echarts/echarts-all-3.js"></script>
 <script src="../../assets/echarts/china.js"></script>
 <script src="../../js/techPlatform/techPlatform.js"></script>
+
+<script>
+    var chartOne = echarts.init(document.getElementById('chart-guangxi'));
+    var provinces = ['guangxi'];
+    var provincesText = [ '广西'];
+    function showProvince() {
+        var name = provinces[currentIdx];
+        $.get('../../json/guangxi.json', function (geoJson) {
+            chartOne.hideLoading();
+
+            echarts.registerMap(name, geoJson);
+
+            chartOne.setOption(option = {
+               /* title:{
+                    text: '广西',
+                    left: 'left',
+                    textStyle: {
+                        color: '#20cbff'
+                    }
+                },*/
+                series: [
+                    {
+                        type: 'map',
+                        mapType: name,
+                        label: {
+                            emphasis: {
+                                textStyle: {
+                                    color: '#fff'
+                                }
+                            }
+                        },
+                        itemStyle: {
+                            normal: {
+                                borderColor: '#20cbff',
+                                areaColor: '#fff',
+                                borderWidth: 2,
+                                label:{
+                                    show:true,
+                                    color:'#999',
+                                    textStyle:{
+                                        fontSize:8
+                                    }
+                                },
+                            },
+                            emphasis: {
+                                areaColor: '#20cbff',
+                                borderWidth: 0
+                            }
+                        },
+                        animation: true
+                    }
+                ]
+            });
+        });
+    }
+    var currentIdx = 0;
+    showProvince();
+
+</script>
 </body>
 </html>
