@@ -125,8 +125,13 @@ em,i{font-style:normal;}
     margin:24px auto 40px;
 }
 
-input.bigSize{
-    height: 54px;
+input.bigSize,
+.btn.bigSize{
+    height: 54px !important;
+}
+
+.techStory .btn.bigSize{
+    width: 90px;
 }
 
 .col-md-1.first-col{
