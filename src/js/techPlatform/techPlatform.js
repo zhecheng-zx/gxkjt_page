@@ -256,4 +256,51 @@ $(function () {
     two.setOption(option1, true);
     three.setOption(option1, true);
     four.setOption(option1, true);
+
+
+    var chartOne = echarts.init(document.getElementById('chart-guangxi'));
+    function showProvince() {
+        var name = 'guangxi';
+        $.get('../../json/guangxi.json', function (geoJson) {
+            chartOne.hideLoading();
+
+            echarts.registerMap(name, geoJson);
+
+            chartOne.setOption(option = {
+                series: [
+                    {
+                        type: 'map',
+                        mapType: name,
+                        label: {
+                            emphasis: {
+                                textStyle: {
+                                    color: '#fff'
+                                }
+                            }
+                        },
+                        itemStyle: {
+                            normal: {
+                                borderColor: '#20cbff',
+                                areaColor: '#fff',
+                                borderWidth: 2,
+                                label:{
+                                    show:true,
+                                    color:'#999',
+                                    textStyle:{
+                                        fontSize:8
+                                    }
+                                },
+                            },
+                            emphasis: {
+                                areaColor: '#20cbff',
+                                borderWidth: 0
+                            }
+                        },
+                        animation: true
+                    }
+                ]
+            });
+        });
+    }
+    showProvince();
 });
