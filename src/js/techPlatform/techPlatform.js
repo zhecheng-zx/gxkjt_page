@@ -10,18 +10,18 @@ $(function () {
             trigger: 'item',
             formatter: "{a} <br/>{b}: {c} ({d}%)"
         },
-        legend: {
+        /*legend: {
             orient: 'vertical',
             x: 'left',
             data:['直接访问','邮件营销','联盟广告','视频广告','搜索引擎']
-        },
+        },*/
         series: [
             {
                 name:'访问来源',
                 type:'pie',
                 radius: ['50%', '70%'],
                 avoidLabelOverlap: false,
-                label: {
+                /*label: {
                     normal: {
                         show: false,
                         position: 'center'
@@ -33,10 +33,10 @@ $(function () {
                             fontWeight: 'bold'
                         }
                     }
-                },
+                },*/
                 labelLine: {
                     normal: {
-                        show: false
+                        show: true
                     }
                 },
                 data:[
@@ -110,6 +110,7 @@ $(function () {
     var card3 = echarts.init(document.getElementById('card3'))
     var option4 = {
         color: ['#3398DB'],
+
         tooltip : {
             trigger: 'axis',
             axisPointer : {            // 坐标轴指示器，坐标轴触发有效
@@ -149,7 +150,10 @@ $(function () {
 
     var card4 = echarts.init(document.getElementById('card4'))
     var option5 = {
-
+        tooltip: {
+            trigger: 'item',
+            formatter: "{a} <br/>{b}: {c} ({d}%)"
+        },
         series : [
             {
                 name: '访问来源',
@@ -176,16 +180,74 @@ $(function () {
     card4.setOption(option5, true);
 
     var option1 = {
-
-        series: [
-            {
-                name: '业务指标',
-                type: 'gauge',
-                detail: {formatter:'{value}%',fontSize:16},
-                data: [{value: 50, name: ''}]
+        "title": {
+            "text": "诚信指数",
+            "x": "center",
+            "top": 10
+        },
+        "toolbox": {
+            "show": false,
+            "feature": {
+                "mark": {
+                    "show": true
+                },
+                "restore": {
+                    "show": true
+                },
+                "saveAsImage": {
+                    "show": true
+                }
             }
-        ]
+        },
+        "series": [{
+            "name": "指标",
+            "type": "gauge",
+            "startAngle": 180, //总的360，设置180就是半圆
+            "endAngle": 0,
+            "center": ["50%", "70%"], //整体的位置设置
+            "radius": 100,
+            "axisLine": {
+                "lineStyle": {
+                    "width": 40, //柱子的宽度
+                    "color": [[0.298, "#03cbff"], [1, "#f0f0f0"]] //0.298是百分比的比例值（小数），还有对应两个颜色值
+                }
+            },
+            "axisTick": {
+                "show": false
+            },
+            "axisLabel": {
+                "show": true,
+                "margin":-10
+            },
+            "splitLine": {
+                "show": false
+            },
+            "pointer": {
+                "width": 5, //指针的宽度
+                "length": "80%", //指针长度，按照半圆半径的百分比
+                "color": "#2d99e2"
+            },
+            "title": {
+                "show": true,
+                "offsetCenter": [0, "20%"], //标题位置设置
+                "textStyle": { //标题样式设置
+                    "color": "#2d99e2",
+                    "fontSize": 15,
+                    "fontFamily": "微软雅黑",
+                    "fontWeight": "bold"
+                }
+            },
+            "detail": {
+                "show": false
+            },
+            "data": [{ //显示数据
+                "value": 29.8,
+                "name": " 29.8",
+            }]
+        }]
     };
+
+
     var one = echarts.init(document.getElementById('one')),
         two = echarts.init(document.getElementById('two')),
         three = echarts.init(document.getElementById('three')),

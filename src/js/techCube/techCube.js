@@ -73,10 +73,48 @@ $(function () {
             }
         ]
     };
+
+    var option2 = {
+
+        legend: {
+            left:'left',
+            data: ['全国科技概览']
+        },
+        radar: {
+            // shape: 'circle',
+            name: {
+                textStyle: {
+                    color: '#fff',
+                    backgroundColor: '#999',
+                    borderRadius: 3,
+                    padding: [3, 5]
+                }
+            },
+            indicator: [
+                { name: '企事业单位（家）', max: 6500},
+                { name: '科技工作者（人）', max: 16000},
+                { name: '经费支出（亿）', max: 30000},
+
+            ]
+        },
+        series: [{
+            name: '全国科技概览',
+            type: 'radar',
+            // areaStyle: {normal: {}},
+            data : [
+                {
+                    value : [4300, 10000, 28000, 35000, 50000, 19000],
+                    name : '全国科技概览'
+                }
+
+            ]
+        }]
+    };
     var chartOne = echarts.init(document.getElementById('chartOne'));
     chartOne.setOption(option, true);
+
     var chartTwo = echarts.init(document.getElementById('chartTwo'));
-    chartTwo.setOption(option, true);
+    chartTwo.setOption(option2, true);
 
 
     $('#datePicker').datetimepicker({
