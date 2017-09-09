@@ -34,6 +34,10 @@
             height: 18px;
             background: green;
         }
+
+        .fileName{
+            font-size: 12px;
+        }
     </style>
 </head>
 <body>
@@ -245,7 +249,11 @@
                             <input id="fileupload" type="file" name="files[]" multiple>
                         </span>
                         <button type="button" class="btn btn-default mrL20" id="uploadBtn">上传</button>
-
+                        <span class="fileName mrL20" id="fileName"></span>
+                        <div id="progress" class="progress checking-progress" style="display: none;">
+                            <div class="progress-bar progress-bar-success"></div>
+                        </div>
+                        
                         <div class="table_list">
                             <table data-pagination="false">
 
@@ -331,6 +339,7 @@
             dataType: 'json',
             autoUpload: false,
             acceptFileTypes: /(\.|\/)(xls|xlsx)$/i,
+            maxNumberOfFiles: 1,
             maxFileSize: 1
         }).on('fileuploadadd',function (e, data) {
             console.log(data)
@@ -340,23 +349,35 @@
                 alert('每次只能上传一个文件');
                 return false;
             }
+            var file = data.files[0];
+            if(file.name.indexOf('xlsx') < 0 && file.name.indexOf('xls') < 0){
+                alert('请上传正确格式的文件!');
+                return false;
+            }
+
+            $('#fileName').text(file.name);
             filesList.push(data.files[0]);
         }).on('fileuploaddone', function (e, data) {
             //上传完成后的方法 调用addData()方法;
 
             //走完之后 清空文件列表
             filesList = [];
+            $('#fileName').text('');
         }).on('fileuploadfail', function (e, data) {
             //上传失败的方法\
+            $('#fileName').text('');
             filesList = [];
             console.error(e);
             alert('上传失败')
+        }).on('fileuploadprogressall', function (e, data) {
+            var progress = parseInt(data.loaded / data.total * 100, 10);
+            $('#progress .progress-bar').css('width', progress + '%');
         });
 
         $('#uploadBtn').click(function () {
             console.log(filesList)
             if(filesList.length == 0){
-                console.log('请选择文件');
+                alert('请选择文件');
                 return ;
             }
             $('#fileupload').fileupload('send', {files: filesList});
