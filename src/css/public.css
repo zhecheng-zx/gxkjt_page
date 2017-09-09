@@ -202,5 +202,5 @@ a:hover{
 .table_list{
     width:90%;
     overflow: hidden;
-    padding: 50px 50px 0 50px;
+    padding: 50px 50px 0 0px;
 }
