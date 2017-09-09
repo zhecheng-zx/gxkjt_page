@@ -483,27 +483,13 @@ div.item {
 }
 
 .article-media{
-    text-align: center;
-}
-
-.swiper-container{
-    width: 600px;
-    height: 300px;
-    margin: auto;
-}
-
-.swiper-slide img{
-    max-height: 300px;
-    max-width: 600px;
+    margin: 15px auto;
+    text-align: center;/*不加这个, 该容器里的video不能居中显示*/
 }
 
 .article-media video{
     height: 350px;
     width: auto;
-}
-
-.article-media{
-    margin: 15px auto;
 }
 
 .articleDetail article .article-content{
@@ -607,6 +593,6 @@ div.item {
     color: #666;
 }
 
-.article-media.slideBox{
+.infoCenter .article-media.slideBox{
     margin-left: 0px;
 }
