@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>系统项目查重</title>
-    <link href="../../assets/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../assets/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../../assets/upload/jquery.fileupload.css">
     <link href="../../css/main.css" rel="stylesheet" rel="stylesheet"/>
     <link rel="stylesheet" href="../../css/laydate.css">
 
@@ -14,8 +15,21 @@
     <link rel="stylesheet" href="../../css/public.css">
     <link rel="stylesheet" href="../../assets/bootstrop_table/bootstrap-table.min.css">
     <style>
-        .demo-input{padding-left: 10px; height: 38px; min-width: 262px; line-height: 38px; border: 1px solid #e6e6e6;  background-color: #fff;  border-radius: 2px;}
-        .demo-footer a{padding: 0 5px; color: #01AAED;}
+        .demo-input {
+            padding-left: 10px;
+            height: 38px;
+            min-width: 262px;
+            line-height: 38px;
+            border: 1px solid #e6e6e6;
+            background-color: #fff;
+            border-radius: 2px;
+        }
+
+        .demo-footer a {
+            padding: 0 5px;
+            color: #01AAED;
+        }
+
         .bar {
             height: 18px;
             background: green;
@@ -49,7 +63,7 @@
                             <span class="has_mr">对比查重</span>
                         </label>
                         <label class="radio-inline">
-                            <input type="radio" name="inlineRadioOptions"value="option2">
+                            <input type="radio" name="inlineRadioOptions" value="option2">
                             <span class="has_mr">项目分析</span>
                         </label>
                     </div>
@@ -71,10 +85,12 @@
                     <div class="radio">
                         <span class="has_mr">查重范围 :</span>
                         <label class="radio-inline">
-                            <input type="radio" name="inlineRadioOptions" value="option1"> <span class="has_mr">内网</span>
+                            <input type="radio" name="inlineRadioOptions" value="option1"> <span
+                                class="has_mr">内网</span>
                         </label>
                         <label class="radio-inline">
-                            <input type="radio" name="inlineRadioOptions"value="option2"> <span class="has_mr">外网</span>
+                            <input type="radio" name="inlineRadioOptions" value="option2"> <span
+                                class="has_mr">外网</span>
                         </label>
                     </div>
                     <div class="checkbox">
@@ -85,8 +101,11 @@
                         <label class="checkbox-inline">
                             <input type="checkbox" value="option2"> <span class="has_mr">申报单位</span>
                         </label>
-                        <button type="button" class="btn btn-success r_btn" data-toggle="modal" data-target=".bs-example-modal-sm">提交</button>
-                        <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+                        <button type="button" class="btn btn-success r_btn" data-toggle="modal"
+                                data-target=".bs-example-modal-sm">提交
+                        </button>
+                        <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog"
+                             aria-labelledby="mySmallModalLabel">
                             <div class="modal-dialog modal-sm" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header">
@@ -118,7 +137,7 @@
                         <select name='make' class="sel">
                             <option selected>行业</option>
                             <option value='acura'>科技</option>
-                            <option value='chrysler' >医疗</option>
+                            <option value='chrysler'>医疗</option>
                             <option value='dodge'>水污染</option>
 
                         </select>
@@ -138,14 +157,14 @@
                         <select name='make' class="sel">
                             <option selected>行业</option>
                             <option value='acura'>科技</option>
-                            <option value='chrysler' >医疗</option>
+                            <option value='chrysler'>医疗</option>
                             <option value='dodge'>水污染</option>
 
                         </select>
                         <button type="button" class="btn btn-success ">查询</button>
 
                         <div class="table_list">
-                            <table data-pagination="true" >
+                            <table data-pagination="true">
 
                             </table>
                         </div>
@@ -180,14 +199,19 @@
                     <div class="radio">
                         <span class="has_mr">查重范围 :</span>
                         <label class="radio-inline">
-                            <input type="radio" name="inlineRadioOptions" value="option1"> <span class="has_mr">内网</span>
+                            <input type="radio" name="inlineRadioOptions" value="option1"> <span
+                                class="has_mr">内网</span>
                         </label>
                         <label class="radio-inline">
-                            <input type="radio" name="inlineRadioOptions" value="option2"> <span class="has_mr">外网</span>
+                            <input type="radio" name="inlineRadioOptions" value="option2"> <span
+                                class="has_mr">外网</span>
                         </label>
 
-                        <button type="button" class="btn btn-success r_btn" data-toggle="modal" data-target=".bs-example-modal-lg">提交</button>
-                        <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+                        <button type="button" class="btn btn-success r_btn" data-toggle="modal"
+                                data-target=".bs-example-modal-lg">提交
+                        </button>
+                        <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog"
+                             aria-labelledby="myLargeModalLabel">
                             <div class="modal-dialog modal-lg" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header">
@@ -215,13 +239,12 @@
                             <button type="button" class="btn btn-primary ">查重项目</button>
                         </div>
 
-
-
-                        <input id="fileupload" type="file" name="files[]" multiple>
-                        <div id="progress">
-                            <div class="bar" style="width: 0%;"></div>
-                        </div>
-
+                        <span class="btn btn-success fileinput-button">
+                            <i class="glyphicon glyphicon-plus"></i>
+                            <span>选择文件</span>
+                            <input id="fileupload" type="file" name="files[]" multiple>
+                        </span>
+                        <button type="button" class="btn btn-default mrL20" id="uploadBtn">上传</button>
 
                         <div class="table_list">
                             <table data-pagination="false">
@@ -239,14 +262,14 @@
                         <select name='make' class="sel">
                             <option selected>行业</option>
                             <option value='acura'>科技</option>
-                            <option value='chrysler' >医疗</option>
+                            <option value='chrysler'>医疗</option>
                             <option value='dodge'>水污染</option>
 
                         </select>
                         <button type="button" class="btn btn-success ">查询</button>
 
                         <div class="table_list">
-                            <table data-pagination="true" >
+                            <table data-pagination="true">
 
                             </table>
                         </div>
@@ -287,7 +310,7 @@
         $('table').bootstrapTable({
             url: '../../json/data2.json',
             dataType: "json",
-            height:500,
+            height: 500,
             columns: [{
                 field: 'id',
                 title: '项目名称'
@@ -301,22 +324,49 @@
         });
     });
 
+    var filesList = [];
     $(function () {
         $('#fileupload').fileupload({
+            url: '', //后台上传路径
             dataType: 'json',
-            add: function (e, data) {
-                console.log(data)
-                //添加到table
-            },
-            done: function (e, data) {
-                console.log(data)
-                $.each(data.result.files, function (index, file) {
-                    $('<p/>').text(file.name).appendTo(document.body);
-                });
+            autoUpload: false,
+            acceptFileTypes: /(\.|\/)(xls|xlsx)$/i,
+            maxFileSize: 1
+        }).on('fileuploadadd',function (e, data) {
+            console.log(data)
+            var fileSize = data.originalFiles.length;
+            if(fileSize > 1){
+                filesList = [];
+                alert('每次只能上传一个文件');
+                return false;
             }
+            filesList.push(data.files[0]);
+        }).on('fileuploaddone', function (e, data) {
+            //上传完成后的方法 调用addData()方法;
+
+            //走完之后 清空文件列表
+            filesList = [];
+        }).on('fileuploadfail', function (e, data) {
+            //上传失败的方法\
+            filesList = [];
+            console.error(e);
+            alert('上传失败')
         });
+
+        $('#uploadBtn').click(function () {
+            console.log(filesList)
+            if(filesList.length == 0){
+                console.log('请选择文件');
+                return ;
+            }
+            $('#fileupload').fileupload('send', {files: filesList});
+        })
     });
 
+    
+    function addData() {
+        //TODO 每次添加前 要先把table清空
+    }
 </script>
 </body>
 </html>
