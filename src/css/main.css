@@ -120,6 +120,14 @@ em,i{font-style:normal;}
     margin-top: 15px;
 }
 
+.mrT10{
+    margin-top: 10px;
+}
+
+.mrB10{
+    margin-bottom: 10px;
+}
+
 .techStorySet .row,
 .techStory .row{
     margin:24px auto 40px;
@@ -520,27 +528,41 @@ div.item {
 .search-select{
     margin-right: 10px;
     border: 1px solid #cecece;
-    font-size: 14px;
+    font-size: 0;
+}
+
+.search-select .box{
+    margin: 10px 0px;
 }
 
 .search-select .text{
+    font-size: 14px;
     padding: 10px 20px;
     border-bottom: 1px solid #cecece;
 }
 
-.search-select ul{
-    margin: 10px auto;
+.search-select .left{
+    font-size: 14px;
+    display: inline-block;
+    width: 75px;
+    text-align: right;
+    vertical-align: top;
+    line-height: 30px;
+    margin-right: 10px;
+}
+
+.search-select .right{
+    font-size: 14px;
+    display: inline-block;
+    width: calc(100% - 85px);
+    vertical-align: top;
+    line-height: 30px;
 }
 
 .search-select ul li{
     display: inline-block;
-    padding: 5px 10px;
+    padding: 1px 10px;
     cursor: pointer;
-}
-
-.search-select li.first{
-    text-align: right;
-    width: 100px;
 }
 
 .search-select li.selected{
@@ -549,7 +571,7 @@ div.item {
     border-radius: 5px;
 }
 
-.content-wrapper .left-part{
+.infoCenter .left-part{
     display: inline-block;
     width: calc(100% - 400px);
     vertical-align: top;
@@ -557,11 +579,34 @@ div.item {
     border-right: 1px solid #cecece;
 }
 
-.content-wrapper .right-part{
+.infoCenter .right-part{
     display: inline-block;
     width: 350px;
     vertical-align: top;
     margin-top: 15px;
     margin-left: 15px;
     min-height: 500px;
+}
+
+.tech-hot .title{
+    color: #3385ff;
+    margin-bottom: 10px;
+}
+
+.hot-list a{
+    font-size: 14px;
+    line-height: 30px;
+    margin: 15px 0px;
+    color: #666;
+    text-decoration: none;
+}
+
+.hot-list a:hover,
+.hot-list a:active,
+.hot-list a:focus{
+    color: #666;
+}
+
+.article-media.slideBox{
+    margin-left: 0px;
 }
