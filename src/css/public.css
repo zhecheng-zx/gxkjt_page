@@ -179,3 +179,12 @@ a:hover{
     width: 180px;
     background: #3385ff;
 }
+
+.sel{
+    display: inline-block;
+    height: 35px;
+    width: 80px;
+    border: 1px solid #999999;
+    border-radius: 5px;
+    line-height: 35px;
+}
