@@ -11,6 +11,8 @@
     <script src="../../assets/respond.js_1.4.2/respond.min.js"></script>
     <![endif]-->
     <script src="../../assets/echarts/echarts-all-3.js"></script>
+
+    <link rel="stylesheet" href="../../assets/bootstrop_table/bootstrap-table.min.css">
     <style>
         .lookList{
             border:none;
@@ -143,68 +145,18 @@
             <div class="look_warPer">
 
                 <!--左边表格-->
-                <div class="look">
 
-                    <div class="lookList">
-                        <p>分析项目别表：(每页20个)</p>
-                        <table class="find_result">
-                            <tr class="first">
-                                <td class="w_4">编号</td>
-                                <td class="w_5">标题</td>
-                            </tr>
-                            <tr>
-                                <td class="w_4">XP127-9</td>
-                                <td class="w_5">复杂环境下决策模型若干关键问题的研究</td>
-                            </tr>
-                            <tr>
-                                <td class="w_4">XP127-9</td>
-                                <td class="w_5">复杂环境下决策模型若干关键问题的研究</td>
-                            </tr>
-                            <tr>
-                                <td class="w_4">XP127-9</td>
-                                <td class="w_5">复杂环境下决策模型若干关键问题的研究</td>
-                            </tr>
-                            <tr>
-                                <td class="w_4">XP127-9</td>
-                                <td class="w_5">复杂环境下决策模型若干关键问题的研究</td>
-                            </tr>
+                <div style="width: 90%; margin: 50px auto">
+                    <p style="margin-bottom: 30px">分析项目别表：(每页10个)</p>
+                    <table data-pagination="true" id="tab">
 
-                        </table>
-                    </div>
+                    </table>
                 </div>
-                <!--右边图表-->
-                <div class="look">
-                    <div class="lookList">
-                        <table class="find_result" style="margin-top: 40px">
-                            <tr class="first">
-                                <td class="w_4">编号</td>
-                                <td class="w_5">标题</td>
-                            </tr>
-                            <tr>
-                                <td class="w_4">XP127-9</td>
-                                <td class="w_5">复杂环境下决策模型若干关键问题的研究</td>
-                            </tr>
-                            <tr>
-                                <td class="w_4">XP127-9</td>
-                                <td class="w_5">复杂环境下决策模型若干关键问题的研究</td>
-                            </tr>
-                            <tr>
-                                <td class="w_4">XP127-9</td>
-                                <td class="w_5">复杂环境下决策模型若干关键问题的研究</td>
-                            </tr>
-                            <tr>
-                                <td class="w_4">XP127-9</td>
-                                <td class="w_5">复杂环境下决策模型若干关键问题的研究</td>
-                            </tr>
 
-                        </table>
-                    </div>
-                </div>
+
+
             </div>
-            <div class="center_box">
-                <button type="button" class="btn btn-success btn_w">上一页</button>
-                <button type="button" class="btn btn-success btn_w">下一页</button>
-            </div>
+
         </div>
 
     </div>
@@ -212,6 +164,7 @@
 
 <script src="../../assets/jQuery/jquery.min.js"></script>
 <script src="../../assets/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+<script src="../../assets/bootstrop_table/bootstrap-table.min.js"></script>
 
 <script type="text/javascript">
     // 基于准备好的dom，初始化echarts实例
@@ -313,6 +266,22 @@
     };
     // 使用刚指定的配置项和数据显示图表。
     myChart2.setOption(option2);
+
+    $(function () {
+
+        $('#tab').bootstrapTable({
+            url: '../../json/data2.json',
+            dataType: "json",
+            height:500,
+            columns: [{
+                field: 'id',
+                title: '项目名称'
+            }, {
+                field: 'price',
+                title: '标题'
+            }]
+        });
+    });
 </script>
 </body>
 </html>

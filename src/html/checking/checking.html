@@ -6,16 +6,20 @@
     <link href="../../assets/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet" />
     <link href="../../css/main.css" rel="stylesheet" rel="stylesheet"/>
     <link rel="stylesheet" href="../../css/laydate.css">
+
     <!--[if lt IE 9]>
     <script src="../vendor/html5shiv_3.7.3/html5shiv.min.js"></script>
     <script src="../vendor/respond.js_1.4.2/respond.min.js"></script>
     <![endif]-->
     <link rel="stylesheet" href="../../css/public.css">
-
     <link rel="stylesheet" href="../../assets/bootstrop_table/bootstrap-table.min.css">
     <style>
         .demo-input{padding-left: 10px; height: 38px; min-width: 262px; line-height: 38px; border: 1px solid #e6e6e6;  background-color: #fff;  border-radius: 2px;}
         .demo-footer a{padding: 0 5px; color: #01AAED;}
+        .bar {
+            height: 18px;
+            background: green;
+        }
     </style>
 </head>
 <body>
@@ -210,10 +214,14 @@
                         <div class="has_mar">
                             <button type="button" class="btn btn-primary ">查重项目</button>
                         </div>
-                        <div class="dropdown left_drop">
-                            <a class="blue justMargin">上传项目</a>
+
+
+
+                        <input id="fileupload" type="file" name="files[]" multiple>
+                        <div id="progress">
+                            <div class="bar" style="width: 0%;"></div>
                         </div>
-                        <button type="button" class="btn btn-success">查询</button>
+
 
                         <div class="table_list">
                             <table data-pagination="false">
@@ -250,11 +258,14 @@
 
     </div>
 </div>
-<script src="../../js/laDate/laydate.js"></script>
+
 <script src="../../assets/jQuery/jquery.min.js"></script>
 <script src="../../assets/bootstrap-3.3.7/js/bootstrap.min.js"></script>
-
+<script src="../../js/laDate/laydate.js"></script>
 <script src="../../assets/bootstrop_table/bootstrap-table.min.js"></script>
+<script src="../../assets/upload/jquery.ui.widget.js"></script>
+<script src="../../assets/upload/jquery.iframe-transport.js"></script>
+<script src="../../assets/upload/jquery.fileupload.js"></script>
 <script>
 
     laydate.render({
@@ -290,6 +301,21 @@
         });
     });
 
+    $(function () {
+        $('#fileupload').fileupload({
+            dataType: 'json',
+            add: function (e, data) {
+                console.log(data)
+                //添加到table
+            },
+            done: function (e, data) {
+                console.log(data)
+                $.each(data.result.files, function (index, file) {
+                    $('<p/>').text(file.name).appendTo(document.body);
+                });
+            }
+        });
+    });
 
 </script>
 </body>

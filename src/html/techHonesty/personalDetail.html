@@ -11,6 +11,9 @@
     <script src="../../assets/html5shiv_3.7.3/html5shiv.min.js"></script>
     <script src="../../assets/respond.js_1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script src="../../assets/echarts/echarts-all-3.js"></script>
+    <script src="../../assets/echarts/echarts-liquidfill.min.js"></script>
+
 </head>
 <body>
 <div class="personalHonestDetail">
@@ -20,8 +23,7 @@
             <table class="table table-bordered">
                 <tr>
                     <td rowspan="3" class="td-chart">
-                        <p>
-                        </p>
+                        <div id="main" style="width: 300px;height:200px;"></div>
                     </td>
                     <td>
                         姓名：张三三
@@ -119,5 +121,20 @@
         </div>
     </div>
 </div>
+
+<script>
+    var myChart = echarts.init(document.getElementById('main'));
+
+    // 指定图表的配置项和数据
+    var option = {
+        series: [{
+            type: 'liquidFill',
+            data: [0.6, 0.5, 0.4, 0.3],
+            radius: '80%'
+        }]
+    };
+    // 使用刚指定的配置项和数据显示图表。
+    myChart.setOption(option);
+</script>
 </body>
 </html>
