@@ -54,18 +54,13 @@
 
         <!-- Tab panes -->
         <div class="tab-content">
-            <div class="dropdown left_drop">
-                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                    选择组别
-                    <span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something</a></li>
-                    <li><a href="#">Separated link</a></li>
-                </ul>
-            </div>
+            <select name='make' class="sel">
+                <option selected>选择组别</option>
+                <option value='acura'>科技</option>
+                <option value='chrysler'>医疗</option>
+                <option value='dodge'>水污染</option>
+
+            </select>
             <button type="button" class="btn btn-success btn_w">查询</button>
             <ul class="find_result">
                 <li class="first">
