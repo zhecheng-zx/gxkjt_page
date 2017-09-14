@@ -176,8 +176,166 @@ $(function () {
             }
         ]
     };
-
     card4.setOption(option5, true);
+
+
+    var markLineOpt = {};
+
+    var bg = {
+        name: '相关背景',
+        type: 'pie',
+        avoidLabelOverlap: false,
+        labelLine: {
+            normal: {
+                show: false
+            }
+        },
+        data: [{
+            value: 1
+        }],
+        animation: false
+    };
+
+    var dot = {
+        name: '强相关',
+        type: 'scatter',
+        xAxisIndex: 0,
+        yAxisIndex: 0,
+        symbol: 'circle',
+        symbolSize: 40,
+        label: {
+            normal: {
+                show: true,
+                textStyle: {
+                    color: '#555'
+                },
+                position: 'bottom',
+                formatter: function(param) {
+                    return param.data[2];
+                },
+            },
+        },
+        itemStyle: {
+            normal: {
+                color: '#00E5B1'
+            },
+        },
+
+        data: [],
+    }
+
+    var datalist = [
+        /**
+         * x坐标
+         * y坐标
+         * name 标签名称
+         * symbolSize 点大小
+         * 趋势，1:上升 0:下降
+         */
+        [14, 16, 'VR', 50, 1],
+        [70, 50, 'AR', 30, 1],
+        [90, 50, '自动驾驶', 20, 1],
+        [85, 90, '大数据', 47, 1],
+        [52, 83, '黑盒子', 50, 1],
+        [72, 83, '人工智能', 20, 0],
+        [47, 110, '全自动', 30, 0]
+    ]
+
+    var dataMap = datalist.map((item) => {
+        return Object.assign({}, dot, {
+            symbolSize: item[3],
+            itemStyle: {
+                normal: {
+                    color: item[4]==1? '#00E5B1':'#FFB041'
+                },
+            },
+            data: [
+                item
+            ]
+        })
+    });
+
+    var hot = echarts.init(document.getElementById('hot_page'))
+    var card_hot = {
+        title: {
+            text: '',
+            x: '35%',
+            y: 0
+        },
+        tooltip: {
+            trigger: 'item',
+            backgroundColor: '#fff',
+            textStyle: {
+                color: '#999'
+            },
+            formatter: (item) => {
+                if (item.data[2]) {
+                    return `${item.data[2]}<br/>  数量:${item.data[3]}`;
+                }
+            }
+        },
+        xAxis: [{
+            gridIndex: 0,
+            type: 'value',
+            show: false,
+            min: 0,
+            max: 100,
+            nameLocation: 'middle',
+            nameGap: 30
+        }],
+        yAxis: [{
+            gridIndex: 0,
+            min: 0,
+            show: false,
+            max: 100,
+            nameLocation: 'middle',
+            nameGap: 30,
+        }],
+        series: [
+            ...dataMap, {
+                name: '弱相关',
+                type: 'scatter',
+                xAxisIndex: 0,
+                yAxisIndex: 0,
+                symbol: 'circle',
+                symbolSize: 120,
+                label: {
+                    normal: {
+                        show: true,
+                        textStyle: {
+                            fontSize: '20'
+                        },
+                        formatter: function(param) {
+                            return param.data[2];
+                        },
+                    },
+
+                },
+                itemStyle: {
+                    normal: {
+                        color: '#00C0FF'
+                    }
+                },
+                data: [
+                    [50, 50, '互联网经济', '5']
+                ],
+                markLine: markLineOpt
+            },
+            Object.assign({}, bg, {
+                radius: ['0%', '100%'],
+                itemStyle: {
+                    normal: {
+                        color: '#f5f5f5',
+                    },
+                    emphasis: {
+                        color: '#f5f5f5',
+                    }
+                }
+            }),
+
+        ]
+    };
+    hot.setOption(card_hot, true);
 
     var option1 = {
         "title": {
@@ -205,10 +363,10 @@ $(function () {
             "startAngle": 180, //总的360，设置180就是半圆
             "endAngle": 0,
             "center": ["50%", "70%"], //整体的位置设置
-            "radius": 100,
+            "radius": 70,
             "axisLine": {
                 "lineStyle": {
-                    "width": 40, //柱子的宽度
+                    "width": 30, //柱子的宽度
                     "color": [[0.298, "#03cbff"], [1, "#f0f0f0"]] //0.298是百分比的比例值（小数），还有对应两个颜色值
                 }
             },
@@ -216,7 +374,7 @@ $(function () {
                 "show": false
             },
             "axisLabel": {
-                "show": true,
+                "show": false,
                 "margin":-10
             },
             "splitLine": {
