@@ -378,8 +378,21 @@ $(function () {
             "axisTick": {
                 "show": false
             },
-            "axisLabel": {
-                "show": false
+            axisLabel: {
+                distance: -10,
+                textStyle: {
+                    color: "#00B0F0",
+                    fontSize: "12",
+                },
+                formatter: function(e) {
+                    switch (e + "") {
+                        case "0":
+                            return "0";
+                        case '950':
+                            return '950';
+
+                    }
+                }
             },
             "splitLine": {
                 "show": false
