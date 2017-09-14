@@ -24,7 +24,18 @@
             border-left: 10px solid #3385ff;
             padding: 5px;
         }
-
+        .collapseIcon{
+            cursor: pointer;
+        }
+        .detail{
+            display: block;
+            text-indent: 2em;
+            line-height: 30px;
+            font-size: 14px;
+            margin: 5px auto;
+            border-top: 1px dashed #cecece;
+            border-bottom: 1px dashed #cecece;
+        }
     </style>
 </head>
 <body>
@@ -59,7 +70,11 @@
                     </td>
                     <td class="w_4">
                         <p>重复率45%</p>
-                        <p>来源：关于大数据在政府部门的应用</p>
+                        <p>来源：关于大数据在政府部门的应用
+                            <span class="glyphicon glyphicon-chevron-down mrL20 collapseIcon"></span>
+
+                           <span class="detail">虽然不总是必须，但是某些时候你可能需要将某些 DOM 内容放到一个盒子里。对于这种情况，可以试试面板组件。</span>
+                        </p>
                         <p>来源：关于大数据在政府部门的应用</p>
                     </td>
                 </tr>
@@ -110,105 +125,16 @@
 <script src="../../assets/bootstrap-3.3.7/js/bootstrap.min.js"></script>
 
 <script type="text/javascript">
-    // 基于准备好的dom，初始化echarts实例
-    var myChart = echarts.init(document.getElementById('main'));
-    // 指定图表的配置项和数据
-    var option = {
-        tooltip: {
-            trigger: 'item',
-            formatter: "{a} <br/>{b}: {c} ({d}%)"
-        },
-        legend: {
-            orient: 'vertical',
-            x: 'left',
-            data:['直接访问','邮件营销','联盟广告','视频广告','搜索引擎']
-        },
-        series: [
-            {
-                name:'访问来源',
-                type:'pie',
-                radius: ['50%', '70%'],
-                avoidLabelOverlap: false,
-                label: {
-                    normal: {
-                        show: false,
-                        position: 'center'
-                    },
-                    emphasis: {
-                        show: true,
-                        textStyle: {
-                            fontSize: '30',
-                            fontWeight: 'bold'
-                        }
-                    }
-                },
-                labelLine: {
-                    normal: {
-                        show: false
-                    }
-                },
-                data:[
-                    {value:335, name:'直接访问'},
-                    {value:310, name:'邮件营销'},
-                    {value:234, name:'联盟广告'},
-                    {value:135, name:'视频广告'},
-                    {value:1548, name:'搜索引擎'}
-                ]
+    $(function () {
+        $('.collapseIcon').click(function () {
+            var _this = $(this);
+            if(_this.hasClass('glyphicon-chevron-down')){
+                _this.removeClass('glyphicon-chevron-down').addClass('glyphicon-chevron-up').next('.detail').hide();
+            }else {
+                _this.removeClass('glyphicon-chevron-up').addClass('glyphicon-chevron-down').next('.detail').show();
             }
-        ]
-    };
-    // 使用刚指定的配置项和数据显示图表。
-    myChart.setOption(option);
-
-    // 基于准备好的dom，初始化echarts实例
-    var myChart2 = echarts.init(document.getElementById('main2'));
-    // 指定图表的配置项和数据
-    var option2 = {
-        tooltip: {
-            trigger: 'item',
-            formatter: "{a} <br/>{b}: {c} ({d}%)"
-        },
-        legend: {
-            orient: 'vertical',
-            x: 'left',
-            data:['直接访问','邮件营销','联盟广告','视频广告','搜索引擎']
-        },
-        series: [
-            {
-                name:'访问来源',
-                type:'pie',
-                radius: ['50%', '70%'],
-                avoidLabelOverlap: false,
-                label: {
-                    normal: {
-                        show: false,
-                        position: 'center'
-                    },
-                    emphasis: {
-                        show: true,
-                        textStyle: {
-                            fontSize: '30',
-                            fontWeight: 'bold'
-                        }
-                    }
-                },
-                labelLine: {
-                    normal: {
-                        show: false
-                    }
-                },
-                data:[
-                    {value:335, name:'直接访问'},
-                    {value:310, name:'邮件营销'},
-                    {value:234, name:'联盟广告'},
-                    {value:135, name:'视频广告'},
-                    {value:1548, name:'搜索引擎'}
-                ]
-            }
-        ]
-    };
-    // 使用刚指定的配置项和数据显示图表。
-    myChart2.setOption(option2);
+        });
+    })
 </script>
 </body>
 </html>
