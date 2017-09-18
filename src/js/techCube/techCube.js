@@ -298,10 +298,10 @@ function showClassNumChart(chart) {
                 radius : '55%',
                 center: ['50%', '60%'],
                 data:[
-                    {value:335, name:'社发出',itemStyle: {normal: {color: '#1ccaff'}}},
-                    {value:310, name:'合作处',itemStyle: {normal: {color: '#00e4b1'}}},
-                    {value:234, name:'基础处',itemStyle: {normal: {color: '#ffb24d'}}},
-                    {value:135, name:'网络中心',itemStyle: {normal: {color: '#b3ff9b'}}}
+                    // {value:335, name:'社发出',itemStyle: {normal: {color: '#1ccaff'}}},
+                    // {value:310, name:'合作处',itemStyle: {normal: {color: '#00e4b1'}}},
+                    // {value:234, name:'基础处',itemStyle: {normal: {color: '#ffb24d'}}},
+                    // {value:135, name:'网络中心',itemStyle: {normal: {color: '#b3ff9b'}}}
                 ],
                 itemStyle: {
                     emphasis: {
@@ -315,6 +315,7 @@ function showClassNumChart(chart) {
     };
 
     chart.setOption(option5, true);
+    chart.showLoading({text: '暂无数据', color: '#fff', textColor: '#3385ff'})
 }
 
 function showAreaNumChart(chart) {

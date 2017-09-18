@@ -98,8 +98,8 @@ em,i{font-style:normal;}
     border-bottom: 2px solid #3385ff;
 }
 
-.nav-pills.nav-blue>li.active>a, 
-.nav-pills.nav-blue>li.active>a:focus, 
+.nav-pills.nav-blue>li.active>a,
+.nav-pills.nav-blue>li.active>a:focus,
 .nav-pills.nav-blue>li.active>a:hover{
     background: #3385ff;
 }
@@ -153,7 +153,7 @@ input.bigSize,
     margin-left: 5px;
 }
 
- article{
+article{
     margin: auto;
     padding: 25px 0px;
     font-size: 0px;
