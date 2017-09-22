@@ -68,6 +68,16 @@
         .yellow_text{
             color: #C9C900;
         }
+        .chartBox{
+            width: 33.33%;
+            height: 400px;
+            float: left;
+            text-align: center;
+        }
+        .chartBox p{
+            display: block;
+            margin: 100px 0;
+        }
     </style>
 </head>
 <body>
@@ -87,7 +97,20 @@
             下载报告
         </span>
         <div style="width: 100%; height: 400px;">
-            此处放图
+            <div class="chartBox">
+                <p>
+                    查重句子数 : <span>1290句</span>
+                </p>
+                <p>
+                    相拟项目数 : <span>55个</span>
+                </p>
+            </div>
+            <div class="chartBox">
+                <div id="main" style="width: 100%;height:400px;"></div>
+            </div>
+            <div class="chartBox">
+                <div id="main2" style="width: 100%;height:400px;"></div>
+            </div>
         </div>
         <div style="margin-top: 50px">
             <div class="little_box">
@@ -312,6 +335,188 @@
             }
         });
     })
+
+    // 基于准备好的dom，初始化echarts实例
+    var myChart = echarts.init(document.getElementById('main'));
+
+    var data = [17, 20, 45, 56];
+    var xMax = 100;
+    var option = {
+        tooltip: {
+            show: true,
+            formatter: "{b} {c}"
+        },
+        grid: {
+            left: '15%',
+            top: '5%',
+            bottom: '0',
+            right: '0'
+        },
+        xAxis: [{
+            max: xMax,
+            type: 'value',
+            axisTick: {
+                show: false,
+            },
+            axisLine: {
+                show: false,
+            },
+            axisLabel: {
+                show: false
+            },
+            splitLine: {
+                show: false
+            }
+        }],
+        yAxis: [{
+            type: 'category',
+            data: [ 'Hana Norie', 'Max&Mara', 'MJJU', 'Kenzo'],
+            nameTextStyle: {
+                color: '#b7ce9e',
+                fontSize: '18px'
+            },
+            axisTick: {
+                show: false,
+            },
+            axisLine: {
+                show: false,
+            }
+        }],
+        series: [{
+            name: ' ',
+            type: 'bar',
+            barWidth: 16,
+            silent: true,
+            itemStyle: {
+                normal: {
+                    color: '#f2f2f2'
+                }
+            },
+            barGap: '-100%',
+            barCategoryGap: '50%',
+            data: data.map(function(d) {
+                return xMax
+            }),
+        }, {
+            name: ' ',
+            type: 'bar',
+            barWidth: 16,
+            label: {
+                normal: {
+                    show: true,
+                    position: 'right',
+                    formatter: '{c}%',
+                }
+            },
+            data: [{
+                value: 17,
+                itemStyle: {
+                    normal: {
+                        color: '#b7ce9e'
+                    }
+                }
+            }, {
+                value: 20,
+                itemStyle: {
+                    normal: {
+                        color: '#acd680'
+                    }
+                }
+            }, {
+                value: 45,
+                itemStyle: {
+                    normal: {
+                        color: '#88e186'
+                    }
+                }
+            }, {
+                value: 56,
+                itemStyle: {
+                    normal: {
+                        color: '#81e7cf'
+                    }
+                }
+            }],
+            markLine: {
+                label: {
+                    normal: {
+                        show: true,
+                        position: 'end',
+                        formatter: '{b}{c}%'
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        color: '#525d63'
+                    }
+                },
+                symbol: 'none',
+                data: [{
+                    name: '行业平均值为',
+                    xAxis: 30
+                }]
+            }
+        }]
+    };
+    // 使用刚指定的配置项和数据显示图表。
+    myChart.setOption(option);
+
+
+    // 基于准备好的dom，初始化echarts实例
+    var myChart2 = echarts.init(document.getElementById('main2'));
+
+
+    var option2 = {
+        tooltip: {
+            trigger: 'item',
+            formatter: "{a} <br/>{b} : {c} ({d}%)"
+        },
+        series: [{
+            name: '库存情况',
+            type: 'pie',
+            radius: '68%',
+            center: ['50%', '60%'],
+            clockwise: false,
+            data: [{
+                value: 45,
+                name: 'CARD'
+            }, {
+                value: 25,
+                name: 'SSD'
+            }],
+            label: {
+                normal: {
+                    textStyle: {
+                        color: '#999',
+                        fontSize: '14px',
+                    }
+                }
+            },
+            labelLine: {
+                normal: {
+                    show: false
+                }
+            },
+            itemStyle: {
+                normal: {
+                    borderWidth: 4,
+                    borderColor: '#ffffff',
+                },
+                emphasis: {
+                    borderWidth: 0,
+                    shadowBlur: 10,
+                    shadowOffsetX: 0,
+                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                }
+            }
+        }],
+        color: [
+            '#a7e7ff',
+            '#c8efff'
+        ]
+    };
+    // 使用刚指定的配置项和数据显示图表。
+    myChart2.setOption(option2);
 </script>
 </body>
 </html>
