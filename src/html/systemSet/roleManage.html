@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户管理</title>
+    <meta name="viewport" content="width=device-width, initial-scale=0, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>系统设置-科研故事管理</title>
+    <link href="../../assets/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../../assets/bootstrap-ztree/css/bootstrapStyle/bootstrapStyle.css">
+    <link href="../../css/main.css" rel="stylesheet" rel="stylesheet"/>
+
+    <!--[if lt IE 9]>
+    <script src="../../assets/html5shiv_3.7.3/html5shiv.min.js"></script>
+    <script src="../../assets/respond.js_1.4.2/l"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="mainPage roleManage">
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="javascripy:;">角色管理</a></li>
+    </ul>
+    <div class="search-wrapper">
+        <div class="row">
+            <div class="col-md-2">
+                <input type="text" class="form-control">
+            </div>
+            <div class="col-md-1">
+                <button class="btn btn-success" id="role_search_btn">查询</button>
+            </div>
+            <div class="col-md-1">
+                <button class="btn btn-success" id="add_role_btn">添加角色</button>
+            </div>
+        </div>
+    </div>
+    <table class="table table-bordered table-striped">
+        <thead class="bg-blue">
+        <tr>
+            <th>序号</th>
+            <th>角色名称</th>
+            <th>创建时间</th>
+            <th>修改时间</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>admin</td>
+                <td>2015-05-05</td>
+                <td>2015-05-15</td>
+                <td>
+                    <button type="button" class="btn btn-link deployBtn"> 配置角色</button>
+                    <button type="button" class="btn btn-link editBtn">编辑</button>
+                    <button type="button" class="btn btn-link">删除Link</button>
+                </td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>admin</td>
+                <td>2015-05-05</td>
+                <td>2015-05-15</td>
+                <td>
+                    <button type="button" class="btn btn-link deployBtn"> 配置角色</button>
+                    <button type="button" class="btn btn-link editBtn">编辑</button>
+                    <button type="button" class="btn btn-link">删除Link</button>
+                </td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>admin</td>
+                <td>2015-05-05</td>
+                <td>2015-05-15</td>
+                <td>
+                    <button type="button" class="btn btn-link deployBtn"> 配置角色</button>
+                    <button type="button" class="btn btn-link editBtn">编辑</button>
+                    <button type="button" class="btn btn-link">删除Link</button>
+                </td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>admin</td>
+                <td>2015-05-05</td>
+                <td>2015-05-15</td>
+                <td>
+                    <button type="button" class="btn btn-link deployBtn"> 配置角色</button>
+                    <button type="button" class="btn btn-link editBtn">编辑</button>
+                    <button type="button" class="btn btn-link">删除Link</button>
+                </td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>admin</td>
+                <td>2015-05-05</td>
+                <td>2015-05-15</td>
+                <td>
+                    <button type="button" class="btn btn-link deployBtn"> 配置角色</button>
+                    <button type="button" class="btn btn-link editBtn">编辑</button>
+                    <button type="button" class="btn btn-link">删除Link</button>
+                </td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>admin</td>
+                <td>2015-05-05</td>
+                <td>2015-05-15</td>
+                <td>
+                    <button type="button" class="btn btn-link deployBtn"> 配置角色</button>
+                    <button type="button" class="btn btn-link editBtn">编辑</button>
+                    <button type="button" class="btn btn-link">删除Link</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="page-bar">
+        <nav aria-label="...">
+            <ul class="pager">
+                <li class="mrR15"><a href="javascript:;">上一页</a></li>
+                <li><a href="javascript:;">下一页</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>
+<!-- 编辑角色模态框（Modal） -->
+<div class="modal fade" id="editRoleModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-blue">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="myModalLabel" align="center">
+                   编辑角色
+                </h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal" role="form">
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label">序号</label>
+                        <div class="col-sm-6">
+                            <p class="form-control-static">7</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="roleName" class="col-sm-4 control-label">编辑角色名字</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="roleName">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success mrR15" id="edit_role_submit">确定
+                </button>
+                <button type="button" class="btn btn-primary" id="modal_cancel_btn">
+                    取消
+                </button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+
+<!-- 模态框（Modal） -->
+<div class="modal fade" id="deployRoleModal" tabindex="-1" role="dialog" aria-labelledby="deployLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-blue">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="deployLabel" align="center">
+                    配置角色
+                </h4>
+            </div>
+            <div class="modal-body">
+                <div id="ztree" class="ztree"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success mrR15" id="deploy_role_submit">确定
+                </button>
+                <button type="button" class="btn btn-primary" id="deploy_cancel_btn">
+                    取消
+                </button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+<script src="../../assets/jQuery/jquery.min.js"></script>
+<script src="../../assets/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+<script src="../../assets/bootstrap-ztree/js/jquery.ztree.core.min.js"></script>
+<script src="../../assets/bootstrap-ztree/js/jquery.ztree.excheck.min.js"></script>
+<script src="../../assets/bootstrap-ztree/js/jquery.ztree.exedit.min.js"></script>
+<script src="../../js/systemSet/roleManage.js"></script>
+</body>
+</html>

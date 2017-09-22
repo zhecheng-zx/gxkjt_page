@@ -38,7 +38,6 @@ em,i{font-style:normal;}
 .mainPage{
     padding: 35px 35px 20px 35px;
     color: #333;
-    font-size: 16px;
 }
 
 .nav-tabs li{
@@ -73,7 +72,7 @@ em,i{font-style:normal;}
 }
 
 .nav-tabs.bg-gray li{
-    margin: 0px 35px;
+    margin: 0 35px;
 }
 
 .nav-tabs.bg-gray li:first-child{
@@ -83,7 +82,7 @@ em,i{font-style:normal;}
 .nav-tabs.bg-gray li a{
     background: transparent;
     border: 2px;
-    padding: 35px 0px;
+    padding: 35px 0;
 }
 
 .nav-tabs.bg-gray li.active a{
@@ -143,7 +142,7 @@ input.bigSize,
 }
 
 .col-md-1.first-col{
-    padding-left: 0px;
+    padding-left: 0;
     line-height:34px;
 }
 
@@ -155,8 +154,8 @@ input.bigSize,
 
 article{
     margin: auto;
-    padding: 25px 0px;
-    font-size: 0px;
+    padding: 25px 0;
+    font-size: 0;
     border-bottom: 1px solid #cfcfcf;
 }
 
@@ -266,10 +265,6 @@ article p.detail{
     color: #fff;
 }
 
-.tab-pane .content{
-    font-style: 0;
-}
-
 .btn-wrapper{
     background: #fff;
     padding: 40px 50px 0px 50px;
@@ -279,7 +274,7 @@ article p.detail{
     width: 600px;
     height: 450px;
     margin: auto;
-    padding: 15px 0px;
+    padding: 15px 0;
 }
 
 .techCube .date-wrapper{
@@ -288,7 +283,7 @@ article p.detail{
 
 .itemTitle{
     font-size: 16px;
-    padding: 0px 25px;
+    padding: 0 25px;
     border-left: 3px solid #3385ff;
 }
 
@@ -312,11 +307,11 @@ div.item {
 }
 
 .techCube .search-box{
-    margin: 20px 0px;
+    margin: 20px auto;
 }
 
 .info-wrap{
-    font-size: 0px;
+    font-size: 0;
     padding: 20px;
 }
 
@@ -582,7 +577,7 @@ div.item {
 .hot-list a{
     font-size: 14px;
     line-height: 30px;
-    margin: 15px 0px;
+    margin: 15px 0;
     color: #666;
     text-decoration: none;
 }
@@ -594,5 +589,24 @@ div.item {
 }
 
 .infoCenter .article-media.slideBox{
-    margin-left: 0px;
+    margin-left: 0;
+}
+
+.roleManage .search-wrapper{
+    padding: 20px 0;
+}
+
+.bg-blue{
+    background: #3385ff;
+    color: #fff;
+}
+
+.bg-blue button.close{
+    color: #fff;
+    opacity: 1;
+}
+
+.table thead tr th{
+    font-weight: normal;
+    font-size: 16px;
 }
