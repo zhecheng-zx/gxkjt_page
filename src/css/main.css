@@ -36,7 +36,7 @@ em,i{font-style:normal;}
 }
 
 .mainPage{
-    padding: 35px 35px 20px 35px;
+    padding: 20px;
     color: #333;
 }
 
@@ -609,4 +609,29 @@ div.item {
 .table thead tr th{
     font-weight: normal;
     font-size: 16px;
+}
+
+.delete-icon-box{
+    width: 90px;
+    height: 90px;
+    margin: auto;
+    background: #63c422;
+    border-radius: 50%;
+    padding: 27px;
+}
+
+.delete-icon-box .glyphicon-trash{
+    font-size: 35px;
+    color: #fff;
+}
+
+.deleteRoleModal p.text{
+    font-size: 16px;
+    color: #666;
+    margin: 15px auto;
+    text-align: center;
+}
+
+.text-center{
+    text-align: center !important;
 }

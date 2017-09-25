@@ -26,10 +26,10 @@
                 <input type="text" class="form-control">
             </div>
             <div class="col-md-1">
-                <button class="btn btn-success" id="role_search_btn">查询</button>
+                <button class="btn btn-success" id="searchBtn">查询</button>
             </div>
             <div class="col-md-1">
-                <button class="btn btn-success" id="add_role_btn">添加角色</button>
+                <button class="btn btn-success" id="addBtn">添加角色</button>
             </div>
         </div>
     </div>
@@ -52,7 +52,7 @@
                 <td>
                     <button type="button" class="btn btn-link deployBtn"> 配置角色</button>
                     <button type="button" class="btn btn-link editBtn">编辑</button>
-                    <button type="button" class="btn btn-link">删除Link</button>
+                    <button type="button" class="btn btn-link deleteBtn">删除</button>
                 </td>
             </tr>
             <tr>
@@ -63,7 +63,7 @@
                 <td>
                     <button type="button" class="btn btn-link deployBtn"> 配置角色</button>
                     <button type="button" class="btn btn-link editBtn">编辑</button>
-                    <button type="button" class="btn btn-link">删除Link</button>
+                    <button type="button" class="btn btn-link deleteBtn">删除</button>
                 </td>
             </tr>
             <tr>
@@ -74,7 +74,7 @@
                 <td>
                     <button type="button" class="btn btn-link deployBtn"> 配置角色</button>
                     <button type="button" class="btn btn-link editBtn">编辑</button>
-                    <button type="button" class="btn btn-link">删除Link</button>
+                    <button type="button" class="btn btn-link deleteBtn">删除</button>
                 </td>
             </tr>
             <tr>
@@ -85,7 +85,7 @@
                 <td>
                     <button type="button" class="btn btn-link deployBtn"> 配置角色</button>
                     <button type="button" class="btn btn-link editBtn">编辑</button>
-                    <button type="button" class="btn btn-link">删除Link</button>
+                    <button type="button" class="btn btn-link deleteBtn">删除</button>
                 </td>
             </tr>
             <tr>
@@ -96,7 +96,7 @@
                 <td>
                     <button type="button" class="btn btn-link deployBtn"> 配置角色</button>
                     <button type="button" class="btn btn-link editBtn">编辑</button>
-                    <button type="button" class="btn btn-link">删除Link</button>
+                    <button type="button" class="btn btn-link deleteBtn">删除</button>
                 </td>
             </tr>
             <tr>
@@ -107,7 +107,7 @@
                 <td>
                     <button type="button" class="btn btn-link deployBtn"> 配置角色</button>
                     <button type="button" class="btn btn-link editBtn">编辑</button>
-                    <button type="button" class="btn btn-link">删除Link</button>
+                    <button type="button" class="btn btn-link deleteBtn">删除</button>
                 </td>
             </tr>
         </tbody>
@@ -160,10 +160,10 @@
     </div><!-- /.modal -->
 </div>
 
-<!-- 模态框（Modal） -->
+<!-- 配置角色模态框（Modal） -->
 <div class="modal fade" id="deployRoleModal" tabindex="-1" role="dialog" aria-labelledby="deployLabel" aria-hidden="true">
     <div class="modal-dialog">
-        <div class="modal-content">
+        <div class="modal-content" style="height: 600px; overflow-y: auto">
             <div class="modal-header bg-blue">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
                     &times;
@@ -172,13 +172,77 @@
                     配置角色
                 </h4>
             </div>
-            <div class="modal-body">
+            <div class="modal-body" style="height: 460px;">
                 <div id="ztree" class="ztree"></div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-success mrR15" id="deploy_role_submit">确定
                 </button>
                 <button type="button" class="btn btn-primary" id="deploy_cancel_btn">
+                    取消
+                </button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+
+<!-- 删除角色模态框（Modal） -->
+<div class="modal fade deleteRoleModal" id="deleteRoleModal" tabindex="-1" role="dialog" aria-labelledby="deleteLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-blue">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="deleteLabel" align="center">
+                    删除角色
+                </h4>
+            </div>
+            <div class="modal-body">
+                <div class="delete-icon-box">
+                    <i class="glyphicon glyphicon-trash"></i>
+                </div>
+                <p class="text">
+                    确认删除角色[序号: <span class="delete-index">7</span>, 角色名称: <span class="delete-role-name">狮子座</span>]吗?
+                </p>
+                <p class="text">
+                    删除角色的同时会删除给角色配置的所有权限
+                </p>
+            </div>
+            <div class="modal-footer text-center">
+                <button type="button" class="btn btn-success mrR15" id="delete_role_submit">确定
+                </button>
+                <button type="button" class="btn btn-primary" id="delete_cancel_btn">
+                    取消
+                </button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+
+<!-- 添加角色模态框（Modal） -->
+<div class="modal fade addRoleModal" id="addRoleModal" tabindex="-1" role="dialog" aria-labelledby="addLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-blue">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="addLabel" align="center">
+                   添加角色
+                </h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3">
+                        <input type="text" class="form-control" placeholder="请输入角色名称">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer text-center">
+                <button type="button" class="btn btn-success mrR15" id="add_role_submit">确定
+                </button>
+                <button type="button" class="btn btn-primary" id="add_cancel_btn">
                     取消
                 </button>
             </div>

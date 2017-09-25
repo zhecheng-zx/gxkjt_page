@@ -31,8 +31,8 @@ $(function () {
     });
 
     //初始化ztree
-    var zNodes = getRoleTreeData();
-    var setting = {
+    let zNodes = getRoleTreeData();
+    let setting = {
         view: {
             addHoverDom: false,
             removeHoverDom: false,
@@ -51,11 +51,44 @@ $(function () {
         }
     };
     $.fn.zTree.init($("#ztree"), setting, zNodes);
+
+    //配置角色模态框取消按钮点击事件
+    $('#deploy_cancel_btn').click(function () {
+        //
+
+        $('#deployRoleModal').modal('toggle');
+    });
+
+    $('#deploy_role_submit').click(function () {
+        //ajax回调后关闭模态框
+        $('#deployRoleModal').modal('toggle');
+    });
     //-----------------------------------------配置角色系列事件end---------------------------------------------
+
+    $('.deleteBtn').click(function () {
+        $('#deleteRoleModal').modal('toggle');
+    });
+    $('#delete_cancel_btn').click(function () {
+        $('#deleteRoleModal').modal('toggle');
+    });
+    $('#delete_role_submit').click(function () {
+        $('#deleteRoleModal').modal('toggle');
+    });
+
+    $('#addBtn').click(function () {
+        $('#addRoleModal').modal('toggle');
+    });
+    $('#add_role_submit').click(function () {
+        //ajax回调 清空模态框绑定的信息  关闭模态框
+        $('#addRoleModal').modal('toggle');
+    });
+    $('#add_cancel_btn').click(function () {
+        $('#addRoleModal').modal('toggle');
+    });
 });
 
 function getRoleTreeData() {
-    var zNodes =[
+    let zNodes =[
         {id:1, pId:0, name:"科技台", open:true},
         {id:2, pId:0, name:"科技立方", open:true},
 
