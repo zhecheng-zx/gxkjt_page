@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>科技智汇-一键搜索</title>
+    <link href="../../assets/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../assets/iCkeck-v1.0.2/css/skins/square/blue.css" rel="stylesheet">
+    <link href="../../css/main.css" rel="stylesheet" rel="stylesheet"/>
+
+    <!--[if lt IE 9]>
+    <script src="../../assets/html5shiv_3.7.3/html5shiv.min.js"></script>
+    <script src="../../assets/respond.js_1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="mainPage poolSearch">
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="javascripy:;">一键搜索</a></li>
+    </ul>
+    <div class="input-group">
+            
+            <input type="text" class="form-control" placeholder="请输入您想要查询的关键词">
+            <span  class="input-group-btn"><button class="btn">查询</button></span>
+    </div>
+    <ul class="list-group">
+       <li class="list-group-item">
+           <span class="title text-center">搜索范围</span>
+           <ul class="item-list clearfix">
+             <li><input type="checkbox">项目</li>
+             <li><input type="checkbox">企事业单位</li>
+             <li><input type="checkbox">科技工作者</li>
+             <li><input type="checkbox">专家</li>
+             <li><input type="checkbox">论文</li>
+             <li><input type="checkbox">科技行业情报</li>
+             <li><input type="checkbox">专利</li>
+
+
+           </ul>
+           <a href="#setRange" data-toggle="modal"><img src="../../images/write.png" alt=""></a>
+       </li>
+       <li class="list-group-item">
+           <span class="title text-center">关键词</span>
+           <ul class="item-list clearfix">
+             <li>科技</li>
+             <li>农业</li>
+             <li>人工智能</li>
+             <li>AI</li>
+             <li>自动驾驶</li>
+             <li>虚拟现实</li>
+             <li>熵增</li> 
+
+           </ul>
+            <a href="#setWord" data-toggle="modal"><img src="../../images/keyWord.png" alt=""></a>
+       </li>
+    </ul>
+    <div class="modal fade" id="setRange" tabindex="-1" role="dialog"  aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">设置搜索范围</h4>
+            </div>
+            <div class="modal-body">
+                <h4 class="text-center">一键搜索页显示搜索范围（最多选择7项）</h4>
+                 <ul class="item-list clearfix">
+                     <li><input type="checkbox">项目</li>
+                     <li><input type="checkbox">企事业单位</li>
+                     <li><input type="checkbox">科技工作者</li>
+                     <li><input type="checkbox">专家</li>
+                     <li><input type="checkbox">论文</li>
+                     <li><input type="checkbox">科技行业情报</li>
+                     <li><input type="checkbox">专利</li>
+                     <li><input type="checkbox">高校</li>
+                     <li><input type="checkbox">获奖项目</li>
+                     <li><input type="checkbox">活动</li>
+
+               </ul>
+            </div>
+            
+        </div>
+    </div>
+</div>  
+    <div class="modal fade" id="setWord" tabindex="-1" role="dialog"  aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">定制关键词</h4>
+            </div>
+            <div class="modal-body">
+                <div class="word-box">
+                    <div class="word-list">
+                        <span>科技</span>
+                        <span>农业</span>
+                        <span>人工智能</span>
+                        <span>科技</span>
+                        <span>农业</span>
+                        <span>人工智能</span>
+                        <span>科技</span>
+                        <span>农业</span>
+                        <span>人工智能</span>
+                        <span>科技</span>
+                        <span>农业</span>
+                        <span>人工智能</span>
+                    </div>
+                </div>
+                <div class="word-box">
+                    <div class="add-word">
+                        <input type="text" placeholder="输入关键词"> <button class="btn ">添加</button>
+                    </div>
+                    <div class="word-list">
+                        <span>+科技</span>
+                        <span>+农业</span>
+                        <span>+人工智能</span>
+                        
+                    </div>
+                </div>
+                <div class="word-box">
+                    <h4>使用大数据平台默认关键词</h4>
+                    <div class="word-list">
+                        <span>科技</span>
+                        <span>农业</span>
+                        <span>人工智能</span>
+                        <span>科技</span>
+                        <span>农业</span>
+                        <span>人工智能</span>
+                        <span>科技</span>
+                        <span>农业</span>
+                        <span>人工智能</span>
+                        <span>科技</span>
+                        <span>农业</span>
+                        <span>人工智能</span>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>  
+</div>
+  
+<script src="../../assets/jQuery/jquery.min.js"></script>
+<script src="../../assets/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+<script src="../../assets/iCkeck-v1.0.2/js/icheck.min.js"></script>
+<script src="../../js/techPool/poolSearch.js"></script>
+</body>
+</html>

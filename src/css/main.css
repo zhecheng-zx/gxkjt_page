@@ -635,3 +635,120 @@ div.item {
 .text-center{
     text-align: center !important;
 }
+.poolSearch .input-group{
+    width:866px;
+    margin:0 auto;
+    margin-top:30vh;
+}
+.poolSearch .form-control{
+    height:46px;
+    width:736px;
+    border:1px solid #3385ff;
+}
+.poolSearch .input-group-btn .btn{
+    height:46px;
+    width:130px;
+    border:1px solid #3385ff;
+    background-color:#3385ff;
+    color:#ffffff;
+}
+.poolSearch .list-group{
+    width:1134px;
+    margin:0 auto;
+    margin-top:100px;
+    
+}
+.poolSearch .list-group .list-group-item{
+    padding:0;
+    
+
+}
+.poolSearch .list-group .list-group-item{
+    margin-left:20px;
+}
+.poolSearch .list-group .title{
+  display:inline-block;
+  background-color:#fafafa;
+  width:146px;
+  height:62px;
+  line-height:62px;
+  border-right:1px solid #ddd;
+  font-size: 16px;
+}
+.poolSearch  .item-list {
+    display:inline-block;
+    vertical-align: middle;
+    width:880px;
+    padding:0 15px;
+    
+}
+.poolSearch  .item-list li{
+  float:left;
+  width:121px;
+  text-align:center;
+  color:#666666;
+}
+.poolSearch .modal-header{
+    background-color:#3385ff;
+    text-align: center;
+    color:#ffffff;
+
+}
+.poolSearch .modal-header .close{
+    color:#ffffff;
+    opacity:1;
+    box-shadow: 0;
+    margin-top:4px;
+}
+@media (min-width: 768px){
+.poolSearch .modal-dialog {
+    width: 900px;
+    margin: 30px auto;
+}
+}
+.poolSearch .modal .item-list li{text-align: left}
+.poolSearch .modal .item-list li,#setRange .modal-body h4{
+    margin-top:40px;
+}
+#setRange .modal-body{
+    padding-bottom:60px;
+}
+.poolSearch .icheckbox_square-blue{
+    margin-right:8px;
+}
+.poolSearch .word-box{
+    padding:9px 30px 24px 30px;
+    border:1px solid #cfd1d3;
+    border-radius: 3px;
+    margin-top:20px;
+}
+.poolSearch .word-list span{
+  display:inline-block;
+  padding:5px 15px;
+  margin-right:10px;
+  border:1px solid #cfd1d3;
+  color:#4c4c4c;
+  margin-top:15px;
+  cursor:pointer;
+}
+.poolSearch .add-word input{
+  border:1px solid #cfd1d3;
+  height:40px;
+  padding:0 10px;
+  border-radius:4px;
+}
+.poolSearch .add-word{
+   margin-top:15px; 
+}
+.poolSearch .add-word .btn{
+    width:100px;
+    border:1px solid #3385ff;
+    background-color:#3385ff;
+    color:#ffffff;
+    height:40px;
+    margin-left:20px;
+
+}
+.poolSearch .word-box h4{
+    margin-top:15px;
+}
