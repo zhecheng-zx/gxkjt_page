@@ -115,6 +115,10 @@ em,i{font-style:normal;}
     margin-right: 15px;
 }
 
+.mrR5{
+    margin-right: 5px;
+}
+
 .mrT15{
     margin-top: 15px;
 }
@@ -129,12 +133,13 @@ em,i{font-style:normal;}
 
 .techStorySet .row,
 .techStory .row{
-    margin:24px auto 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 input.bigSize,
 .btn.bigSize{
-    height: 54px !important;
+    height: 44px !important;
 }
 
 .techStory .btn.bigSize{
@@ -156,7 +161,7 @@ article{
     margin: auto;
     padding: 25px 0;
     font-size: 0;
-    border-bottom: 1px solid #cfcfcf;
+    border-bottom: 1px solid #cecece;
 }
 
 .checkboxWrap{
@@ -192,24 +197,42 @@ section.content{
     margin-left: 10px;
 }
 
+.techStory section.content{
+    width: calc(100% - 340px);
+}
+
 article .info{
     font-size: 14px;
     margin-top: 25px;
+    color: #999;
 }
 
 article .info span{
-    padding: 5px 12px 5px 0px;
+    padding: 5px 15px 5px 0;
+    display: inline-block;
 }
 
 .info span.tag,
 .article-info span.tag{
-    padding: 4px 12px;
+    padding: 4px 15px;
     border: 1px solid #3385ff;
     color: #3385ff;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
-    margin-right: 12px;
+    margin-right: 20px;
+}
+
+.info .tag.red,
+.article-info .tag.red{
+    border: 1px solid #ff3355;
+    color: #ff3355;
+}
+
+.info .tag.green,
+.article-info .tag.green{
+    border: 1px solid #7fc420;
+    color: #7fc420;
 }
 
 article.mediaBox .info{
@@ -218,11 +241,14 @@ article.mediaBox .info{
 
 article .btn{
     width: 120px;
-    margin: 0px 22px;
+    margin: 0 22px;
+}
+
+article section {
+    display: inline-block;
 }
 
 section.right{
-    display: inline-block;
     width: calc(100% - 60px);
     vertical-align: middle;
 }
@@ -231,6 +257,15 @@ article p.detail{
     font-size: 14px;
     color: #666;
     margin-top: 25px;
+}
+
+article .img-list{
+    margin-top: 25px;
+}
+
+article .img-list img{
+    width: 100%;
+    height: 100%;
 }
 
 .page-bar{
@@ -464,7 +499,7 @@ div.item {
 
 .articleDetail article .article-info{
     margin: 15px auto;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .article-info span,
@@ -473,8 +508,8 @@ div.item {
 }
 
 .articleDetail article .article-sub-info{
-    font-size: 12px;
-    color: #a5a5a5;
+    font-size: 14px;
+    color: #999;
 }
 
 .article-media{
@@ -507,13 +542,13 @@ div.item {
 }
 
 .search-select{
-    margin-right: 10px;
     border: 1px solid #cecece;
     font-size: 0;
 }
 
 .search-select .box{
-    margin: 10px 0px;
+    padding: 10px 0;
+    background: #fafafa;
 }
 
 .search-select .text{
@@ -552,21 +587,53 @@ div.item {
     border-radius: 5px;
 }
 
-.infoCenter .left-part{
-    display: inline-block;
-    width: calc(100% - 400px);
-    vertical-align: top;
-    margin-top: 15px;
-    border-right: 1px solid #cecece;
+.infoCenter .infoCenter-panel{
+    height: 478px;
 }
 
-.infoCenter .right-part{
-    display: inline-block;
-    width: 350px;
-    vertical-align: top;
-    margin-top: 15px;
-    margin-left: 15px;
-    min-height: 500px;
+.infoCenter .infoCenter-panel .panel-heading{
+    height: 48px;
+}
+
+.infoCenter .infoCenter-panel .panel-body{
+    height: 428px;
+}
+
+.infoCenter-panel .echart-box{
+    height: 398px;
+}
+
+.panel-body.hot-list-box{
+    padding: 0;
+}
+
+.hot-list{
+    height: 100%;
+    overflow-y: auto;
+}
+
+.hot-list li{
+    line-height: 54px;
+    border-bottom: 1px solid #dbdbdb;
+    padding: 0 28px;
+}
+
+.mainPage .input-group-addon{
+    top: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+.article-wrapper.hasBorder{
+    border: 1px solid #cecece;
+}
+
+.article-wrapper.hasBorder article{
+    padding: 25px 40px;
+}
+
+.article-wrapper.hasBorder article:last-child{
+    border-bottom: none;
 }
 
 .tech-hot .title{
@@ -597,8 +664,8 @@ div.item {
 }
 
 .bg-blue{
-    background: #3385ff;
-    color: #fff;
+    background: #3385ff !important;
+    color: #fff !important;
 }
 
 .bg-blue button.close{
@@ -634,4 +701,42 @@ div.item {
 
 .text-center{
     text-align: center !important;
+}
+
+.bg-gray{
+    background: #fafafa !important;
+}
+
+.publish-box{
+    height: 44px;
+    padding: 12px 0;
+}
+
+.loadMoreBox{
+    margin-top: 25px;
+}
+
+span.thumbs-up{
+    cursor: pointer;
+}
+
+.thumbs-up.active{
+    color: #2478f6;
+}
+
+.techStory .search-box,
+.techStory .summary{
+    margin: 20px 0;
+}
+
+.techStory .search-box .input-group{
+    width: 600px;
+}
+
+.techStory .icon-edit{
+    background-image: url('../images/icon-edit.png');
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
 }
