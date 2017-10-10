@@ -127,6 +127,10 @@ em,i{font-style:normal;}
     margin-top: 10px;
 }
 
+.mrT30{
+    margin-top: 30px;
+}
+
 .mrB10{
     margin-bottom: 10px;
 }
@@ -709,10 +713,39 @@ article .copyright{
     text-align: center;
 }
 
+.text-left{
+    text-align: left !important;
+}
+
+.text-right{
+    text-align: right !important;
+}
+
 .text-center{
     text-align: center !important;
 }
+.table-thead-blue>thead>tr>th {
+    background-color: #3385ff;
+    color: #ffffff;
+}
 
+.table-thead-blue>thead>tr>th,.table-thead-blue>tbody>tr>td {
+    border: none;
+}
+.form-striped>div.form-group{
+    margin-bottom: 0;
+}
+.form-striped>div:nth-of-type(odd){
+    background-color: #f9f9f9;
+}
+.border-table-600{
+    width: 600px;
+    margin: 0 auto;
+    border:1px solid #ddd;
+}
+.border-table-600 td{
+    padding-left: 30px;
+}
 .bg-gray{
     background: #fafafa !important;
 }

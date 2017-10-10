@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>系统设置-用户管理</title>
+    <link href="../../assets/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../../assets/bootstrap-ztree/css/bootstrapStyle/bootstrapStyle.css">
+    <link rel="stylesheet" href="../../assets/bootstrop_table/bootstrap-table.min.css" />
+    <link rel="stylesheet" href="../../assets/bootstrap-select/bootstrap-select.min.css" />
+    <link href="../../css/main.css" rel="stylesheet"/>
+
+    <!--[if lt IE 9]>
+    <script src="../../assets/html5shiv_3.7.3/html5shiv.min.js"></script>
+    <script src="../../assets/respond.js_1.4.2/l"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="mainPage roleManage">
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="javascripy:;">用户管理</a></li>
+    </ul>
+    <div class="search-wrapper">
+        <div class="row">
+            <div class="col-md-2">
+                <input type="text" class="form-control" placeholder="输入姓名">
+            </div>
+            <div class="col-md-2">
+                <input type="text" class="form-control" placeholder="输入部门">
+            </div>
+            <div class="col-md-2">
+                <input type="text" class="form-control" placeholder="输入职位">
+            </div>
+            <div class="col-md-2">
+                <input type="text" class="form-control" placeholder="输入角色">
+            </div>
+            <div class="col-md-1">
+                <button class="btn btn-primary" id="searchBtn">查询</button>
+            </div>
+            <div class="col-md-1">
+                <button class="btn btn-success" id="addBtn" data-target="#addRoleModal" data-toggle="modal">添加用户</button>
+            </div>
+        </div>
+    </div>
+    <table class="table table-thead-blue table-striped">
+    </table>
+</div>
+<!-- 编辑用户模态框（Modal） -->
+<div class="modal fade" id="editRoleModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-blue">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="myModalLabel" align="center">
+                    编辑用户
+                </h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label class="control-label col-md-4">编号<span class="text-danger">*</span></label>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" placeholder="编号" readonly>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4">用户名<span class="text-danger">*</span></label>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" placeholder="请输入用户名">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4">部门<span class="text-danger">*</span></label>
+                        <div class="col-md-6">
+                            <select class="selectpicker form-control" name="" id="a1">
+                                <option>部门1</option>
+                                <option>部门2</option>
+                                <option>部门3</option>
+                                <option>部门4</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4">职位<span class="text-danger">*</span></label>
+                        <div class="col-md-6">
+                            <select class="selectpicker form-control" name="" id="b1">
+                                <option>职位1</option>
+                                <option>职位2</option>
+                                <option>职位3</option>
+                                <option>职位4</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4">角色<span class="text-danger">*</span></label>
+                        <div class="col-md-6">
+                            <select class="selectpicker form-control" name="" id="c1">
+                                <option>角色1</option>
+                                <option>角色2</option>
+                                <option>角色3</option>
+                                <option>角色4</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4">手机号<span class="text-danger">*</span></label>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" placeholder="请输入手机号" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4">邮箱</label>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" placeholder="请输入邮箱" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4">密码</label>
+                        <div class="col-md-6">
+                            <input type="password" class="form-control" placeholder="请输入密码" />
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer text-center">
+                <button type="button" class="btn btn-success mrR15">重置密码</button>
+                <button type="button" class="btn btn-primary mrR15">确认修改</button>
+                <button type="button" class="btn" id="modal_cancel_btn">取消</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+<!-- 删除角色模态框（Modal） -->
+<div class="modal fade deleteRoleModal" id="deleteRoleModal" tabindex="-1" role="dialog" aria-labelledby="deleteLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-blue">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="deleteLabel" align="center">
+                    删除用户
+                </h4>
+            </div>
+            <div class="modal-body">
+                <div class="delete-icon-box">
+                    <i class="glyphicon glyphicon-trash"></i>
+                </div>
+                <p class="text">
+                    确认删除吗？
+                </p>
+            </div>
+            <div class="modal-footer text-center">
+                <button type="button" class="btn btn-success mrR15">确定</button>
+                <button type="button" class="btn">取消</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+
+<!-- 添加用户模态框（Modal） -->
+<div class="modal fade addRoleModal" id="addRoleModal" tabindex="-1" role="dialog" aria-labelledby="addLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-blue">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="addLabel" align="center">
+                    添加用户
+                </h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label class="control-label col-md-4">编号<span class="text-danger">*</span></label>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" placeholder="编号">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4">用户名<span class="text-danger">*</span></label>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" placeholder="请输入用户名">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4">部门<span class="text-danger">*</span></label>
+                        <div class="col-md-6">
+                            <select class="selectpicker form-control" name="" id="a">
+                                <option>部门1</option>
+                                <option>部门2</option>
+                                <option>部门3</option>
+                                <option>部门4</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4">职位<span class="text-danger">*</span></label>
+                        <div class="col-md-6">
+                            <select class="selectpicker form-control" name="" id="b">
+                                <option>职位1</option>
+                                <option>职位2</option>
+                                <option>职位3</option>
+                                <option>职位4</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4">角色<span class="text-danger">*</span></label>
+                        <div class="col-md-6">
+                            <select class="selectpicker form-control" name="" id="c">
+                                <option>角色1</option>
+                                <option>角色2</option>
+                                <option>角色3</option>
+                                <option>角色4</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4">手机号<span class="text-danger">*</span></label>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" placeholder="请输入手机号" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4">邮箱</label>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" placeholder="请输入邮箱" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4">密码</label>
+                        <div class="col-md-6">
+                            <input type="password" class="form-control" placeholder="请输入密码" />
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer text-center">
+                <button type="button" class="btn btn-primary mrR15">确定</button>
+                <button type="button" class="btn">取消</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+<!-- 查看用户模态框（Modal） -->
+<div class="modal fade addRoleModal" id="searchRoleModal" tabindex="-1" role="dialog" aria-labelledby="searchLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-blue">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="searchLabel" align="center">
+                    查看用户
+                </h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-horizontal form-striped">
+                    <div class="form-group">
+                        <label class="control-label col-md-4">编号</label>
+                        <div class="col-md-6">
+                            <p class="form-control-static">IKCO-1001283-12239</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4">用户名</label>
+                        <div class="col-md-6">
+                            <p class="form-control-static">IKCO-1001283-12239</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4">部门</label>
+                        <div class="col-md-6">
+                            <p class="form-control-static">IKCO-1001283-12239</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4">职位</label>
+                        <div class="col-md-6">
+                            <p class="form-control-static">IKCO-1001283-12239</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4">角色</label>
+                        <div class="col-md-6">
+                            <p class="form-control-static">IKCO-1001283-12239</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4">手机号</label>
+                        <div class="col-md-6">
+                            <p class="form-control-static">IKCO-1001283-12239</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4">邮箱</label>
+                        <div class="col-md-6">
+                            <p class="form-control-static">IKCO-1001283-12239</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4">密码</label>
+                        <div class="col-md-6">
+                            <p class="form-control-static">IKCO-1001283-12239</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+<script src="../../assets/jQuery/jquery.min.js"></script>
+<script src="../../assets/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+<script src="../../assets/bootstrap-ztree/js/jquery.ztree.core.min.js"></script>
+<script src="../../assets/bootstrap-ztree/js/jquery.ztree.excheck.min.js"></script>
+<script src="../../assets/bootstrap-ztree/js/jquery.ztree.exedit.min.js"></script>
+<script src="../../assets/bootstrop_table/bootstrap-table.min.js"></script>
+<script src="../../assets/bootstrop_table/locale/bootstrap-table-zh-CN.min.js"></script>
+<script src="../../assets/bootstrap-select/bootstrap-select.min.js"></script>
+<script src="../../js/systemSet/userManage.js"></script>
+</body>
+</html>
