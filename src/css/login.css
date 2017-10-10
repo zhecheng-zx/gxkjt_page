@@ -1,0 +1,168 @@
+html,body,ul,li,ol,p,span,div,header,main,h1,h2,h3,h4,h5,h6,em,i,small,section,aside,s,menu,code,label,eq,textarea,input,table,tr,td,th,thead,tbody,option,audio,canvas,svg,select,button,head,footer,applet,object,iframe,blockquote,pre,a,abbr,acronym,address,big,cite,del,dfn,font,img,ins,kbd,q,samp,strike,strong,msqrt,sub,sup,tt,var,b,u,center,dl,dt,dd,fieldset,form,legend,caption,card,circle,article{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    outline: 0;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box; /* Firefox */
+    -webkit-box-sizing:border-box; /* Safari */
+}
+:before,
+:after{
+    box-sizing:border-box;
+    -moz-box-sizing:border-box; /* Firefox */
+    -webkit-box-sizing:border-box; /* Safari */
+}
+html,
+body{height:100%;}
+html *{
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+body{
+    font-family: PingFang SC,Lantinghei SC,Helvetica Neue,Helvetica,Arial,Microsoft YaHei,微软雅黑,STHeitiSC-Light,simsun,宋体,WenQuanYi Zen Hei,WenQuanYi Micro Hei,'sans-serif';
+    font-size: 14px;
+}
+ul,ol,li{list-style: none;}
+a{
+    text-decoration: none;
+}
+.login{
+    position: relative;
+    height:100%;
+    background-image: url("../images/login_banner.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.login .login-panel{
+    position: absolute;
+    left: 50%;
+    top:50%;
+    margin-left: -454px;
+    margin-top: -272px;
+    width: 908px;
+    height: 544px;
+    -webkit-border-radius:22px;
+    -moz-border-radius:22px;
+    border-radius:22px;
+    -webkit-box-shadow: 0 0 10px rgba(93,102,144,.38);
+    -moz-box-shadow: 0 0 10px rgba(93,102,144,.38);
+    box-shadow: 0 0 10px rgba(93,102,144,.38);
+    background-color: #fff;
+}
+.login-panel .login-panel-header{
+    padding-top: 60px;
+    padding-bottom: 60px;
+    text-align: center;
+}
+.login-panel-header .login-header-title{
+    color: #161c26;
+    font-size: 28px;
+    font-weight: 400;
+}
+.login-panel .login-panel-body{
+    padding: 70px 200px;
+}
+.icon-input-group.icon-phone,
+.icon-input-group.icon-password{
+    padding-left: 35px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #cccccc;
+    background-image: url("../images/login_icon.png");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+}
+.icon-input-group.icon-phone{
+    background-position: 0 10px;
+}
+.icon-input-group.icon-password{
+    background-position: 0 -80px;
+}
+.icon-input-group.icon-password+div{
+    margin-bottom: 50px;
+}
+.icon-input-group.icon-password{
+    margin-bottom: 30px;
+}
+.icon-input-group .input{
+    height:48px;
+    width: 100%;
+}
+.btn{
+    padding-left: 20px;
+    padding-right: 20px;
+    -webkit-border-radius:3px;
+    -moz-border-radius:3px;
+    border-radius:3px;
+}
+.btn-primary{
+    color:#fff;
+    background-color: #3385ff;
+    border-color: #3385ff;
+}
+.btn-primary:focus,
+.btn-primary.focus {
+    color: #fff;
+    background-color: #2674e8;
+    border-color: #267af7;
+}
+.btn-primary:hover {
+    color: #fff;
+    background-color: #2674e8;
+    border-color: #267af7;
+}
+.btn-primary:active,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary {
+    color: #fff;
+    background-color: #2674e8;
+    border-color: #267af7;
+}
+.btn-primary:active:hover,
+.btn-primary.active:hover,
+.open > .dropdown-toggle.btn-primary:hover,
+.btn-primary:active:focus,
+.btn-primary.active:focus,
+.open > .dropdown-toggle.btn-primary:focus,
+.btn-primary:active.focus,
+.btn-primary.active.focus,
+.open > .dropdown-toggle.btn-primary.focus {
+    color: #fff;
+    background-color: #2674e8;
+    border-color: #267af7;
+}
+.btn-primary:active,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary {
+    background-image: none;
+}
+.btn-primary.disabled:hover,
+.btn-primary[disabled]:hover,
+fieldset[disabled] .btn-primary:hover,
+.btn-primary.disabled:focus,
+.btn-primary[disabled]:focus,
+fieldset[disabled] .btn-primary:focus,
+.btn-primary.disabled.focus,
+.btn-primary[disabled].focus,
+fieldset[disabled] .btn-primary.focus {
+    background-color: #2674e8;
+    border-color: #267af7;
+}
+.btn-primary .badge {
+    color: #2674e8;
+    background-color: #fff;
+}
+
+.login .btn-primary{
+    padding-left: 80px;
+    padding-right: 80px;
+}
+.control-label{
+    font-weight: 400;
+}
+.login-panel .forget{
+    padding-top: 0;
+}
+.forget .form-group:last-child{
+    margin-top: 94px;
+}
