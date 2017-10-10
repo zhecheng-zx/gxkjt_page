@@ -1027,3 +1027,53 @@ fieldset[disabled] .btn-success.focus {
     width: 850px;
     margin:auto;
 }
+
+.enterpriseDataDisplay .btn-area{
+    margin: 20px auto;
+}
+
+.enterpriseDataDisplay .table-info img{
+    width: 150px;
+    height: 150px;
+}
+
+.nav.nav-classify{
+    background: #0066ff;
+    margin: 30px 0;
+    border:1px solid #e5e5e5;
+}
+
+.nav.nav-classify li{
+    width: 16.6667%;
+    margin: 0;
+    text-align: center;
+}
+
+.nav.nav-classify li a{
+    font-size: 18px;
+    color: #fff;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+
+.nav.nav-classify li:hover a,
+.nav.nav-classify li:active a,
+.nav.nav-classify li:focus a{
+    background: #6aa5fc;
+}
+
+.nav.nav-classify li.active a{
+    background: #fff;
+    color: #000;
+}
+
+.enterpriseDataDisplay div.item{
+    padding: 30px 0;
+}
+
+.panel-lightblue .panel-heading,
+.table.table-lightblue thead tr th{
+    background: #e7f7ff;
+    font-size: 14px;
+}
