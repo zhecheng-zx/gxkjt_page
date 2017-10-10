@@ -59,14 +59,37 @@
             <div class="itemTitle mrB20">基本信息</div>
             <div class="row">
                 <div class="col-md-5">
-                    <div class="panel panel-default  panel-lightblue panel-lightblue">
+                    <div class="panel panel-default panel-lightblue panel-legal-person">
                         <div class="panel-heading">
                             <h5 class="text-center">
                                 法人信息
                             </h5>
                         </div>
                         <div class="panel-body">
-                           
+                            <p class="person-img text-center">
+                                <img src="../../images/person-temp.png" alt="">
+                            </p>
+                            <p class="name text-center">雷军</p>
+                            <p class="gray text-center">
+                                他有 <span class="blue">100</span> 家企业，分布情况如下
+                            </p>
+                            <ul class="list-group noBorder">
+                                <li class="list-group-item text-center">
+                                    <span class="area">杭州</span>
+                                    <span class="num blue">21</span>
+                                    <span class="name">杭州摩拜有限公司</span>
+                                </li>
+                                <li class="list-group-item text-center">
+                                    <span class="area">上海</span>
+                                    <span class="num blue">11</span>
+                                    <span class="name">上海摩拜有限公司</span>
+                                </li>
+                                <li class="list-group-item text-center">
+                                    <span class="area">北京</span>
+                                    <span class="num blue">11</span>
+                                    <span class="name">北京摩拜有限公司</span>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -76,7 +99,7 @@
                             <h5 class="text-center">评分</h5>
                         </div>
                         <div class="panel-body">
-
+                            <div class="chart-grade" id="chart_grade"></div>
                         </div>
                     </div>
                 </div>
@@ -87,8 +110,23 @@
                         <div class="panel-heading">
                             <h5 class="text-center">注册信息</h5>
                         </div>
-                        <div class="panel-body">
-
+                        <div class="panel-body noPadding">
+                            <table class="table table-striped">
+                                <tbody>
+                                <tr>
+                                    <td>注册资本</td>
+                                    <td>1000万元</td>
+                                </tr>
+                                <tr>
+                                    <td>注册时间</td>
+                                    <td>2013-02-02</td>
+                                </tr>
+                                <tr>
+                                    <td>企业状态</td>
+                                    <td>开业</td>
+                                </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
@@ -98,7 +136,10 @@
                             <h5 class="text-center">股权结构图</h5>
                         </div>
                         <div class="panel-body">
-
+                            <p class="stock-img-box text-center">
+                                <img src="../../images/share-temp.jpg" alt="">
+                            </p>
+                            <p class="text-center"><button class="btn btn-primary">查看详情</button></p>
                         </div>
                     </div>
                 </div>
@@ -149,15 +190,152 @@
                 </thead>
                 <tbody>
                 <tr>
-                    <td>计算机信息科技领域内的技术开发、技术转让、技术咨询、技术服
-                        务,电子产品、自行车(电动自行车按本市产品目录经营)计算机信息科技领域内的技术开发、技术转让、技术咨询、技术服务,电子产品、自行车(电动自行车按本市产品目录经营)</td>
+                    <td style="width: 50%">
+                        计算机信息科技领域内的技术开发、技术转让、技术咨询、技术服
+                        务,电子产品、自行车(电动自行车按本市产品目录经营)计算机信息科技领域内的技术开发、技术转让、技术咨询、技术服务,电子产品、自行车(电动自行车按本市产品目录经营)
+                    </td>
                     <td>北京市海淀区软件园二期</td>
                     <td>海淀分局</td>
                 </tr>
                 </tbody>
             </table>
         </div>
+        <div class="item">
+            <div class="itemTitle mrB20">企业关系</div>
+            <div class="relation-wrap">
+                <p class="no-relation text-center">暂无相关信息，看看公司的其他信息</p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="itemTitle mrB20">主要人员</div>
+            <table class="table table-bordered table-lightblue">
+                <thead>
+                <tr>
+                    <th>董事</th>
+                    <th>董事</th>
+                    <th>董事</th>
+                    <th>董事</th>
+                    <th>董事</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                   <td>张三 <a href="javascript:;">他有7家公司>></a></td>
+                    <td>张三 <a href="javascript:;">他有7家公司>></a></td>
+                    <td>张三 <a href="javascript:;">他有7家公司>></a></td>
+                    <td>张三 <a href="javascript:;">他有7家公司>></a></td>
+                    <td>张三 <a href="javascript:;">他有7家公司>></a></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="item">
+            <div class="itemTitle mrB20">控股信息</div>
+            <table class="table table-bordered table-striped table-lightblue">
+                <thead>
+                <tr>
+                    <th>股东</th>
+                    <th>出资比例</th>
+                    <th>认缴出资</th>
+                    <th>时间</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>张三 <a href="javascript:;">他有7家公司>></a></td>
+                    <td>77.08%</td>
+                    <td>888万元</td>
+                    <td>2015-03-28</td>
+                </tr>
+                <tr>
+                    <td>张三 <a href="javascript:;">他有7家公司>></a></td>
+                    <td>77.08%</td>
+                    <td>888万元</td>
+                    <td>2015-03-28</td>
+                </tr>
+                <tr>
+                    <td>张三 <a href="javascript:;">他有7家公司>></a></td>
+                    <td>77.08%</td>
+                    <td>888万元</td>
+                    <td>2015-03-28</td>
+                </tr>
+                <tr>
+                    <td>张三 <a href="javascript:;">他有7家公司>></a></td>
+                    <td>77.08%</td>
+                    <td>888万元</td>
+                    <td>2015-03-28</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="item">
+            <div class="itemTitle mrB20">对外投资</div>
+            <table class="table table-bordered table-striped table-lightblue">
+                <thead>
+                <tr>
+                    <th>被投资企业名称</th>
+                    <th>被投资法定代表人</th>
+                    <th>注册资本</th>
+                    <th>投资数额</th>
+                    <th>投资占比</th>
+                    <th>注册时间</th>
+                    <th>状态</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>中科点击科技有限公司</td>
+                    <td>张三 <a href="javascript:;">他有7家公司>></a></td>
+                    <td>888万元</td>
+                    <td>888万元</td>
+                    <td>31.22%</td>
+                    <td>2015-03-28</td>
+                    <td>
+                        <span class="gray">存续</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>中科点击科技有限公司</td>
+                    <td>张三 <a href="javascript:;">他有7家公司>></a></td>
+                    <td>888万元</td>
+                    <td>888万元</td>
+                    <td>31.22%</td>
+                    <td>2015-03-28</td>
+                    <td>
+                        <span class="blue">存续</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>中科点击科技有限公司</td>
+                    <td>张三 <a href="javascript:;">他有7家公司>></a></td>
+                    <td>888万元</td>
+                    <td>888万元</td>
+                    <td>31.22%</td>
+                    <td>2015-03-28</td>
+                    <td>
+                        <span class="gray">注销</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>中科点击科技有限公司</td>
+                    <td>张三 <a href="javascript:;">他有7家公司>></a></td>
+                    <td>888万元</td>
+                    <td>888万元</td>
+                    <td>31.22%</td>
+                    <td>2015-03-28</td>
+                    <td>
+                        <span class="blue">注销</span>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>
+
+<script src="../../assets/jQuery/jquery.min.js"></script>
+<script src="../../assets/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+<script src="../../assets/echarts/echarts-all-3.js"></script>
+<script src="../../js/techPool/enterpriseDataDisplay.js"></script>
 </body>
 </html>
