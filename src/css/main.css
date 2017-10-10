@@ -224,7 +224,7 @@ article .info span{
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
-    margin-right: 20px;
+    margin-right: 15px;
 }
 
 .info .tag.red,
@@ -508,12 +508,17 @@ div.item {
 
 .article-info span,
 .article-sub-info span{
-    padding: 5px 13px 5px 0px;
+    padding: 5px 20px 5px 0;
 }
 
 .articleDetail article .article-sub-info{
     font-size: 14px;
     color: #999;
+}
+
+.article-sub-info .like-wrap{
+    color: #3385ff;
+    cursor: pointer;
 }
 
 .article-media{
@@ -522,8 +527,8 @@ div.item {
 }
 
 .article-media video{
-    height: 350px;
-    width: auto;
+    height: 545px;
+    max-width: 90%;
 }
 
 .articleDetail article .article-content{
@@ -531,6 +536,11 @@ div.item {
     font-size: 16px;
     text-indent: 2em;
     line-height: 28px;
+}
+
+article .copyright{
+    font-size: 14px;
+    color: #999;
 }
 
 .title a,
@@ -891,7 +901,6 @@ span.thumbs-up{
 .poolSearch .word-box h4{
     margin-top:15px;
 }
-
 .btn{
     padding-left: 20px;
     padding-right: 20px;
@@ -1013,4 +1022,8 @@ fieldset[disabled] .btn-success.focus {
     color: #77b71f;
     background-color: #fff;
 }
-
+.article-form{
+    padding-top: 65px;
+    width: 850px;
+    margin:auto;
+}
