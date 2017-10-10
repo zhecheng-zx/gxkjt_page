@@ -724,6 +724,7 @@ article .copyright{
 .text-center{
     text-align: center !important;
 }
+
 .table-thead-blue>thead>tr>th {
     background-color: #3385ff;
     color: #ffffff;
@@ -784,17 +785,21 @@ span.thumbs-up{
     height: 20px;
 }
 
+
+/*科技智汇*/
+/*一键搜索*/
+
 .poolSearch .input-group{
     width:866px;
     margin:0 auto;
     margin-top:30vh;
 }
-.poolSearch .form-control{
+.poolSearch .form-control,.poolResult .form-control{
     height:46px;
     width:736px;
     border:1px solid #3385ff;
 }
-.poolSearch .input-group-btn .btn{
+.poolSearch .input-group-btn .btn,.poolResult .input-group-btn .btn{
     height:46px;
     width:130px;
     border:1px solid #3385ff;
@@ -836,6 +841,7 @@ span.thumbs-up{
   width:121px;
   text-align:center;
   color:#666666;
+  cursor:pointer;
 }
 .poolSearch .modal-header{
     background-color:#3385ff;
@@ -901,6 +907,7 @@ span.thumbs-up{
 .poolSearch .word-box h4{
     margin-top:15px;
 }
+
 .btn{
     padding-left: 20px;
     padding-right: 20px;
@@ -1076,4 +1083,130 @@ fieldset[disabled] .btn-success.focus {
 .table.table-lightblue thead tr th{
     background: #e7f7ff;
     font-size: 14px;
+}
+
+/*搜索结果*/
+.poolResult a{
+    color:#3385ff;
+}
+ .poolResult .top-tool .input-group{
+    width:866px;
+    margin-top:-10px;
+}
+.poolResult .top-tool{
+    padding-top:35px;
+}
+.poolResult .top-tool a{
+    display:inline-block;
+    font-size:22px;
+    vertical-align: middle;
+    color:#3385ff;
+}
+.poolResult .top-tool a:hover,.poolResult .top-tool a:focus{
+    text-decoration: none;
+}
+.poolResult .result-box {
+ margin-top:30px;
+}
+.poolResult .result-box:last-of-type {
+ margin-bottom:30px;
+}
+
+.poolResult .result-box table{
+    margin-bottom: 20px;
+}
+.poolResult .result-box table td{
+    height:40px;
+    vertical-align:bottom;
+
+
+}
+.poolResult .result-box table tr td:first-child a{
+    display:block;
+   width:600px;
+  padding-right:20px;
+  color:#333;
+  text-overflow: ellipsis; 
+  -moz-text-overflow: ellipsis;  
+  overflow: hidden;  
+   white-space: nowrap;  
+}
+/*智搜*/
+.intelligentSearch .filter-list{
+    margin-top:20px;
+}
+.intelligentSearch .filter-list li{
+    display:inline-block;
+    margin-left:20px;
+    margin-bottom:20px;
+}
+.intelligentSearch .filter-list li>.btn{
+    width:100px;
+    background-color:#3385ff;
+    color:#fff;
+}
+.intelligentSearch .filter-list li:first-child,.intelligentSearch .filter-list li:nth-of-type(6){
+    margin-left:0;
+}
+.intelligentSearch .filter-list .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+    width: 120px;
+}
+.intelligentSearch .filter-list li>input{
+
+}
+
+.intelligentSearch .bootstrap-table .table thead>tr>th{
+    border:none;
+    background-color:#3385ff;
+    color:#ffffff;
+}
+
+.i-item-title{
+    padding-left:12px;
+    border-left:4px solid #3385ff;
+}
+.project-content li{
+    padding:30px 0;
+    border-bottom:1px solid #e5e5e5;
+}
+
+.project-content .i-wrapper{
+    width:100%;
+     margin-top:20px;
+     padding:0 15px;
+}
+.project-content .table1{
+    width:100%;
+}
+.project-content .table1 td{
+    height:40px;
+   
+}
+.project-content .details p{
+    margin-top:20px;
+}
+.project-content .i-wrapper .content{
+    margin-top:10px;
+}
+.project-content .i-wrapper a{
+    color:#3385ff;
+}
+.project-content .i-wrapper p{
+    margin-bottom:10px;
+}
+.intelligentSearch .score-box{
+   width:430px;
+   margin:0 auto;
+}
+#score{
+    display:inline-block;
+    width:240px;
+    height:260px;
+}
+#score+a{
+    float:right;
+    color:#3385ff;
+    margin-top:100px;
+   
+
 }
