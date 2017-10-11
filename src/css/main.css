@@ -1271,8 +1271,8 @@ fieldset[disabled] .btn-success.focus {
 
 .stock-img-box{
     width: 100%;
-    height: 226px;
-    margin-bottom: 10px;
+    height: 221px;
+    margin-bottom: 15px;
 }
 
 .stock-img-box img{
@@ -1290,4 +1290,19 @@ fieldset[disabled] .btn-success.focus {
 .no-relation{
     line-height: 251px;
     color: #3a3a3a;
+}
+
+.tag-num{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    background: #2478f6;
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    border-radius: 50%;
+    margin-left: 8px;
 }
