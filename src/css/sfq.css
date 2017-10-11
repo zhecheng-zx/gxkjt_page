@@ -155,17 +155,27 @@
 
 .left_nav.another{
     width: 120px;
+    background: #030a1c;
 }
 
-.left_nav.another .list_dt{
-    padding: 0px 10px;
+.left_nav.another #open{
+    background: #030a1c;
+}
+
+.left_nav.another .list_dt,
+.left_nav.another #open{
+    padding: 0 10px;
     height: auto;
+    background: transparent;
+    border:none;
 }
 
 .left_nav.another .list_dt p{
     text-align: center;
     line-height: 40px;
-    padding: 10px 0px;
+    padding: 10px 0;
+    color: #00fcff;
+    font-weight:normal;
 }
 
 .left_nav.another .icon_img{
@@ -179,4 +189,59 @@
 
 .right_content.another{
     width: auto;
+}
+
+
+.top.another{
+    background-image: url('../images/top-black.png');
+    -webkit-background-size: 100% 81px;
+    background-size: 100% 81px;
+}
+
+.left_nav.another .icon_img{
+    background-image: url('../images/left_nav_black.png');
+    -webkit-background-size:40px 229px;
+    background-size:40px 229px;
+    width: 35px;
+    height: 35px;
+}
+
+
+.left_nav.another .icon_img.icon1,
+.left_nav.another #open .icon_img.icon1{
+    background-position: -3px -3px;
+}
+
+.left_nav.another .icon_img.icon2,
+.left_nav.another #open .icon_img.icon2{
+    background-position: -1px -36px;
+}
+
+.left_nav.another .icon_img.icon3,
+.left_nav.another #open .icon_img.icon3{
+    background-position: -2px -68px;
+}
+
+.left_nav.another .icon_img.icon4,
+.left_nav.another #open .icon_img.icon4{
+    background-position: -2px -99px;
+}
+
+.left_nav.another .icon_img.icon5,
+.left_nav.another #open .icon_img.icon5{
+    background-position: -2px -133px;
+}
+
+.left_nav.another .icon_img.icon6,
+.left_nav.another #open .icon_img.icon6{
+    background-position: -2px -166px;
+}
+
+.left_nav.another .icon_img.icon7,
+.left_nav.another #open .icon_img.icon7{
+    background-position: -2px -197px;
+}
+
+.left_nav.another .list_li{
+    font-size: 11px;
 }
