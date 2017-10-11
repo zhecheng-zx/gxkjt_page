@@ -1313,3 +1313,54 @@ fieldset[disabled] .btn-success.focus {
 .enterpriseDataDisplay .itemTitle{
     padding: 0 15px;
 }
+
+.enterpriseDataDisplay .pagination{
+    margin: 0 auto;
+}
+
+.annual-report>div>div{
+    border: 1px solid #e6e6e6;
+}
+
+.annual-report .pull-left,
+.annual-report .pull-right{
+    width: 50%;
+    padding: 30px 0;
+    height: 180px;
+}
+
+.report-logo{
+    display: inline-block;
+    width: 120px;
+    height: 120px;
+    margin: auto;
+    background-image: url('../images/report.png');
+}
+
+.report-logo.report2{
+    background-position: -132px 0;
+}
+
+.report-logo.report3{
+    background-position: -264px 0;
+}
+
+.report-logo.report4{
+    background-position: -396px 0;
+}
+
+.annual-report p.year{
+    font-size: 40px;
+    color: #666;
+    height: 60px;
+    line-height: 60px;
+}
+
+.annual-report .btn-box{
+    line-height: 60px;
+}
+
+#table_projectInfo img{
+    width: 120px;
+    height: 120px;
+}
