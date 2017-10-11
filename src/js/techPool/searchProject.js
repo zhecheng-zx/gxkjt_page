@@ -5,8 +5,8 @@
 
 
               var stateFormatter=function (value, row, index){
-                var a="<a href='#'>"+查看+"</a>";
-                return a;
+                var s="<a href='javascript:void(0);'>查看</a>";
+                return s;
             };
             var options = {
                 columns : [ {
@@ -47,7 +47,8 @@
                     field : 'id',
                     align:"center",
                     valign: "middle",
-                    title : "操作"
+                    title : "操作",
+                    formatter:stateFormatter
                 }],
                 paginationPreText:"<i class='glyphicon glyphicon-menu-left'></i>",
                 paginationNextText:"<i class='glyphicon glyphicon-menu-right'></i>",
@@ -71,7 +72,7 @@
 
 
             $('#project-list').bootstrapTable(options);
-})
+});
 
 
 

@@ -1160,7 +1160,10 @@ fieldset[disabled] .btn-success.focus {
     background-color:#3385ff;
     color:#ffffff;
 }
-
+.intelligentSearch .bootstrap-select.btn-group .dropdown-menu.inner li{
+    width:100%;
+}
+.intelligentSearch table th{font-weight:normal;}
 .i-item-title{
     padding-left:12px;
     border-left:4px solid #3385ff;
