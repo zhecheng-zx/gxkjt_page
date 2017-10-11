@@ -885,6 +885,17 @@ span.thumbs-up{
   color:#4c4c4c;
   margin-top:15px;
   cursor:pointer;
+
+    -moz-user-select:none;/*火狐*/
+    -webkit-user-select:none;/*webkit浏览器*/
+    -ms-user-select:none;/*IE10*/
+    -khtml-user-select:none;/*早期浏览器*/
+    user-select:none;
+
+}
+.word-list .top{
+    height:auto;
+    background:#fff;
 }
 .poolSearch .add-word input{
   border:1px solid #cfd1d3;
