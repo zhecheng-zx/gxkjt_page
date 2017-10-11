@@ -1306,3 +1306,7 @@ fieldset[disabled] .btn-success.focus {
     border-radius: 50%;
     margin-left: 8px;
 }
+
+.enterpriseDataDisplay .itemTitle{
+    padding: 0 15px;
+}
