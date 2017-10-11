@@ -51,4 +51,10 @@ $(function () {
     };
     var chart = echarts.init(document.getElementById('chart_grade'));
     chart.setOption(option);
+
+    $('#table_investOut').bootstrapTable({
+        pagination: true,
+        pageNumber: 1,
+        pageSize: 10
+    });
 });

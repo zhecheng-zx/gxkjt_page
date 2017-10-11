@@ -82,4 +82,9 @@ $(function () {
         }
     }
     $(".table").bootstrapTable(option)
+    
+    
+    $('#modal_cancel_btn').click(function () {
+        $('#editRoleModal').modal('toggle')
+    })
 })
