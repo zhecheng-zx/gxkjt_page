@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <title>科技立方</title>
     <link href="../../assets/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="../../assets/bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css">
+    <link href="../../assets/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="../../assets/bootstrap-select/bootstrap-select.min.css">
     <link href="../../css/main.css" rel="stylesheet"/>
 
     <!--[if lt IE 9]>
@@ -21,12 +22,12 @@
         <li role="presentation">
             <a href="#guangxi" aria-controls="guangxi" role="tab" data-toggle="tab">广西</a>
         </li>
-        <!--<li role="presentation">-->
-            <!--<a href="#" aria-controls="" role="tab" data-toggle="tab">广西九张名片</a>-->
-        <!--</li>-->
-        <!--<li role="presentation">-->
-            <!--<a href="#" aria-controls="" role="tab" data-toggle="tab">国内广西科技发展趋势</a>-->
-        <!--</li>-->
+        <li role="presentation">
+            <a href="#nineCard" aria-controls="nineCard" role="tab" data-toggle="tab">广西九张名片</a>
+        </li>
+        <li role="presentation">
+            <a href="#developTrend" aria-controls="developTrend" role="tab" data-toggle="tab">国内广西科技发展趋势</a>
+        </li>
         <!--<li role="presentation">-->
             <!--<a href="#" aria-controls="" role="tab" data-toggle="tab">项目分析报告</a>-->
         <!--</li>-->
@@ -249,6 +250,69 @@
                 </div>
             </div>
         </div>
+
+        <div id="nineCard" class="tab-pane" role="tabpanel">
+            <div class="btn-wrapper">
+                <select class="selectpicker">
+                    <option>选择名片</option>
+                    <option>传统优势产业</option>
+                    <option>先进制造业</option>
+                    <option>信息技术</option>
+                    <option>互联网经济</option>
+                    <option>高性能新材料</option>
+                    <option>生态环保产业</option>
+                    <option>优势特色农业</option>
+                    <option>海洋资源开发利用资源</option>
+                    <option>大健康产业</option>
+                </select>
+
+                <span class="text">“九张名片”于2016年9月22日提车</span>
+            </div>
+            <div class="content">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="item">
+                            <div class="itemTitle">项目</div>
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    基于大数据的甘蔗养殖实验项目   <time>2017-01-25</time>
+                                </li>
+                                <li class="list-group-item">
+                                    使用最新浇灌技术种植实验项目  <time>2016-10-15</time>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="item">
+                            <div class="itemTitle">
+                                企事业单位  <span class="tag-num">108</span>
+                            </div>
+                            <ul class="list-group">
+                                <li class="list-group-item">国企  <span class="mrL20">23家</span></li>
+                                <li class="list-group-item">私营  <span class="mrL20">23家</span></li>
+                                <li class="list-group-item">国内外控股企业  <span class="mrL20">23家</span></li>
+                            </ul>
+                        </div>
+                        <div class="item">
+                            <div class="itemTitle">科技工作者 <span class="tag-num bigSize">5567</span></div>
+                        </div>
+                        <div class="item">
+                            <div class="itemTitle">专家 <span class="tag-num">655</span></div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="chart-wrap" id="nineCardChartOne"></div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="chart-wrap" id="nineCardChartTwo"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="developTrend" class="tab-pane" role="tabpanel">
+            <div class="btn-wrapper">
+
+            </div>
+        </div>
     </div>
 </div>
 
@@ -258,6 +322,7 @@
 <script src="../../assets/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
 <script src="../../assets/echarts/echarts-all-3.js"></script>
 <script src="../../assets/echarts/china.js"></script>
+<script src="../../assets/bootstrap-select/bootstrap-select.min.js"></script>
 <script src="../../js/techCube/techCube.js"></script>
 </body>
 </html>

@@ -242,6 +242,18 @@
     background-position: -2px -197px;
 }
 
-.left_nav.another .list_li{
+.left_nav.another .list_dd .list_li{
     font-size: 11px;
+    background: #030a1c;
+    border-bottom: 1px solid #030a1c;
+    color: #00fcff;
+}
+
+.left_nav.another .list_dd .list_li:hover{
+    color: #fff;
+}
+
+.left_nav.another #open ._after,
+.left_nav.another .list_dt:hover ._after{
+    width: 0;
 }

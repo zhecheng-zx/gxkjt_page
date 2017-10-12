@@ -1230,7 +1230,7 @@ fieldset[disabled] .btn-success.focus {
 }
 
 .blue{
-    color: #2478f6;
+    color: #3385ff;
 }
 
 .person-img{
@@ -1374,4 +1374,44 @@ fieldset[disabled] .btn-success.focus {
 #table_projectInfo img{
     width: 120px;
     height: 120px;
+}
+
+.reportContainer .search-select{
+    margin-top: 25px;
+}
+
+.reportContainer .search-select .left{
+    width: 120px;
+}
+
+.reportContainer .search-select .right{
+    width: calc(100% - 130px);
+}
+
+.reportContainer .search-select ul li{
+    padding: 1px 15px;
+    margin: 0 10px;
+}
+
+.reportContainer>h6{
+    margin: 36px auto;
+    color: #333;
+}
+
+.report-row>div{
+    padding: 15px;
+}
+
+.report-row .content{
+    border: 1px solid #dbdbdb;
+    padding: 40px 0;
+    box-shadow: 1px 1px 6px #dbdbdb, 1px 1px 6px #dbdbdb;
+}
+
+.report-row .blue{
+    margin: 35px auto 10px;
+}
+
+.report-row .date{
+    margin-bottom: 30px;
 }
