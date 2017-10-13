@@ -9,10 +9,13 @@
     <link rel="stylesheet" href="../../css/main.css">
     <link rel="stylesheet" href="../../css/sfq.css">
     <style>
+        html, body{
+            height: auto;
+        }
         .left_nav{
             width: 20%;
             background: #f5f5f5;
-            height: 900px;
+            height: 1120px;
             float: left;
         }
         .top{
@@ -25,14 +28,13 @@
         .right_content{
             float: left;
             width: 80%;
-            padding: 5px;
         }
         .ma_span{
             margin-right: 20px;
         }
     </style>
 </head>
-<body>
+<body class="clearfix">
 <div class="top clearfix another">
     <div style="float: left">
         <img src="../../images/logo.png" alt="">
@@ -143,12 +145,129 @@
         </dd>
     </dl>
 </div>
-<div class="right_content another">
-    1
+<div class="right_content another ">
+    <div class="techPlatform">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="panel panel-default panel-white">
+                    <div class="panel-heading">
+                        <img src="../../images/sercli.png" alt="" class="mrR5">
+                        广西壮族自治区
+                    </div>
+                    <div class="panel-body">
+                        <div class="chart-wrap-big" id="chart-guangxi"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="panel panel-default panel-white tech-small-panel">
+                            <div class="panel-body noPadding">
+                                <div class="row">
+                                    <div class="col-md-6 text-right"> <span class="techIcon icon1"></span> </div>
+                                    <div class="col-md-6">
+                                        <h2 class="num first">26384</h2>
+                                        <span class="name">科技项目</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="panel panel-default panel-white tech-small-panel">
+                            <div class="panel-body noPadding">
+                                <div class="row">
+                                    <div class="col-md-6 text-right"> <span class="techIcon icon2"></span> </div>
+                                    <div class="col-md-6">
+                                        <h2 class="num second"> 26384</h2>
+                                        <span class="name">科技单位</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-4">
+                        <div class="panel panel-default panel-white tech-small-panel">
+                            <div class="panel-body noPadding">
+                                <div class="row">
+                                    <div class="col-md-6 text-right"><span class="techIcon icon3"></span> </div>
+                                    <div class="col-md-6 text-left">
+                                        <h2 class="num third">26384</h2>
+                                        <span class="name">科技工作者</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="panel panel-default panel-white">
+                            <div class="panel-heading">
+                                <img src="../../images/sercli.png" alt="" class="mrR5">
+                                九张名片项目统计
+                            </div>
+                            <div class="panel-body">
+                                <div class="chart-wrap-middle" id="chart-nine-card"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="panel panel-default panel-white">
+                            <div class="panel-body">
+                                <div class="panel-heading"> &nbsp;</div>
+                                <div class="chart-wrap-middle" id="card2"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="panel panel-default panel-white">
+                    <div class="panel-heading">
+                        <img src="../../images/sercli.png" alt="" class="mrR5">
+                        全国科技产出
+                    </div>
+                    <div class="panel-body">
+                        <div class="chart-wrap-h420" id="card3"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-default panel-white">
+                    <div class="panel-heading">
+                        <img src="../../images/sercli.png" alt="" class="mrR5">
+                        各处室科技数据量
+                    </div>
+                    <div class="panel-body">
+                        <div class="chart-wrap-h420" id="card4"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-default panel-white">
+                    <div class="panel-heading">
+                        <img src="../../images/sercli.png" alt="" class="mrR5">
+                        全区科技热点
+                    </div>
+                    <div class="panel-body">
+                        <div class="chart-wrap-h420" id="hot_page">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <script src="../../assets/jQuery/jquery.min.js"></script>
 <script src="../../assets/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+<script src="../../js/techPlatform/techPlatform.js"></script>
 
 <script>
     $(".list_dt").on("click",function () {
