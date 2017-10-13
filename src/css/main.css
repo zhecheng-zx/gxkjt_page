@@ -491,6 +491,10 @@ div.item {
     height: 400px;
 }
 
+.chart-wrap-h470{
+    height: 470px;
+}
+
 .chart-wrap-big{
     height: 550px;
 }
@@ -757,6 +761,10 @@ article .copyright{
 }
 .bg-gray{
     background: #fafafa !important;
+}
+
+.bg-white{
+    background: #fff !important;
 }
 
 .publish-box{
@@ -1104,6 +1112,10 @@ fieldset[disabled] .btn-success.focus {
     font-size: 14px;
 }
 
+.table.table-lightblue{
+    border: 1px solid #d6dde5;
+}
+
 /*搜索结果*/
 .poolResult a{
     color:#3385ff;
@@ -1420,17 +1432,42 @@ fieldset[disabled] .btn-success.focus {
     margin-bottom: 30px;
 }
 
-.reportDetail>.pull-left{
-    width: 210px;
+.reportDetail{
+    position: relative;
 }
 
-.reportDetail>.pull-right{
-    width: calc(100% - 210px);
+.reportDetail>.left-part{
+    position: absolute;
+    width: 210px;
+    height:100%;
+    left: 0;
+    top: 0;
+    background: #f5f5f5;
+}
+
+.reportDetail>.left-part .list-group-item{
+    background: #f5f5f5;
+    line-height: 25px;
+}
+
+.reportDetail>.right-part{
+    margin-left: 210px;
+    padding: 20px;
 }
 
 .reportDetail .item{
     padding: 15px 30px;
     margin-bottom: 0;
+}
+
+.reportDetail .reportTitle{
+    position: relative;
+}
+
+.reportDetail .reportTitle .btn-wrap{
+    position: absolute;
+    right:0;
+    top:0;
 }
 
 .panel.panel-white{
@@ -1482,4 +1519,8 @@ fieldset[disabled] .btn-success.focus {
     color: #808080;
     font-size: 16px;
     line-height: 40px;
+}
+
+.border-box{
+    border: 1px solid #e6e6e6;
 }

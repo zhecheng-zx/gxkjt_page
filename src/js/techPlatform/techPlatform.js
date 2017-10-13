@@ -40,11 +40,11 @@ $(function () {
                     }
                 },
                 data:[
-                    {value:335, name:'直接访问',itemStyle: {normal: {color: '#ffb24d'}}},
-                    {value:310, name:'邮件营销',itemStyle: {normal: {color: '#00b1f3'}}},
-                    {value:234, name:'联盟广告',itemStyle: {normal: {color: '#00c8ec'}}},
-                    {value:135, name:'视频广告',itemStyle: {normal: {color: '#00e1e4'}}},
-                    {value:1548, name:'搜索引擎',itemStyle: {normal: {color: '#00eabb'}}}
+                    {value:335, name:'大健康产业',itemStyle: {normal: {color: '#2395ff'}}},
+                    {value:310, name:'先进制造业',itemStyle: {normal: {color: '#0084ff'}}},
+                    {value:234, name:'先进制造业',itemStyle: {normal: {color: '#00de9d'}}},
+                    {value:335, name:'互联网经济',itemStyle: {normal: {color: '#00c8e0'}}},
+                    {value:448, name:'优势特色农业',itemStyle: {normal: {color: '#00a9e0'}}}
                 ]
             }
         ]
@@ -83,7 +83,7 @@ $(function () {
                 {
                     value : [4300, 10000, 28000, 35000, 50000, 19000],
                     name : '2017',
-                    itemStyle: {normal: {color: '#20e1b7' ,areaStyle: {
+                    itemStyle: {normal: {color: '#50a9fb' ,areaStyle: {
                         type: 'default'
                     }}}
 
@@ -91,14 +91,14 @@ $(function () {
                 {
                     value : [5000, 14000, 28000, 31000, 42000, 21000],
                     name : '2016',
-                    itemStyle: {normal: {color: '#ffb24d', areaStyle: {
+                    itemStyle: {normal: {color: '#50a9fb', areaStyle: {
                         type: 'default'
                     }}}
                 },
                 {
-                    value : [6000, 11000, 38000, 39000, 32000, 18000],
+                    value : [6000, 11000, 18000, 29000, 22000, 18000],
                     name : '2015',
-                    itemStyle: {normal: {color: '#00bfff', areaStyle: {
+                    itemStyle: {normal: {color: '#84dcee', areaStyle: {
                         type: 'default'
                     }}}
                 }
@@ -109,7 +109,7 @@ $(function () {
 
     var card3 = echarts.init(document.getElementById('card3'))
     var option4 = {
-        color: ['#3398DB'],
+        color: ['#2a96fa'],
 
         tooltip : {
             trigger: 'axis',
@@ -163,7 +163,7 @@ $(function () {
                 data: [
                     {value: 335, name: '社发出', itemStyle: {normal: {color: '#1ccaff'}}},
                     {value: 310, name: '合作处', itemStyle: {normal: {color: '#00e4b1'}}},
-                    {value: 234, name: '基础处', itemStyle: {normal: {color: '#ffb24d'}}},
+                    {value: 234, name: '社发处', itemStyle: {normal: {color: '#00d5d2'}}},
                     {value: 135, name: '网络中心', itemStyle: {normal: {color: '#b3ff9b'}}}
                 ],
                 itemStyle: {
@@ -372,7 +372,7 @@ $(function () {
                         },
                         itemStyle: {
                             normal: {
-                                borderColor: '#20cbff',
+                                borderColor: '#0a89ff',
                                 areaColor: '#fff',
                                 borderWidth: 2,
                                 label:{
@@ -384,7 +384,7 @@ $(function () {
                                 },
                             },
                             emphasis: {
-                                areaColor: '#20cbff',
+                                areaColor: '#0a89ff',
                                 borderWidth: 0
                             }
                         },
