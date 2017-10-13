@@ -188,7 +188,7 @@
 }
 
 .right_content.another{
-    width: auto;
+    width: calc(100% - 120px);
 }
 
 
