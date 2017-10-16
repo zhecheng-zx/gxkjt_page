@@ -1062,15 +1062,6 @@ fieldset[disabled] .btn-success.focus {
     margin:auto;
 }
 
-.enterpriseDataDisplay .btn-area{
-    margin: 20px auto;
-}
-
-.enterpriseDataDisplay .table-info img{
-    width: 150px;
-    height: 150px;
-}
-
 .nav.nav-classify{
     margin: 30px 0;
 }
@@ -1102,8 +1093,25 @@ fieldset[disabled] .btn-success.focus {
     color: #000;
 }
 
-.enterpriseDataDisplay div.item{
-    padding: 30px 0 0;
+.companyDetail div.item{
+    padding: 10px 0 0;
+}
+
+.companyDetail .nav-pills{
+    margin: 20px auto;
+}
+
+.companyDetail .table-interval.table-quarter td{
+    width: 25%;
+}
+
+.companyDetail .table.table-interval tr td:nth-child(odd){
+    background: #f7f7f7;
+}
+
+.companyDetail .btn-link:focus,
+.companyDetail .btn-link:hover{
+    text-decoration: none;
 }
 
 .panel-lightblue .panel-heading,
@@ -1284,13 +1292,6 @@ fieldset[disabled] .btn-success.focus {
     width: 100%;
 }
 
-.enterpriseDataDisplay .table-striped>tbody>tr:nth-of-type(odd){
-    background: #fff;
-}
-.enterpriseDataDisplay .table-striped>tbody>tr:nth-of-type(even){
-    background: #fafafa;
-}
-
 .panel-body.noPadding{
     padding: 0;
 }
@@ -1339,10 +1340,6 @@ fieldset[disabled] .btn-success.focus {
     -moz-border-radius:50%;
     border-radius: 50%;
     margin-left: 8px;
-}
-
-.enterpriseDataDisplay .pagination{
-    margin: 0 auto;
 }
 
 .annual-report>div>div{
@@ -1627,4 +1624,14 @@ fieldset[disabled] .btn-success.focus {
 
 .reportDetail .icon-list.icon3{
     background-position: 0 -46px;
+}
+
+.nav.nav-classify.bg-white li a{
+    background: #fff;
+    color: #333;
+}
+
+.nav.nav-classify.bg-white li.active a{
+    background: #3385ff;
+    color: #fff;
 }
