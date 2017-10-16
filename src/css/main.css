@@ -429,8 +429,8 @@ div.item {
     background: #f5f5f5;
 }
 
-.item .left,
-.item .right{
+.item>.left,
+.item>.right{
     width: calc(50% - 80px);
     height: 500px;
     display: inline-block;
@@ -1093,7 +1093,8 @@ fieldset[disabled] .btn-success.focus {
     color: #000;
 }
 
-.companyDetail div.item{
+.companyDetail div.item,
+.projectAnalysis div.item{
     padding: 10px 0 0;
 }
 
@@ -1634,4 +1635,34 @@ fieldset[disabled] .btn-success.focus {
 .nav.nav-classify.bg-white li.active a{
     background: #3385ff;
     color: #fff;
+}
+
+.companyDetail .nav-default li{
+    width: 16.6667%;
+    margin: 0;
+}
+
+.nav.nav-tabs.nav-default{
+    border-right:1px solid #ddd;
+    border-bottom:none;
+}
+
+.nav.nav-default li.active{
+    background: #3385ff;
+}
+
+.nav-tabs.nav-default li a{
+    margin: 0;
+    border-radius: 0;
+    border-left: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+}
+
+.nav-tabs.nav-default li.active a,
+.nav-tabs.nav-default li.active a:active,
+.nav-tabs.nav-default li.active a:hover,
+.nav-tabs.nav-default li.active a:focus{
+    color: #fff;
+    background-color: transparent;
 }
