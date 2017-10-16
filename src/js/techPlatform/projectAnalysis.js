@@ -110,4 +110,17 @@ $(function () {
     chart4.setOption(option3);
 
 
+
+    $('#addTechCubeBtn').click(function () {
+        $('#addToTechCubeModal').modal('toggle');
+    });
+
+    $('.datetimepicker').datetimepicker({
+        format: 'yyyy',
+        startView: 'decade',
+        minView: 'decade',
+        maxViewMode: 2,
+        minViewMode:2,
+        autoclose: true
+    });
 });

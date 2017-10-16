@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>科技项目分析</title>
     <link href="../../assets/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../../assets/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css">
     <link href="../../css/main.css" rel="stylesheet"/>
 
     <!--[if lt IE 9]>
@@ -26,7 +27,7 @@
     <div class="item">
         <div class="itemTitle mrB20 blue">
             统计说明
-            <button class="btn btn-link pull-right blue"><span class="glyphicon glyphicon-plus-sign"></span> 添加到科技立方</button>
+            <button class="btn btn-link pull-right blue" id="addTechCubeBtn"><span class="glyphicon glyphicon-plus-sign"></span> 添加到科技立方</button>
         </div>
         <div class="summary">统计数据来自科技厅收到的所有项目申报数据，共55546条，统计截止日期2017-09-27。 对所有申报项目进行工作进度统计、</div>
     </div>
@@ -284,9 +285,87 @@
         </div>
     </div>
 </div>
-
+<!-- 编辑角色模态框（Modal） -->
+<div class="modal fade" id="addToTechCubeModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-blue">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="myModalLabel" align="center">
+                    添加到科技立方
+                </h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal" role="form">
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label" for="addTitle">自定义报表标题</label>
+                        <div class="col-sm-7">
+                            <input type="text" class="form-control" id="addTitle">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label">选择模块和时间</label>
+                        <div class="col-sm-7">
+                            <div class="row height50">
+                                <div class="col-sm-8">
+                                    <div class="checkbox">
+                                        <label><input type="checkbox" value="">项目申报工作进度统计</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <input type="text" class="form-control datetimepicker" data-date-format="yyyy" placeholder="全部">
+                                </div>
+                            </div>
+                            <div class="row height50">
+                                <div class="col-sm-8">
+                                    <div class="checkbox">
+                                        <label><input type="checkbox" value="">项目申报工作进度统计</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <input type="text" class="form-control datetimepicker" data-date-format="yyyy" placeholder="全部">
+                                </div>
+                            </div>
+                            <div class="row height50">
+                                <div class="col-sm-8">
+                                    <div class="checkbox">
+                                        <label><input type="checkbox" value="">项目申报工作进度统计</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <input type="text" class="form-control datetimepicker" data-date-format="yyyy" placeholder="全部">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-8">
+                                    <div class="checkbox">
+                                        <label><input type="checkbox" value="">项目申报工作进度统计</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <input type="text" class="form-control datetimepicker" data-date-format="yyyy" placeholder="全部">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer text-center">
+                <button type="button" class="btn btn-primary mrR15" id="edit_role_submit">确定
+                </button>
+                <button type="button" class="btn btn-default" id="modal_cancel_btn">
+                    取消
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
 <script src="../../assets/jQuery/jquery.min.js"></script>
 <script src="../../assets/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+<script src="../../assets/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+<script src="../../assets/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
 <script src="../../assets/echarts/echarts-all-3.js"></script>
 <script src="../../js/techPlatform/projectAnalysis.js"></script>
 </body>
