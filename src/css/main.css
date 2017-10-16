@@ -1576,10 +1576,13 @@ fieldset[disabled] .btn-success.focus {
 .reportDetail .list-group a{
     text-decoration: none;
     color: #999;
+}
+
+.reportDetail .list-group.smallSize a{
     font-size: 12px;
 }
 
-.reportDetail .list-group-item.special a{
+.reportDetail .list-group-item.special{
     font-size: 16px;
 }
 
@@ -1609,7 +1612,7 @@ fieldset[disabled] .btn-success.focus {
 .reportDetail .list-group .icon-list{
     display: inline-block;
     width: 17px;
-    height: 17px;
+    height: 20px;
     background-image: url("../images/icon-report-list.png");
     background-repeat:no-repeat;
     vertical-align: middle;
