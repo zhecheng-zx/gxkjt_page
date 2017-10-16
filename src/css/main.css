@@ -1448,6 +1448,12 @@ fieldset[disabled] .btn-success.focus {
 .reportDetail>.left-part .list-group-item{
     background: #f5f5f5;
     line-height: 25px;
+    padding: 10px 15px 10px 40px;
+}
+
+.reportDetail .back-box,
+.reportDetail>.left-part .list-group-item.special{
+    padding: 10px 15px;
 }
 
 .reportDetail>.right-part{
@@ -1523,4 +1529,102 @@ fieldset[disabled] .btn-success.focus {
 
 .border-box{
     border: 1px solid #e6e6e6;
+}
+
+.reportDetail .icon-detail1{
+    display: inline-block;
+    width: 125px;
+    height: 125px;
+    background-image: url("../images/icon-report2.png");
+    background-repeat: no-repeat;
+}
+
+.reportDetail .icon-detail1.icon1{
+    background-position: 2px -1px;
+}
+
+.reportDetail .icon-detail1.icon2{
+    background-position: -135px -1px;
+}
+
+.reportDetail .icon-detail1.icon3{
+    background-position: -272px 1px;
+}
+
+.reportDetail .icon-detail1.icon4{
+    background-position: -410px -1px;
+}
+
+.reportDetail .item .row .pull-left,
+.reportDetail .item .row .pull-right{
+    width: 50%;
+}
+
+.reportDetail .row .text-top{
+    font-size: 26px;
+    color: #2396fa;
+    line-height: 65px;
+}
+
+.reportDetail .row .text-bottom{
+    font-size: 16px;
+    line-height: 65px;
+}
+
+.reportDetail .row .border-box{
+    padding: 20px;
+}
+
+.reportDetail .list-group a{
+    text-decoration: none;
+    color: #999;
+    font-size: 12px;
+}
+
+.reportDetail .list-group-item.special a{
+    font-size: 16px;
+}
+
+.reportDetail .list-group-item.active,
+.reportDetail .list-group-item:hover{
+    background: #2478f6;
+}
+.reportDetail .list-group-item.active a,
+.reportDetail .list-group-item:hover a,
+.reportDetail .list-group a:active{
+    color: #fff;
+}
+
+.reportDetail .list-group-item.special:hover{
+    background: transparent;
+}
+
+.reportDetail .back-box a.toBack{
+    font-size: 16px;
+    color: #3385ff;
+}
+
+.reportDetail .list-group.noBorder{
+    margin:  0;
+}
+
+.reportDetail .list-group .icon-list{
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    background-image: url("../images/icon-report-list.png");
+    background-repeat:no-repeat;
+    vertical-align: middle;
+}
+
+.reportDetail .icon-list.icon1{
+    background-position: -2px 1px;
+}
+
+.reportDetail .icon-list.icon2{
+    background-position: 0 -22px;
+}
+
+.reportDetail .icon-list.icon3{
+    background-position: 0 -46px;
 }

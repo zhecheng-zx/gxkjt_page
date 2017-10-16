@@ -32,9 +32,13 @@ $(function () {
 
     var chart = echarts.init(document.getElementById('chartOne'));
     chart.setOption(option);
+    var chart9 = echarts.init(document.getElementById("chartNine"));
+    chart9.setOption(option);
     var chart3 = echarts.init(document.getElementById('chartThree'));
     option['color'] = ["#00df9c"];
     chart3.setOption(option);
+    var chart7 = echarts.init(document.getElementById("chartSeven"));
+    chart7.setOption(option);
 
     var option2 = {
         tooltip: {
@@ -64,6 +68,10 @@ $(function () {
     }
     var chart2 = echarts.init(document.getElementById('chartTwo'));
     chart2.setOption(option2);
+    var chart6 = echarts.init(document.getElementById('chartSix'));
+    chart6.setOption(option2);
+    var chart8 = echarts.init(document.getElementById('chartEight'));
+    chart8.setOption(option2);
 
     var option3 = {
         tooltip: {
@@ -103,4 +111,37 @@ $(function () {
     };
     var chart4 = echarts.init(document.getElementById('chartFour'));
     chart4.setOption(option3);
+    var chart10 = echarts.init(document.getElementById('chartTen'));
+    chart10.setOption(option3);
+
+    var option4 = {
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: {
+                type: 'shadow'
+            }
+        },
+        legend: {
+            data: ['科技工作者分类统计']
+        },
+        xAxis: {
+            type: 'value',
+            boundaryGap: [0, 0.01]
+        },
+        yAxis: {
+            type: 'category',
+            data: ['申报人','专家']
+        },
+        series: [
+            {
+                type: 'bar',
+                data: [
+                    {value: 566, itemStyle: {normal: {color: "#1997ff"}}},
+                    {value: 148, itemStyle: {normal: {color: "#00df9c"}}}
+                ]
+            }
+        ]
+    };
+    var chart5 = echarts.init(document.getElementById('chartFive'));
+    chart5.setOption(option4);
 });
