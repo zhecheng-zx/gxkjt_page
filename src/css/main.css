@@ -25,8 +25,13 @@ address, caption, cite, code, dfn, em, strong, th, var { font-style: normal; }
 em,i{font-style:normal;}
 
 .top{
+    width: 100%;
     height: 80px;
     background: #3385ff;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 9999;
 }
 
 .leftNav{
@@ -36,7 +41,7 @@ em,i{font-style:normal;}
 }
 
 .mainPage{
-    padding: 20px;
+    padding: 30px 40px;
     color: #333;
 }
 
@@ -411,10 +416,8 @@ div.item {
 }
 
 .chart-quarter{
-    width: 25%;
+    width: 100%;
     height: 210px;
-    display: inline-block;
-    padding: 10px;
 }
 
 .honestyView,
@@ -425,7 +428,7 @@ div.item {
 }
 
 .techPlatform{
-    padding: 20px;
+    padding: 27px 21px;
     background: #f5f5f5;
 }
 
@@ -499,12 +502,26 @@ div.item {
     height: 550px;
 }
 
+.chart-wrap-h490{
+    height:490px;
+}
+
 .techPlatform .chart-wrap{
     width: 100%;
 }
 
 .techPlatform .panel-body{
     padding: 0 10px;
+}
+
+.techPlatform .panel-body .city-info{
+    height: 60px;
+    line-height: 60px;
+}
+
+.techPlatform .panel-body .city-info .emphasize{
+    font-size: 18px;
+    margin-right: 5px;
 }
 
 .articleDetail article{
@@ -575,6 +592,7 @@ article .copyright{
 .search-select .box{
     padding: 10px 0;
     background: #fafafa;
+    font-size: 0;
 }
 
 .search-select .text{
@@ -1443,6 +1461,10 @@ fieldset[disabled] .btn-success.focus {
     background: #f5f5f5;
 }
 
+.reportDetail.wideLeft>.left-part{
+    width: 230px;
+}
+
 .reportDetail>.left-part .list-group-item{
     background: #f5f5f5;
     line-height: 25px;
@@ -1456,7 +1478,11 @@ fieldset[disabled] .btn-success.focus {
 
 .reportDetail>.right-part{
     margin-left: 210px;
-    padding: 20px;
+    padding: 30px 40px;
+}
+
+.reportDetail.wideLeft>.right-part{
+    margin-left: 230px;
 }
 
 .reportDetail .item{
@@ -1575,7 +1601,7 @@ fieldset[disabled] .btn-success.focus {
 
 .reportDetail .list-group a{
     text-decoration: none;
-    color: #999;
+    color: #666;
 }
 
 .reportDetail .list-group.smallSize a{
