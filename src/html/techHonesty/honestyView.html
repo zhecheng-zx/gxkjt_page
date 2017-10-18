@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>诚信总览</title>
     <link href="../../assets/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="../../assets/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="../../assets/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css">
     <link href="../../css/main.css" rel="stylesheet"/>
 
     <!--[if lt IE 9]>
@@ -14,38 +14,80 @@
 </head>
 <body>
 <div class="honestyView">
-    <div class="item">
-        <div class="itemTitle mrB20">广西科技诚信总览</div>
-        <div class="row">
-            <div class="col-md-3">
-                <div class="chart-quarter" id="chartOne"></div>
+    <div class="panel panel-default panel-white">
+        <div class="panel-heading">
+            <div class="panel-title blue">广西科技诚信总览</div>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="chart-quarter" id="chartOne"></div>
+                </div>
+                <div class="col-md-3">
+                    <div class="chart-quarter" id="chartTwo"></div>
+                </div>
+                <div class="col-md-3">
+                    <div class="chart-quarter" id="chartThree"></div>
+                </div>
+                <div class="col-md-3">
+                    <div class="chart-quarter" id="chartFour"></div>
+                </div>
             </div>
-           <div class="col-md-3">
-               <div class="chart-quarter" id="chartTwo"></div>
-           </div>
-           <div class="col-md-3">
-               <div class="chart-quarter" id="chartThree"></div>
-           </div>
-           <div class="col-md-3">
-               <div class="chart-quarter" id="chartFour"></div>
-           </div>
         </div>
     </div>
-    <div class="item-half mrR15">
-        <div class="itemTitle">
-            科技诚信分布
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-default panel-white">
+                <div class="panel-heading">
+                    <div class="panel-title blue"> 科技诚信分布</div>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div class="chart-wrap-h490" id="map"></div>
+                        </div>
+                        <div class="col-md-3 text-box">
+                            <h3 class="green">南宁市</h3>
+                            <p class="name">诚信均值</p>
+                            <h3 class="green mrB20">79.32分</h3>
+                            <p class="name">个人诚信均值</p>
+                            <h3 class="green mrB20">82.12分</h3>
+                            <p class="name">企业诚信均值</p>
+                            <h3 class="green mrB20">82.12分</h3>
+                            <p class="name">专家诚信均值</p>
+                            <h3 class="green">82.12分</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="chart-wrap"></div>
-    </div>
-    <div class="item-half">
-        <div class="itemTitle">
-            广西2017年诚信企业分布
+        <div class="col-md-6">
+            <div class="panel panel-default panel-white">
+                <div class="panel-heading">
+                    <div class="panel-title blue">广西2017年诚信企业分布</div>
+                </div>
+                <div class="panel-body">
+                    <form class="form-inline" style="height: 40px;">
+                        <div class="form-group">
+                            <input type="text" class="form-control" data-date-format="yyyy" id="datetimepicker">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control">
+                        </div>
+                        <button class="btn btn-primary">确定</button>
+                    </form>
+                    <div class="chart-wrap" id="chartFive"></div>
+                </div>
+            </div>
         </div>
-        <div class="chart-wrap"></div>
     </div>
-    <div class="item">
-        <div class="itemTitle">诚信均值</div>
-        <div class="chart-wrap" id="honestAverage"></div>
+    <div class="panel panel-default panel-white">
+        <div class="panel-heading">
+            <div class="panel-title blue">诚信均值</div>
+        </div>
+        <div class="panel-body">
+            <div class="chart-wrap-middle" id="honestAverage"></div>
+        </div>
     </div>
 </div>
 

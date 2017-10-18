@@ -119,4 +119,89 @@ $(function () {
 
     var chartA = echarts.init(document.getElementById('honestAverage'));
     chartA.setOption(opt);
+
+
+    $('#datetimepicker').datetimepicker({
+        format: 'yyyy',
+        startView: 'decade',
+        minView: 'decade',
+        maxViewMode: 2,
+        minViewMode:2,
+        autoclose: true
+    });
+
+    var map = echarts.init(document.getElementById('map'));
+    showProvince(map);
+
+
+    var card5 = echarts.init(document.getElementById('chartFive'));
+    var option2 = {
+        tooltip: {
+            trigger: 'item',
+            formatter: "{a} <br/>{b}: {c} ({d}%)"
+        },
+        series: [
+            {
+                name:'访问来源',
+                type:'pie',
+                radius: ['50%', '70%'],
+                avoidLabelOverlap: false,
+                labelLine: {
+                    normal: {
+                        show: true
+                    }
+                },
+                data:[
+                    {value:335, name:'大健康产业',itemStyle: {normal: {color: '#ffb041'}}},
+                    {value:310, name:'先进制造业',itemStyle: {normal: {color: '#00ebbb'}}},
+                    {value:234, name:'先进制造业',itemStyle: {normal: {color: '#00b3f6'}}},
+                    {value:335, name:'互联网经济',itemStyle: {normal: {color: '#00c9ee'}}},
+                    {value:448, name:'优势特色农业',itemStyle: {normal: {color: '#00e2e5'}}}
+                ]
+            }
+        ]
+    }
+    card5.setOption(option2, true);
 });
+
+function showProvince(chart) {
+    var name = 'guangxi';
+    $.get('../../json/guangxi.json', function (geoJson) {
+        chart.hideLoading();
+        echarts.registerMap(name, geoJson);
+        chart.setOption(option = {
+            series: [
+                {
+                    type: 'map',
+                    mapType: name,
+                    label: {
+                        emphasis: {
+                            textStyle: {
+                                color: '#fff'
+                            }
+                        }
+                    },
+                    itemStyle: {
+                        normal: {
+                            borderColor: '#03cbff',
+                            areaColor: '#fff',
+                            borderWidth: 2,
+                            label:{
+                                show:true,
+                                color:'#999',
+                                textStyle:{
+                                    fontSize:8
+                                }
+                            }
+                        },
+                        emphasis: {
+                            areaColor: 'rgba(3,203,255,0.7)',
+                            borderWidth: 0
+                        }
+                    },
+                    animation: true
+                }
+            ]
+        });
+    });
+}

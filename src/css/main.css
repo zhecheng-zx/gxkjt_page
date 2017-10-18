@@ -1699,3 +1699,27 @@ fieldset[disabled] .btn-success.focus {
 .height50{
     height: 50px !important;
 }
+
+.honestyView .panel.panel-white{
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -o-box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+.honestyView h3.green{
+    color: #00e5b1;
+}
+
+.honestyView h3.green:first-child{
+    line-height: 60px;
+}
+
+.honestyView .text-box{
+    padding: 40px 0;
+}
+
+.honestyView .text-box .name{
+    color: #808080;
+    line-height: 30px;
+}
