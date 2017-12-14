@@ -6,7 +6,9 @@
     <link href="../../assets/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="../../assets/upload/jquery.fileupload.css">
     <link href="../../css/main.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="../../js/laDate/theme/default/laydate.css">
+    <link rel="stylesheet" href="../../assets/icheck/flat/_all.css"/>
+    <link rel="stylesheet" href="../../assets/daterangepicker/css/daterangepicker.css">
+    <link rel="stylesheet" href="../../assets/bootstrap-multiselect-master/dist/css/bootstrap-multiselect.css">
 
     <!--[if lt IE 9]>
     <script src="../../assets/html5shiv_3.7.3/html5shiv.min.js"></script>
@@ -136,15 +138,17 @@
                         <div class="has_mar">
                             <button type="button" class="btn btn-primary ">查重项目</button>
                         </div>
-                        <input type="text" class="demo-input" placeholder="请选择日期" id="test1">
 
-                        <select name='make' class="sel">
+                        <input type="text" class="demo-input" placeholder="请选择日期" id="test1">
+                        <select name='make' class="sel" id="example-select"  multiple="multiple">
                             <option selected>行业</option>
                             <option value='acura'>科技</option>
                             <option value='chrysler'>医疗</option>
                             <option value='dodge'>水污染</option>
 
                         </select>
+                        <button type="button" class="btn btn-success ">查询</button>
+
                         <button type="button" class="btn btn-success ">查询</button>
 
 
@@ -290,25 +294,24 @@
 
 <script src="../../assets/jQuery/jquery.min.js"></script>
 <script src="../../assets/bootstrap-3.3.7/js/bootstrap.min.js"></script>
-<script src="../../js/laDate/laydate.js"></script>
 <script src="../../assets/bootstrap-table/bootstrap-table.min.js"></script>
 <script src="../../assets/upload/jquery.ui.widget.js"></script>
 <script src="../../assets/upload/jquery.iframe-transport.js"></script>
 <script src="../../assets/upload/jquery.fileupload.js"></script>
+<script src="../../assets/icheck/icheck.min.js"></script>
+<script src="../../assets/daterangepicker/js/moment.min.js"></script>
+<script src="../../assets/daterangepicker/js/jquery.daterangepicker.js"></script>
+<script src="../../assets/bootstrap-multiselect-master/dist/js/bootstrap-multiselect.js"></script>
 <script>
 
-    laydate.render({
-        elem: '#test1',
-        range: '~'//指定元素
-    });
-    laydate.render({
-        elem: '#test2',
-        range: '~'//指定元素
-    });
-    laydate.render({
-        elem: '#test3',
-        range: '~'//指定元素
-    });
+//    laydate.render({
+//        elem: '#test2',
+//        range: '~'//指定元素
+//    });
+//    laydate.render({
+//        elem: '#test3',
+//        range: '~'//指定元素
+//    });
 
 
     $(function () {
@@ -380,9 +383,20 @@
             }
             $('#fileupload').fileupload('send', {files: filesList});
         })
+
+
+        $('input[type=checkbox]').iCheck({
+            checkboxClass: 'icheckbox_flat-blue'
+        });
+
+        $('#test1').dateRangePicker({
+            separator: '至'
+        });
+
+        $('#example-select').multiselect({});
     });
 
-    
+
     function addData() {
         //TODO 每次添加前 要先把table清空
     }

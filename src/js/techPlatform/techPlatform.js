@@ -117,12 +117,7 @@ $(function () {
                 type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
             }
         },
-        grid: {
-            left: '3%',
-            right: '4%',
-            bottom: '3%',
-            containLabel: true
-        },
+
         xAxis : [
             {
                 type : 'category',
